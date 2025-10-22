@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enbott - Career Ready in 90 Days</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s 0.2s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s 0.4s backwards;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            padding: 18px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Social Proof Strip */
+        .social-proof-strip {
+            background: #f8f9fa;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .social-proof-strip p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            opacity: 0.7;
+        }
+
+        .company-logo {
+            width: 120px;
+            height: 60px;
+            background: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .section-header p {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .reviewer-info h4 {
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .reviewer-info p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .problem-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #e53e3e;
+        }
+
+        .problem-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .problem-card p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .transition-text {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+            margin-top: 40px;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 40px auto 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .video-placeholder:hover {
+            transform: scale(1.02);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #667eea;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .steps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .step-content h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .step-content h4 {
+            font-size: 18px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .step-content ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .step-content li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .step-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .step-outcome {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-style: italic;
+            color: #2d3748;
+        }
+
+        /* Value Prop */
+        .value-prop {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .value-prop h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .value-prop .subtitle {
+            font-size: 24px;
+            margin-bottom: 50px;
+            opacity: 0.95;
+        }
+
+        .guarantee-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .guarantee-box h3 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .guarantee-box ul {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-box li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 18px;
+        }
+
+        .guarantee-box li:before {
+            content: "🎯";
+            position: absolute;
+            left: 0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+
+        .faq-answer {
+            padding: 0 25px 25px;
+            color: #555;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .emotional-text {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .benefits-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: left;
+        }
+
+        .comparison-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .urgency-box {
+            background: #e53e3e;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: 50px auto;
+        }
+
+        .urgency-box h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .urgency-items {
+            display: grid;
+            gap: 10px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-trust {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating CTA Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 99;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .section-header h2 { font-size: 32px; }
+            .step { grid-template-columns: 1fr; }
+            .step-number { margin: 0 auto 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Enbott</div>
+            <a href="#cta" class="nav-cta">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>From Campus to Career-Ready in 90 Days</h1>
+            <p>Bridge the skills gap between your education and your dream job. Get industry-ready training, real internships, and guaranteed placement support—all in one transformative program.</p>
+            <div class="cta-buttons">
+                <a href="#cta" class="btn-primary">Start Your Career Journey →</a>
+                <a href="#video" class="btn-secondary">See Success Stories</a>
+            </div>
+            <div class="trust-bar">
+                <div class="trust-item">✓ 500+ Students Placed</div>
+                <div class="trust-item">✓ 50+ Hiring Partners</div>
+                <div class="trust-item">✓ 95% Placement Rate</div>
+                <div class="trust-item">✓ Industry-Certified Training</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Strip -->
+    <section class="social-proof-strip">
+        <div class="container">
+            <p><strong>Trusted by leading companies to deliver job-ready talent</strong></p>
+            <div class="company-logos">
+                <div class="company-logo">TCS</div>
+                <div class="company-logo">Infosys</div>
+                <div class="company-logo">Wipro</div>
+                <div class="company-logo">Cognizant</div>
+                <div class="company-logo">Accenture</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Don't Just Take Our Word For It</h2>
+                <p>See what our students say about their transformation journey</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar"></div>
+                        <div class="reviewer-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Software Developer at TCS</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"I struggled with interviews for 8 months. After Enbott's finishing school program, I landed 3 job offers in 2 weeks. The communication training alone was worth it!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar"></div>
+                        <div class="reviewer-info">
+                            <h4>Rahul Patel</h4>
+                            <p>Junior Developer at Infosys</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"From 15 rejections to my dream job! Enbott taught me what college never did—how to think and communicate like a professional. Best decision I ever made."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar"></div>
+                        <div class="reviewer-info">
+                            <h4>Anjali Kumar</h4>
+                            <p>Business Analyst at Wipro</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The mentorship was incredible. Real industry professionals helped me build my portfolio and prepare for interviews. I got placed within 3 weeks of completing the program!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Fresh Graduates Struggle to Get Hired</h2>
+            </div>
+            <p class="problem-intro">You worked hard for your degree. But when you face recruiters, something feels... off. You're not alone.</p>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>❌ The Academic-Industry Gap</h3>
+                    <p>Your college taught theory. Companies need practical skills, real-world problem-solving, and workplace communication. That 3-year gap? It's costing you opportunities.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Interview Anxiety Kills Confidence</h3>
+                    <p>You know your stuff, but can't express it under pressure. One nervous interview can cost you your dream job—no matter how talented you are.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ No Real-World Experience</h3>
+                    <p>"2 years experience required" for entry-level jobs. It's frustrating. Without internships or projects, your resume gets ignored before you even get a chance.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Communication Barriers Hold You Back</h3>
+                    <p>Technical skills get you in the door. But poor business communication keeps you stuck at the entry level. Promotions go to those who can speak up and collaborate.</p>
+                </div>
+            </div>
+            <p class="transition-text">What if you could fix all of this in just 90 days?</p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <div class="section-header">
+                <h2>From Rejected to Selected: Real Stories</h2>
+                <p>Watch Rahul explain how he went from 15 rejections to his dream job at Infosys</p>
+            </div>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your 90-Day Transformation Roadmap</h2>
+                <p>A proven system that transforms students into career-ready professionals</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Skills Assessment & Onboarding</h3>
+                        <h4>We identify your gaps</h4>
+                        <ul>
+                            <li>Comprehensive skill assessment</li>
+                            <li>Personalized learning path creation</li>
+                            <li>Industry mentor assignment</li>
+                            <li>Goal setting session</li>
+                        </ul>
+                        <div class="step-outcome">You'll know exactly what to work on and why it matters.</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Industry-Ready Training</h3>
+                        <h4>We make you job-ready</h4>
+                        <ul>
+                            <li><strong>Technical Upskilling:</strong> Latest technologies, frameworks, and tools companies actually use</li>
+                            <li><strong>Business Communication:</strong> Professional emails, presentations, meetings, and workplace etiquette</li>
+                            <li><strong>Soft Skills Mastery:</strong> Leadership, teamwork, time management, and problem-solving</li>
+                            <li><strong>Live Projects:</strong> Real-world assignments that build your portfolio</li>
+                        </ul>
+                        <div class="step-outcome">You'll have practical experience that makes recruiters take notice.</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Interview Preparation</h3>
+                        <h4>We prepare you to win</h4>
+                        <ul>
+                            <li>Mock interviews with industry professionals</li>
+                            <li>Resume optimization and LinkedIn profile building</li>
+                            <li>Behavioral interview training</li>
+                            <li>Technical interview practice</li>
+                            <li>Salary negotiation coaching</li>
+                        </ul>
+                        <div class="step-outcome">You'll walk into interviews with unshakeable confidence.</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Job Placement & Career Launch</h3>
+                        <h4>We connect you with opportunities</h4>
+                        <ul>
+                            <li>Exclusive access to hiring partners</li>
+                            <li>Direct placement opportunities</li>
+                            <li>Internship-to-hire programs</li>
+                            <li>Incubation support for entrepreneurs</li>
+                            <li>Ongoing career guidance</li>
+                        </ul>
+                        <div class="step-outcome">You'll have real job offers, not just certificates.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <h2>Why Enbott Is Different</h2>
+            <p class="subtitle">Most training programs give you a certificate and send you on your way.<br>We don't let you leave until you're employed.</p>
+            <div class="guarantee-box">
+                <h3>🎯 The Enbott Guarantee</h3>
+                <p style="margin-bottom: 20px;">We're not just a training center—we're your career partner. You get:</p>
+                <ul>
+                    <li><strong>Hands-on mentorship</strong> from industry professionals (not just recorded videos)</li>
+                    <li><strong>Real internships</strong> with our 50+ partner companies</li>
+                    <li><strong>Guaranteed interview opportunities</strong> (not just "job assistance")</li>
+                    <li><strong>Lifetime access</strong> to our alumni network and career resources</li>
+                    <li><strong>Pay-after-placement options</strong> available (ask us how)</li>
+                </ul>
+                <p style="font-size: 24px; margin-top: 20px; font-weight: bold;">We succeed only when you succeed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions? We've Got Answers</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>I just graduated. Is this program really necessary if I have a degree?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Your degree proves you can learn—but employers need proof you can perform. 89% of recruiters say fresh graduates lack workplace-ready skills. Our finishing school bridges that critical gap, giving you the practical experience and confidence colleges don't provide.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How is this different from online courses on Udemy or Coursera?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Three major differences: (1) Live mentorship from industry professionals, not pre-recorded videos (2) Real internships and job placements, not just certificates (3) Personalized career support until you're employed. We're invested in your success, not just course completion.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What if I don't get placed after completing the program?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-
