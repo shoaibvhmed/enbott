@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enbott - Technology & IT Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0891b2;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        /* Hero Section */
+        .services-hero {
+            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+        }
+
+        .services-hero .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .services-hero h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s;
+        }
+
+        .services-hero p {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s 0.2s backwards;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s 0.3s backwards;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Services Overview */
+        .services-overview {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #0c4a6e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 20px;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 40px 35px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: #0891b2;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(8, 145, 178, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .service-features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0891b2;
+            font-weight: bold;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0891b2;
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.3s;
+        }
+
+        .learn-more:hover {
+            gap: 8px;
+        }
+
+        /* Detailed Services Section */
+        .detailed-services {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .service-detail {
+            background: white;
+            border-radius: 25px;
+            padding: 60px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-detail-header {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .detail-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .service-detail-header h3 {
+            font-size: 36px;
+            color: #1e293b;
+        }
+
+        .service-detail-content h4 {
+            font-size: 24px;
+            color: #1e293b;
+            margin: 30px 0 15px;
+        }
+
+        .service-detail-content p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .capability-item {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #0891b2;
+        }
+
+        .capability-item h5 {
+            font-size: 18px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .capability-item p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* EdTech Section */
+        .edtech-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+            color: white;
+        }
+
+        .edtech-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .edtech-text h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .edtech-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .edtech-programs {
+            display: grid;
+            gap: 20px;
+        }
+
+        .edtech-program {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .edtech-program h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .edtech-program p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 35px;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 20px;
+        }
+
+        .why-item h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .why-item p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .services-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .services-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .services-cta p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(8, 145, 178, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 50px 0 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+
+        .footer-section h4 {
+            font-size: 17px;
+            margin-bottom: 18px;
+            color: #0891b2;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 13px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .services-hero h1 { font-size: 36px; }
+            .section-header h2 { font-size: 32px; }
+            .edtech-content { grid-template-columns: 1fr; }
+            .service-detail { padding: 35px 25px; }
+            .service-detail-header { grid-template-columns: 1fr; text-align: center; }
+            .detail-icon { margin: 0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Enbott</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services">Services</a>
+                <a href="/about">About</a>
+                <a href="/contact" class="nav-cta">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Technology & IT Services</h1>
+            <p>Ground-breaking solutions that help businesses provide uninterrupted services. From IT consulting to cybersecurity, EdTech to digital transformation—we deliver excellence.</p>
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>›</span>
+                <span>Services</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">WHAT WE DO</span>
+                <h2>Our Service Portfolio</h2>
+                <p>Comprehensive technology solutions backed by 25 years of industry experience</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>IT Consulting & Strategy</h3>
+                    <p>Strategic technology guidance to align IT infrastructure with business objectives and drive digital transformation.</p>
+                    <ul class="service-features">
+                        <li>Technology roadmap development</li>
+                        <li>IT infrastructure assessment</li>
+                        <li>Digital transformation strategy</li>
+                        <li>Cloud migration planning</li>
+                    </ul>
+                    <a href="#it-consulting" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Cybersecurity Solutions</h3>
+                    <p>Comprehensive security services to protect your business from evolving cyber threats and ensure compliance.</p>
+                    <ul class="service-features">
+                        <li>Security assessment & audits</li>
+                        <li>Threat detection & response</li>
+                        <li>Compliance management</li>
+                        <li>Security awareness training</li>
+                    </ul>
+                    <a href="#cybersecurity" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>IT Support & Maintenance</h3>
+                    <p>Reliable technical support ensuring uninterrupted business operations and optimal system performance.</p>
+                    <ul class="service-features">
+                        <li>24/7 helpdesk support</li>
+                        <li>System monitoring & maintenance</li>
+                        <li>Infrastructure management</li>
+                        <li>Preventive maintenance</li>
+                    </ul>
+                    <a href="#support" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Services</h3>
+                    <p>End-to-end cloud solutions from migration to management, enabling scalability and cost optimization.</p>
+                    <ul class="service-features">
+                        <li>Cloud migration services</li>
+                        <li>Cloud infrastructure setup</li>
+                        <li>Multi-cloud management</li>
+                        <li>Cloud cost optimization</li>
+                    </ul>
+                    <a href="#cloud" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Software Development</h3>
+                    <p>Custom software solutions tailored to your business needs, from web applications to enterprise systems.</p>
+                    <ul class="service-features">
+                        <li>Custom application development</li>
+                        <li>Web & mobile solutions</li>
+                        <li>Enterprise software integration</li>
+                        <li>API development & integration</li>
+                    </ul>
+                    <a href="#software" class="learn-more">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>EdTech Solutions</h3>
+                    <p>Educational technology services helping institutions bridge the gap between academia and industry.</p>
+                    <ul class="service-features">
+                        <li>Campus Centers of Excellence</li>
+                        <li>Competitive programming (CodeChef)</li>
+                        <li>Communication training (Pearson)</li>
+                        <li>International learning programs</li>
+                    </ul>
+                    <a href="#edtech" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="detailed-services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">IN DEPTH</span>
+                <h2>Service Details</h2>
+                <p>Comprehensive breakdown of our technology services</p>
+            </div>
+
+            <!-- IT Consulting -->
+            <div class="service-detail" id="it-consulting">
+                <div class="service-detail-header">
+                    <div class="detail-icon">💻</div>
+                    <div>
+                        <h3>IT Consulting & Strategy</h3>
+                        <p style="color: #64748b; margin-top: 10px;">Strategic technology guidance for business growth</p>
+                    </div>
+                </div>
+                <div class="service-detail-content">
+                    <p>Our IT consulting services help organizations navigate complex technology decisions and build robust digital strategies. With 25 years of industry experience through GT Technologies, we provide insights that align technology investments with business objectives.</p>
+
+                    <h4>Core Capabilities</h4>
+                    <div class="capabilities-grid">
+                        <div class="capability-item">
+                            <h5>Technology Assessment</h5>
+                            <p>Comprehensive evaluation of current IT infrastructure, identifying gaps, inefficiencies, and opportunities for improvement.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Digital Transformation</h5>
+                            <p>Strategic roadmaps for modernizing legacy systems, adopting cloud technologies, and implementing digital-first approaches.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>IT Roadmap Development</h5>
+                            <p>Long-term technology planning aligned with business goals, including budget allocation and phased implementation.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Vendor Selection & Management</h5>
+                            <p>Guidance on choosing the right technology partners, negotiating contracts, and managing vendor relationships.</p>
+                        </div>
+                    </div>
+
+                    <h4>Who Benefits</h4>
+                    <p>Organizations undergoing digital transformation, businesses seeking to optimize IT spending, companies planning major technology initiatives, and enterprises requiring strategic technology guidance.</p>
+                </div>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="service-detail" id="cybersecurity">
+                <div class="service-detail-header">
+                    <div class="detail-icon">🛡️</div>
+                    <div>
+                        <h3>Cybersecurity Solutions</h3>
+                        <p style="color: #64748b; margin-top: 10px;">Protect your business from evolving cyber threats</p>
+                    </div>
+                </div>
+                <div class="service-detail-content">
+                    <p>In an era of increasing cyber threats, our comprehensive security services protect your business assets, data, and reputation. We implement industry-leading practices to ensure your organization remains secure and compliant.</p>
+
+                    <h4>Core Capabilities</h4>
+                    <div class="capabilities-grid">
+                        <div class="capability-item">
+                            <h5>Security Assessment</h5>
+                            <p>Vulnerability assessments, penetration testing, and security audits to identify weaknesses before attackers do.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Threat Detection & Response</h5>
+                            <p>24/7 monitoring, real-time threat detection, incident response, and security event management.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Compliance Management</h5>
+                            <p>Support for regulatory compliance including GDPR, ISO 27001, and industry-specific security standards.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Security Training</h5>
+                            <p>Employee awareness programs, phishing simulations, and security best practices training.</p>
+                        </div>
+                    </div>
+
+                    <h4>Who Benefits</h4>
+                    <p>Organizations handling sensitive data, businesses requiring compliance certifications, companies experiencing security incidents, and enterprises seeking proactive security measures.</p>
+                </div>
+            </div>
+
+            <!-- IT Support -->
+            <div class="service-detail" id="support">
+                <div class="service-detail-header">
+                    <div class="detail-icon">🔧</div>
+                    <div>
+                        <h3>IT Support & Maintenance</h3>
+                        <p style="color: #64748b; margin-top: 10px;">Uninterrupted business operations through reliable support</p>
+                    </div>
+                </div>
+                <div class="service-detail-content">
+                    <p>Our IT support services ensure your technology infrastructure operates smoothly, minimizing downtime and maximizing productivity. We provide multi-level support tailored to your organization's needs.</p>
+
+                    <h4>Core Capabilities</h4>
+                    <div class="capabilities-grid">
+                        <div class="capability-item">
+                            <h5>Helpdesk Services</h5>
+                            <p>24/7 technical support for end-users, handling hardware, software, and connectivity issues promptly.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>System Monitoring</h5>
+                            <p>Proactive monitoring of servers, networks, and applications to detect and resolve issues before they impact users.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Infrastructure Management</h5>
+                            <p>Complete management of IT infrastructure including servers, storage, networking, and endpoints.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Preventive Maintenance</h5>
+                            <p>Scheduled maintenance, updates, patches, and optimization to prevent problems and ensure peak performance.</p>
+                        </div>
+                    </div>
+
+                    <h4>Who Benefits</h4>
+                    <p>Businesses without in-house IT teams, organizations seeking to reduce IT overhead, companies requiring 24/7 support, and enterprises needing reliable infrastructure management.</p>
+                </div>
+            </div>
+
+            <!-- Cloud Services -->
+            <div class="service-detail" id="cloud">
+                <div class="service-detail-header">
+                    <div class="detail-icon">☁️</div>
+                    <div>
+                        <h3>Cloud Services</h3>
+                        <p style="color: #64748b; margin-top: 10px;">Scalable, cost-effective cloud solutions</p>
+                    </div>
+                </div>
+                <div class="service-detail-content">
+                    <p>We help organizations leverage cloud technologies to improve agility, reduce costs, and scale efficiently. Our cloud services cover the entire journey from strategy to ongoing optimization.</p>
+
+                    <h4>Core Capabilities</h4>
+                    <div class="capabilities-grid">
+                        <div class="capability-item">
+                            <h5>Cloud Migration</h5>
+                            <p>Seamless migration of applications, data, and workloads from on-premises to cloud platforms (AWS, Azure, GCP).</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Cloud Architecture</h5>
+                            <p>Design and implementation of secure, scalable cloud architectures optimized for performance and cost.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Multi-Cloud Management</h5>
+                            <p>Unified management across multiple cloud providers, ensuring optimal resource utilization and avoiding vendor lock-in.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Cloud Optimization</h5>
+                            <p>Continuous monitoring and optimization of cloud resources to reduce costs while maintaining performance.</p>
+                        </div>
+                    </div>
+
+                    <h4>Who Benefits</h4>
+                    <p>Organizations modernizing infrastructure, businesses seeking cost reduction, companies requiring scalability, and enterprises adopting hybrid or multi-cloud strategies.</p>
+                </div>
+            </div>
+
+            <!-- Software Development -->
+            <div class="service-detail" id="software">
+                <div class="service-detail-header">
+                    <div class="detail-icon">⚙️</div>
+                    <div>
+                        <h3>Software Development</h3>
+                        <p style="color: #64748b; margin-top: 10px;">Custom solutions tailored to your business needs</p>
+                    </div>
+                </div>
+                <div class="service-detail-content">
+                    <p>Our software development team builds custom applications that solve specific business challenges. From web platforms to mobile apps and enterprise integrations, we deliver quality solutions.</p>
+
+                    <h4>Core Capabilities</h4>
+                    <div class="capabilities-grid">
+                        <div class="capability-item">
+                            <h5>Custom Application Development</h5>
+                            <p>Bespoke software solutions designed specifically for your business processes, workflows, and requirements.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Web & Mobile Solutions</h5>
+                            <p>Responsive web applications and native mobile apps for iOS and Android platforms.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>Enterprise Integration</h5>
+                            <p>Seamless integration of existing systems, databases, and third-party applications for unified operations.</p>
+                        </div>
+                        <div class="capability-item">
+                            <h5>API Development</h5>
+                            <p>RESTful API design and development enabling system interoperability and third-party integrations.</p>
+                        </div>
+                    </div>
+
+                    <h4>Who Benefits</h4>
+                    <p>Businesses requiring custom solutions, organizations with unique workflows, companies needing system integration, and enterprises seeking competitive advantages through technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EdTech Section -->
+    <section class="edtech-section" id="edtech">
+        <div class="container">
+            <div class="edtech-content">
