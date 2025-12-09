@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enbott - Transform Campus Learning Into Career Success</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0891b2;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+            color: white;
+            padding: 90px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            animation: fadeInUp 0.8s;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s 0.2s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s 0.4s backwards;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0891b2;
+            padding: 16px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 16px 35px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .trust-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 45px;
+            animation: fadeInUp 0.8s 0.6s backwards;
+        }
+
+        .trust-item {
+            text-align: center;
+            font-size: 13px;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .trust-item strong {
+            display: block;
+            font-size: 17px;
+            margin-bottom: 3px;
+        }
+
+        /* Partnership Strip */
+        .partnership-strip {
+            background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+            padding: 35px 0;
+            text-align: center;
+            border-bottom: 2px solid #0891b2;
+        }
+
+        .partnership-strip p {
+            font-size: 15px;
+            color: #0c4a6e;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo {
+            background: white;
+            padding: 18px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-weight: 700;
+            color: #0c4a6e;
+            font-size: 17px;
+            transition: transform 0.3s;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner-logo.codechef {
+            background: linear-gradient(135deg, #a17845 0%, #8B4513 100%);
+            color: white;
+        }
+
+        .partner-logo.pearson {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .partner-logo.gt {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #0c4a6e;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .section-header h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            background: #f8fafc;
+            padding: 28px;
+            border-radius: 15px;
+            border-left: 4px solid #0891b2;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .reviewer-info h4 {
+            font-size: 15px;
+            margin-bottom: 3px;
+            color: #1e293b;
+        }
+
+        .reviewer-info p {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: #f8fafc;
+        }
+
+        .problem-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 17px;
+            color: #475569;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 45px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .problem-card h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .problem-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .transition-text {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 35px;
+        }
+
+        /* Programs Section - Four Pillars */
+        .programs-section {
+            background: white;
+        }
+
+        .programs-grid {
+            display: grid;
+            gap: 35px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .program-header {
+            padding: 35px;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .program-header.codechef {
+            background: linear-gradient(135deg, #a17845 0%, #8B4513 100%);
+        }
+
+        .program-header.pearson {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .program-header.coe {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .program-header.international {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .program-icon {
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .program-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .program-subtitle {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .program-content {
+            padding: 35px;
+        }
+
+        .program-content h4 {
+            font-size: 20px;
+            margin: 20px 0 12px 0;
+            color: #1e293b;
+        }
+
+        .program-content p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 18px 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .feature-list li strong {
+            color: #1e293b;
+        }
+
+        .program-outcome {
+            background: #f0f9ff;
+            padding: 18px;
+            border-radius: 10px;
+            border-left: 4px solid #0891b2;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .program-outcome strong {
+            color: #0c4a6e;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .stats-highlight {
+            background: #ecfeff;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 18px 0;
+            border: 2px solid #06b6d4;
+        }
+
+        .stats-highlight strong {
+            color: #0891b2;
+            font-size: 16px;
+        }
+
+        /* Metrics Section */
+        .metrics-section {
+            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .metric-number {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 16px;
+            opacity: 0.95;
+            display: block;
+        }
+
+        .metric-sublabel {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #f8fafc;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: #0891b2;
+        }
+
+        .faq-question {
+            padding: 22px 28px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+            color: #1e293b;
+        }
+
+        .faq-question:hover {
+            background: #e0f2fe;
+        }
+
+        .faq-answer {
+            padding: 0 28px 22px;
+            color: #64748b;
+            line-height: 1.7;
+            display: none;
+            font-size: 14px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 22px;
+            transition: transform 0.3s;
+            color: #0891b2;
+            font-weight: bold;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .emotional-text {
+            font-size: 18px;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .benefit-item {
+            background: rgba(255,255,255,0.05);
+            padding: 16px 22px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 4px solid #10b981;
+            font-size: 15px;
+        }
+
+        .cta-buttons-final {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .btn-large {
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(8, 145, 178, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 18px 45px;
+            border: 2px solid white;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 50px 0 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+
+        .footer-section h4 {
+            font-size: 17px;
+            margin-bottom: 18px;
+            color: #0891b2;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 13px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(8, 145, 178, 0.4);
+            text-decoration: none;
+            font-weight: 700;
+            z-index: 99;
+            animation: float 3s ease-in-out infinite;
+            font-size: 15px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 34px; }
+            .hero-subtitle { font-size: 17px; }
+            .section-header h2 { font-size: 30px; }
+            .program-title { font-size: 24px; }
+            .final-cta h2 { font-size: 34px; }
+        }
+
+        @media (max-width: 640px) {
+            .cta-buttons, .cta-buttons-final { flex-direction: column; align-items: stretch; }
+            .btn-primary, .btn-secondary, .btn-large, .btn-outline { text-align: center; }
+            .floating-cta { right: 18px; bottom: 18px; padding: 14px 24px; font-size: 13px; }
+        }
+      
+      /* Services Overview */
+        .services-overview {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #0c4a6e;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 20px;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 40px 35px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: #0891b2;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(8, 145, 178, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .service-card p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .service-features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0891b2;
+            font-weight: bold;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0891b2;
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.3s;
+        }
+
+        .learn-more:hover {
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Enbott</div>
+            <div class="nav-links">
+                <a href="https://shoaibvhmed.github.io/enbott/home.html">Home</a>
+                <a href="https://shoaibvhmed.github.io/enbott/services.html">Services</a>
+                <a href="https://shoaibvhmed.github.io/enbott/partners.html">Partnerships</a>
+                <a href="https://shoaibvhmed.github.io/enbott/client.html">Client Stories</a>
+                <a href="https://shoaibvhmed.github.io/enbott/contact.html" class="nav-cta">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+      <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Trusted by Esteemed Institutions</h1>
+            <p>Enbott is dedicated to transforming education through innovative, smart, and interactive digital solutions. We empower institutions, educators, and learners with cutting-edge tools designed for the digital generation.</p>
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>›</span>
+                <span>Services</span>
+            </div>
+        </div>
+    </section>
+
+     <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">WHAT WE DO</span>
+                <h2>Our Service Portfolio</h2>
+                <p>Comprehensive technology solutions for the education sector, backed by 25 years of industry experience</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>IT & Software Training</h3>
+                    <p>Practical, technology-powered training designed to build strong coding, problem-solving, and digital skills.</p>
+                    <ul class="service-features">
+                        <li>Hands-on learning with industry-aligned tools</li>
+                        <li>Focus on employability through real-world projects</li>
+                        <li>Practical problem-solving guides</li>
+                        <li>Strong foundational skill development</li>
+                    </ul>
+                    <a href="#it-consulting" class="learn-more">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Final CTA Section -->
+    <section class="final-cta" id="cta">
+        <div class="container">
+            <h2>Ready to Build Industry-Ready Skills?</h2>
+            <p class="emotional-text">Your degree opens doors. But industry-recognized skills, global certifications, and competitive programming rankings are what get you through them. Thousands of students are already learning through our campus CoEs. Join them.</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">✅ Global competitive programming through CodeChef (600K+ users yearly)</div>
+                <div class="benefit-item">✅ Professional communication mastery with Pearson (300+ hours, AI-enabled)</div>
+                <div class="benefit-item">✅ Industry-backed campus infrastructure through Centers of Excellence</div>
+                <div class="benefit-item">✅ International learning opportunities for cross-cultural expertise</div>
+                <div class="benefit-item">✅ Recognized certifications that validate your skills to employers</div>
+                <div class="benefit-item">✅ Improved career outcomes (6-12 LPA placement range)</div>
+            </div>
+
+            <div class="cta-buttons-final">
+                <a href="#" class="btn-large">🎓 Find Your Campus CoE</a>
+                <a href="#" class="btn-outline">📧 Download Program Details</a>
+            </div>
+
+            <p style="margin-top: 40px; opacity: 0.9;">Join 15,000+ students learning through Enbott Centers of Excellence</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#programs">Competitive Programming</a></li>
+                        <li><a href="#programs">Communicative English</a></li>
+                        <li><a href="#programs">Centers of Excellence</a></li>
+                        <li><a href="#programs">International Learning</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer-section">
+                    <h4>For Universities</h4>
+                    <ul>
+                        <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">Partner With Us</a></li>
+                        <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Setup a CoE</a></li>
+                        <li><a href="https://shoaibvhmed.github.io/enbott/services.html#software">Faculty Development</a></li>
+                        <li><a href="https://shoaibvhmed.github.io/enbott/client.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="footer-section">
+                    <!-- <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Program Brochures</a></li>
+                        <li><a href="#">Sample Content</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">About Enbott</a></li>
+                        <li><a href="https://www.gt.technology/"  target="_blank">GT Technologies</a></li>
+                        <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Careers</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
+                <p style="margin-top: 10px;">🏫 Campus-Integrated Learning | 🌍 Global Partnerships | 📜 Recognized Certifications | 🏢 25 Years Industry Legacy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA
+    <a href="#cta" class="floating-cta">💬 Find Your CoE</a> -->
+
+</body>
+</html>
+
+  
