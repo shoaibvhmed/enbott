@@ -877,6 +877,58 @@
   }
 }
 
+        /* --- Partner cards: equal-height grid --- */
+.partners-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: stretch;
+  margin-top: 18px;
+}
+
+/* make each card a column-flex container so we can push the highlight to bottom */
+.card {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 24px 26px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  display: flex;            /* NEW */
+  flex-direction: column;   /* NEW */
+  height: 100%;             /* NEW — lets grid rows stretch */
+}
+
+/* card-body holds the title, description, bullets — it expands */
+.card-body {
+  flex: 1 1 auto;           /* NEW — makes main content expand */
+}
+
+/* keep the highlight box pinned to bottom */
+.highlight-box {
+  margin-top: 18px;
+  margin-bottom: 0;
+  align-self: stretch;
+}
+
+/* optional: consistent logo container */
+.partner-logo-wrapper {
+  width: 110px;
+  height: 50px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+}
+
+/* optional: minimum height on large screens for tighter visual parity */
+@media(min-width: 1024px) {
+  .card { min-height: 340px; }  /* tweak value as needed */
+}
+
+
     </style>
 </head>
 <body>
