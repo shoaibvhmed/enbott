@@ -877,6 +877,83 @@
   }
 }
 
+        /* Logo Strip / Slider */
+.logo-strip {
+    background: #020617; /* deep dark, matches your final CTA/footer vibe */
+    padding: 40px 0 50px;
+}
+
+.logo-strip-title {
+    text-align: center;
+    font-size: 16px;
+    color: #9ca3af;
+    margin-bottom: 26px;
+}
+
+.logo-strip-title span {
+    color: #f9fafb;
+    font-weight: 600;
+}
+
+.logo-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    animation: logo-scroll 25s linear infinite;
+    /* small padding so logos don't touch container edges */
+    padding: 0 10px;
+}
+
+.logo-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    height: 40px;             /* adjust based on your logo files */
+    max-width: 140px;
+    opacity: 0.5;
+    filter: grayscale(1);
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+}
+
+.logo-item img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    transform: translateY(-2px);
+}
+
+/* Continuous scroll animation */
+@keyframes logo-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* because we duplicated the logos */
+    }
+}
+
+@media (max-width: 640px) {
+    .logo-strip {
+        padding: 30px 0 40px;
+    }
+    .logo-track {
+        gap: 30px;
+    }
+    .logo-item img {
+        height: 32px;
+        max-width: 110px;
+    }
+}
+
+
     </style>
 </head>
 <body>
