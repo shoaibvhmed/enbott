@@ -812,6 +812,71 @@
             .btn-primary, .btn-secondary, .btn-large, .btn-outline { text-align: center; }
             .floating-cta { right: 18px; bottom: 18px; padding: 14px 24px; font-size: 13px; }
         }
+
+        /* Enhanced footer layout */
+.footer-grid-enhanced {
+  grid-template-columns: 1.3fr 1fr 1fr;
+}
+
+/* Brand block */
+.footer-brand {
+  max-width: 420px;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 26px;
+}
+
+/* CTA button (Muza-inspired, Enbott-colored) */
+.footer-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #0891b2, #3b82f6);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(8,145,178,0.35);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-grid-enhanced {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    margin-bottom: 25px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -1283,53 +1348,60 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- <div class="footer-section">
-                    <h4>Programs</h4>
-                    <ul>
-                        <li><a href="#programs">Competitive Programming</a></li>
-                        <li><a href="#programs">Communicative English</a></li>
-                        <li><a href="#programs">Centers of Excellence</a></li>
-                        <li><a href="#programs">International Learning</a></li>
-                    </ul>
-                </div> -->
-                <div class="footer-section">
-                    <h4>For Universities</h4>
-                    <ul>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">Partner With Us</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Setup a CoE</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/services.html#software">Faculty Development</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/client.html">Success Stories</a></li>
-                    </ul>
-                </div>
-                <!-- <div class="footer-section">
-                    <!-- <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Program Brochures</a></li>
-                        <li><a href="#">Sample Content</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div> -->
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">About Enbott</a></li>
-                        <li><a href="https://www.gt.technology/"  target="_blank">GT Technologies</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Contact Us</a></li>
-                        <!-- <li><a href="#">Careers</a></li> -->
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
-                <p style="margin-top: 10px;">🏫 Campus-Integrated Learning | 🌍 Global Partnerships | 📜 Recognized Certifications | 🏢 25 Years Industry Legacy</p>
-            </div>
+    <!-- footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content footer-grid-enhanced">
+
+      <!-- Brand / CTA section (NEW) -->
+      <div class="footer-section footer-brand">
+        <div class="brand-row">
+          <div class="brand-logo">◔</div>
+          <span class="brand-name">Enbott</span>
         </div>
-    </footer>
+
+        <p class="footer-desc">
+          Campus-integrated, industry-aligned learning solutions built with
+          <strong>25+ years</strong> of enterprise expertise.
+        </p>
+
+        <a href="https://shoaibvhmed.github.io/enbott/contact.html" class="footer-cta">
+          Partner with Enbott
+        </a>
+      </div>
+
+      <!-- Existing sections -->
+      <div class="footer-section">
+        <h4>For Universities</h4>
+        <ul>
+          <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">Partner With Us</a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Setup a CoE</a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/services.html#software">Faculty Development</a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/client.html">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">About Enbott</a></li>
+          <li><a href="https://www.gt.technology/" target="_blank">GT Technologies</a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
+      <p style="margin-top: 10px;">
+        🏫 Campus-Integrated Learning | 🌍 Global Partnerships |
+        📜 Recognized Certifications | 🏢 25 Years Industry Legacy
+      </p>
+    </div>
+  </div>
+</footer>
+
 
     <!-- Floating CTA
     <a href="#cta" class="floating-cta">💬 Find Your CoE</a> -->
