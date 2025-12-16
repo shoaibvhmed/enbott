@@ -981,11 +981,130 @@
         .learn-more:hover {
             gap: 8px;
         }
+
+        .footer {
+  background: #0e0e0e;
+  color: #e5e5e5;
+  padding: 80px 40px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 80px;
+}
+
+/* Brand Section */
+.footer-brand .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
+
+.brand-desc {
+  margin: 28px 0 32px;
+  max-width: 420px;
+  line-height: 1.6;
+  color: #bdbdbd;
+}
+
+.brand-desc a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.buy-btn {
+  display: inline-block;
+  background: #f5f1ee;
+  color: #000;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Links */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.link-col h4 {
+  font-size: 14px;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.link-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-col li {
+  margin-bottom: 14px;
+}
+
+.link-col a {
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-col a:hover {
+  color: #fff;
+}
+
+.link-col .bold {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Bottom Divider */
+.footer-bottom {
+  margin-top: 60px;
+  border-top: 1px solid #222;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
     </style>
 </head>
 <body>
     <!-- Navigation -->
-<nav>
+    <nav>
         <div class="container">
             <div class="logo"><a href = "https://shoaibvhmed.github.io/enbott/home.html" target="_blank" ><img src="assets/logos/logo.png" alt="Enbott hero logo" width=120px height=50px align="centre"> </a></div>
             <div class="nav-links">
@@ -1137,61 +1256,66 @@
             </div>
 
             <div class="cta-buttons-final">
-                <a href="#" class="btn-large">🎓 Find Your Campus CoE</a>
-                <a href="#" class="btn-outline">📧 Download Program Details</a>
+                <a href="https://shoaibvhmed.github.io/enbott/contact.html" class="btn-large">🎓 Find Your Campus CoE</a>
+                <a href="https://cdn.prod.website-files.com/68784b0e995e11015d1d8c5d/694190c1460f0466388b10d8_Enbott%20Learning%20Division%20Services%20%20%20.pdf" class="btn-outline">📧 Download Program Details</a>
             </div>
 
             <p style="margin-top: 40px; opacity: 0.9;">Join 15,000+ students learning through Enbott Centers of Excellence</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- <div class="footer-section">
-                    <h4>Programs</h4>
-                    <ul>
-                        <li><a href="#programs">Competitive Programming</a></li>
-                        <li><a href="#programs">Communicative English</a></li>
-                        <li><a href="#programs">Centers of Excellence</a></li>
-                        <li><a href="#programs">International Learning</a></li>
-                    </ul>
-                </div> -->
-                <div class="footer-section">
-                    <h4>For Universities</h4>
-                    <ul>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">Partner With Us</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Setup a CoE</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/services.html#software">Faculty Development</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/client.html">Success Stories</a></li>
-                    </ul>
-                </div>
-                <!-- <div class="footer-section">
-                    <!-- <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Program Brochures</a></li>
-                        <li><a href="#">Sample Content</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div> -->
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">About Enbott</a></li>
-                        <li><a href="https://www.gt.technology/"  target="_blank">GT Technologies ↗</a></li>
-                        <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Contact Us</a></li>
-                        <!-- <li><a href="#">Careers</a></li> -->
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
-                <p style="margin-top: 10px;">🏫 Campus-Integrated Learning | 🌍 Global Partnerships | 📜 Recognized Certifications | 🏢 25 Years Industry Legacy</p>
-            </div>
+    <!-- footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content footer-grid-enhanced">
+
+      <!-- Brand / CTA section (NEW) -->
+      <div class="footer-section footer-brand">
+        <div class="brand-row">
+          <div><a href="https://shoaibvhmed.github.io/enbott/home.html"> <img src="assets/logos/enbott-bw.png" alt="Enbott footer logo" width=120px height=50px align="centre"></a></div>
         </div>
-    </footer>
+
+        <p class="footer-desc">
+          Campus-integrated, industry-aligned learning solutions built with
+          <strong>25+ years</strong> of enterprise expertise.
+        </p>
+
+        <a href="https://shoaibvhmed.github.io/enbott/contact.html" class="footer-cta" target="_blank">
+          Partner with Enbott
+        </a>
+    </div>
+
+      <!-- Existing sections -->
+      <div class="footer-section">
+        <h4>For Universities</h4>
+        <ul>
+          <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">Partner With Us</a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Setup a CoE</a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/services.html#software">Faculty Development</a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/client.html">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://shoaibvhmed.github.io/enbott/partners.html">About Enbott</a></li>
+          <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
+          <li><a href="https://shoaibvhmed.github.io/enbott/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
+      <p style="margin-top: 10px;">
+        🏫 Campus-Integrated Learning | 🌍 Global Partnerships |
+        📜 Recognized Certifications | 🏢 25 Years Industry Legacy
+      </p>
+    </div>
+  </div>
+</footer>
 
     <!-- Floating CTA
     <a href="#cta" class="floating-cta">💬 Find Your CoE</a> -->
