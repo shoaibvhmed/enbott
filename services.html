@@ -250,6 +250,73 @@
         .btn-outline:hover {
             background: rgba(255,255,255,0.1);
         }    
+      /* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #1e293b;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+/* Mobile Nav Panel */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: none;
+  flex-direction: column;
+  padding: 90px 20px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+
+.mobile-nav a {
+  padding: 14px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e293b;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+.mobile-cta {
+  background: linear-gradient(135deg, #0891b2, #3b82f6);
+  color: white !important;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Show mobile nav */
+.mobile-nav.active {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
     </style>
 </head>
 <body>
@@ -264,9 +331,25 @@
                 <a href="/clients">Client Stories</a>
                 <a href="/contact" class="nav-cta">Contact Us</a>
             </div>
+                  <!-- Mobile Menu Button -->
+<div class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
         </div>
+
     </nav>
 
+        <!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+<a href="/" onclick="toggleMenu()">Home</a>
+<a href="/services" onclick="toggleMenu()">Services</a>
+<a href="/partners" onclick="toggleMenu()">Partnerships</a>
+<a href="/clients" onclick="toggleMenu()">Client Stories</a>
+<a href="/contact" class="mobile-cta" onclick="toggleMenu()">Contact Us</a>
+</div>
+  
     <!-- Hero Section (Rewritten Content) -->
     <section class="services-hero">
         <div class="container">
