@@ -317,6 +317,23 @@ body.menu-open {
     display: flex;
   }
 }
+      .menu-toggle {
+  position: relative;
+  z-index: 10001;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
     </style>
 </head>
 <body>
@@ -660,8 +677,10 @@ body.menu-open {
   function toggleMenu() {
     document.getElementById("mobileNav").classList.toggle("active");
     document.body.classList.toggle("menu-open");
+    document.querySelector(".menu-toggle").classList.toggle("active");
   }
 </script>
+
 
     <!--a href="#cta" class="floating-cta">💬 Find Your CoE</a> -->
 </body>
