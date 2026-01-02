@@ -19,6 +19,23 @@
 .footer-grid-enhanced {
   grid-template-columns: 1.3fr 1fr 1fr;
 }
+.menu-toggle {
+  position: fixed;
+  top: 22px;
+  right: 20px;
+  z-index: 10001;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 
 /* Brand block */
 .footer-brand {
