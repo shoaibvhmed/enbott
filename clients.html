@@ -315,6 +315,67 @@
         .btn-outline:hover {
             background: rgba(255,255,255,0.1);
         }    
+      .gallery-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  font-family: system-ui, sans-serif;
+}
+
+.gallery-main {
+  position: relative;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+  background: #000;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-btn.left { left: 10px; }
+.nav-btn.right { right: 10px; }
+
+.gallery-thumbs {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 15px 0;
+}
+
+.gallery-thumbs img {
+  height: 90px;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.gallery-thumbs img:hover {
+  opacity: 1;
+}
+
+.gallery-thumbs img.active {
+  opacity: 1;
+  border-color: #0891b2; /* brand-friendly accent */
+}
+
     </style>
 </head>
 <body>
@@ -475,7 +536,7 @@
         </div>
     </section>
 
-        <!-- Elfsight Photo Gallery | Untitled Photo Gallery -->
+        <!-- Elfsight Photo Gallery | Untitled Photo Gallery
         <section class="reviews-section">
         <div class="container">
             <div class="section-header">
@@ -484,7 +545,65 @@
             <div class="elfsight-app-2ae40dcb-1658-4764-859a-c792fe60cc09" data-elfsight-app-lazy></div> 
             </div>
         </div>
-    </section>
+    </section> -->
+
+  <script>
+  const images = [
+    "images/gallery/i1.jpg",
+    "images/img2.jpg",
+    "images/img3.jpg",
+    "images/img4.jpg",
+    "images/img5.jpg"
+  ];
+
+  let currentIndex = 0;
+  const mainImage = document.getElementById("mainImage");
+  const thumbs = document.querySelectorAll(".gallery-thumbs img");
+
+  function setImage(index) {
+    currentIndex = index;
+    mainImage.src = images[index];
+    updateActiveThumb();
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    mainImage.src = images[currentIndex];
+    updateActiveThumb();
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    mainImage.src = images[currentIndex];
+    updateActiveThumb();
+  }
+
+  function updateActiveThumb() {
+    thumbs.forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === currentIndex);
+    });
+  }
+</script>
+
+  <div class="gallery-container">
+  <!-- Main Image -->
+  <div class="gallery-main">
+    <button class="nav-btn left" onclick="prevImage()">&#10094;</button>
+    <img id="mainImage" src="images/img1.jpg" alt="Gallery Image">
+    <button class="nav-btn right" onclick="nextImage()">&#10095;</button>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="gallery-thumbs" id="thumbnails">
+    <img src="images/img1.jpg" onclick="setImage(0)" class="active">
+    <img src="images/img2.jpg" onclick="setImage(1)">
+    <img src="images/img3.jpg" onclick="setImage(2)">
+    <img src="images/img4.jpg" onclick="setImage(3)">
+    <img src="images/img5.jpg" onclick="setImage(4)">
+  </div>
+</div>
+
+
 
     
   <!-- Final CTA Section -->
