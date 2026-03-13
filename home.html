@@ -85,7 +85,44 @@
         .nav-cta:hover {
             transform: translateY(-2px);
         }
+/* Dropdown */
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 10px 0;
+  display: none;
+  min-width: 240px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #f1f5f9;
+  color: #0891b2;
+}
+
+/* Show dropdown on hover */
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
       /* Mobile Menu Button */
 .menu-toggle {
   display: none;
@@ -965,7 +1002,18 @@ body.menu-open {
             <div class="logo"><a href = "/"><img src="assets/logos/logo.png" alt="Enbott hero logo" width=120px height=50px align="centre"> </a></div>
             <div class="nav-links">
                 <a href="/">Home</a>
-                <a href="/services">Services</a>
+                <div class="dropdown">
+  <a href="/services">Services ▾</a>
+
+  <div class="dropdown-menu">
+    <a href="/services#technical-training">Technical Competency Training</a>
+    <a href="/services#coe">Center of Excellence</a>
+    <a href="/services#placement-readiness">Placement Readiness</a>
+    <a href="/services#internships">Internship Programs</a>
+    <a href="/services#global-immersion">Global Immersion</a>
+    <a href="/services#faculty-development">Faculty Development</a>
+  </div>
+</div>
                 <a href="/partners">Partnerships</a>
                 <a href="/clients">Client Stories</a>
                 <a href="/contact" class="nav-cta">Contact Us</a>
@@ -983,7 +1031,13 @@ body.menu-open {
         <!-- Mobile Navigation -->
 <div class="mobile-nav" id="mobileNav">
 <a href="/" onclick="toggleMenu()">Home</a>
-<a href="/services" onclick="toggleMenu()">Services</a>
+<a href="/services">Services</a>
+<a href="/services#technical-training">— Technical Training</a>
+<a href="/services#coe">— Center of Excellence</a>
+<a href="/services#placement-readiness">— Placement Readiness</a>
+<a href="/services#internships">— Internships</a>
+<a href="/services#global-immersion">— Global Immersion</a>
+<a href="/services#faculty-development">— Faculty Development</a>
 <a href="/partners" onclick="toggleMenu()">Partnerships</a>
 <a href="/clients" onclick="toggleMenu()">Client Stories</a>
 <a href="/contact" class="mobile-cta" onclick="toggleMenu()">Contact Us</a>
