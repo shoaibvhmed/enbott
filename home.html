@@ -1057,7 +1057,51 @@ body.menu-open {
 <a href="/clients" onclick="toggleMenu()">Client Stories</a>
 <a href="/contact" class="mobile-cta" onclick="toggleMenu()">Contact Us</a>
 </div>
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">×</span>
 
+    <iframe
+      id="JotFormIFrame-260850341409049"
+      title="Launch your career in AR/VR with Enbott"
+      onload="window.parent.scrollTo(0,0)"
+      allow="geolocation; microphone; camera; fullscreen; payment"
+      src="https://form.jotform.com/260850341409049"
+      scrolling="no">
+    </iframe>
+
+  </div>
+</div>
+
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+<script>
+  window.jotformEmbedHandler(
+    "iframe[id='JotFormIFrame-260850341409049']",
+    "https://form.jotform.com/"
+  );
+
+  const popup = document.getElementById("popup");
+
+  function openPopup() {
+    popup.style.display = "flex";
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+
+  // Auto show every 45 seconds
+  setInterval(() => {
+    openPopup();
+  }, 45000);
+
+  // Optional: show first time after delay
+  setTimeout(() => {
+    openPopup();
+  }, 5000);
+</script>
+  
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
