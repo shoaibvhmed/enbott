@@ -391,24 +391,45 @@ body.menu-open {
 </head>
 <body>
 <!-- Navigation -->
-<div class="nav-links">
-  <a href="/">Home</a>
+<nav>
+  <div class="container">
 
-  <div class="dropdown">
-    <a href="/services">Services ▾</a>
-    <div class="dropdown-menu">
-      <a href="#it-consulting">IT Training</a>
-      <a href="#competitivepg">Competitive Programming</a>
-      <a href="#english">Communicative English</a>
-      <a href="#iic">Industry Integrated Certification (IIC)</a>
-      <a href="#intl">Global Programs</a>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">
+        <img src="assets/logos/logo.png" alt="Enbott logo" width="120" height="50">
+      </a>
     </div>
-  </div>
 
-  <a href="/partners">Partnerships</a>
-  <a href="/clients">Client Stories</a>
-  <a href="/contact" class="nav-cta">Contact Us</a>
-</div>
+    <!-- Desktop Nav -->
+    <div class="nav-links">
+      <a href="/">Home</a>
+
+      <div class="dropdown">
+        <a href="/services">Services ▾</a>
+        <div class="dropdown-menu">
+          <a href="#it-consulting">IT Training</a>
+          <a href="#competitivepg">Competitive Programming</a>
+          <a href="#english">Communicative English</a>
+          <a href="#iic">Industry Integrated Certification (IIC)</a>
+          <a href="#intl">Global Programs</a>
+        </div>
+      </div>
+
+      <a href="/partners">Partnerships</a>
+      <a href="/clients">Client Stories</a>
+      <a href="/contact" class="nav-cta">Contact Us</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</nav>
 
         <!-- Mobile Navigation -->
 <div class="mobile-nav" id="mobileNav">
