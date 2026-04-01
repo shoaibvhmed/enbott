@@ -34,6 +34,27 @@
   background: #ffffff;
 }
 
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+.nav-btn:hover {
+  background: #f1f5f9;
+}
+
+
+.nav-btn.left { left: 10px; }
+.nav-btn.right { right: 10px; }
+
 .gallery-thumbs {
   display: flex;
   gap: 12px;
