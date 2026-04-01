@@ -1837,6 +1837,71 @@ body.menu-open {
   }
 </script>
 
+  <script>
+  const images = [
+    "assets/images/gallery/i1 (10).jpeg",
+    "assets/images/gallery/i1 (25).jpeg",
+    "assets/images/gallery/i1 (26).jpeg",
+    "assets/images/gallery/i1 (27).jpeg",
+    "assets/images/gallery/i1 (28).jpeg",
+    "assets/images/gallery/i1 (29).jpeg",
+    "assets/images/gallery/i1 (30).jpeg",
+    "assets/images/gallery/i1 (31).jpeg",
+    "assets/images/gallery/i1 (32).jpeg",
+    "assets/images/gallery/i1 (33).jpeg",
+    "assets/images/gallery/i1 (34).jpeg",
+    "assets/images/gallery/i1 (35).jpeg",
+    "assets/images/gallery/i1 (36).jpeg",
+    "assets/images/gallery/i1 (37).jpeg",
+    "assets/images/gallery/i1 (3).jpeg",
+    "assets/images/gallery/i1 (2).jpeg",
+    "assets/images/gallery/i1 (4).jpeg",
+    "assets/images/gallery/i1 (5).jpeg",
+    "assets/images/gallery/i1 (6).jpeg",
+    "assets/images/gallery/i1 (7).jpeg",
+    "assets/images/gallery/i1 (8).jpeg",
+    "assets/images/gallery/i1 (9).jpeg",
+    "assets/images/gallery/i1 (1).jpeg",
+    "assets/images/gallery/i1 (11).jpeg",
+    "assets/images/gallery/i1 (12).jpeg",
+    "assets/images/gallery/i1 (13).jpeg",
+    "assets/images/gallery/i1 (14).jpeg",
+    "assets/images/gallery/i1 (15).jpeg",
+    "assets/images/gallery/i1 (16).jpeg",
+    "assets/images/gallery/i1 (17).jpeg",
+    "assets/images/gallery/i1 (18).jpeg",
+    "assets/images/gallery/i1 (19).jpeg",
+    "assets/images/gallery/i1 (20).jpeg",
+    "assets/images/gallery/i1 (21).jpeg",
+    "assets/images/gallery/i1 (22).jpeg",
+    "assets/images/gallery/i1 (23).jpeg",
+    "assets/images/gallery/i1 (24).jpeg"
+  ];
+
+  let currentIndex = 0;
+
+  const mainImage = document.getElementById("mainImage");
+  const thumbnails = document.querySelectorAll("#thumbnails img");
+
+  function setImage(index) {
+    currentIndex = index;
+    mainImage.src = images[index];
+
+    thumbnails.forEach(img => img.classList.remove("active"));
+    thumbnails[index].classList.add("active");
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    setImage(currentIndex);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    setImage(currentIndex);
+  }
+</script>
+
 
 
 </body>
