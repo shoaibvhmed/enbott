@@ -1238,30 +1238,6 @@ body.menu-open {
 <a href="/clients" onclick="toggleMenu()">Client Stories</a>
 <a href="/contact" class="mobile-cta" onclick="toggleMenu()">Contact Us</a>
 </div>
-<div class="popup-overlay" id="popup">
-  <div class="popup-box two-col">
-
-    <span class="close-btn" onclick="closePopup()">×</span>
-
-    <!-- LEFT: Image -->
-    <div class="popup-left">
-      <img src="https://images.unsplash.com/photo-1581090700227-1e8d7a3c0c6f?q=80&w=800" alt="Career Growth">
-    </div>
-
-    <!-- RIGHT: Form -->
-    <div class="popup-right">
-      <iframe
-        id="JotFormIFrame-260850341409049"
-        title="Launch your career in AR/VR with Enbott"
-        onload="window.parent.scrollTo(0,0)"
-        allow="geolocation; microphone; camera; fullscreen; payment"
-        src="https://form.jotform.com/260850341409049"
-        scrolling="no">
-      </iframe>
-    </div>
-
-  </div>
-</div>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -1900,6 +1876,22 @@ body.menu-open {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     setImage(currentIndex);
   }
+  
+  @media(max-width: 768px){
+  .popup-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .popup-left {
+    height: 180px;
+    width: 100%;
+  }
+
+  .popup-right iframe {
+    height: 400px;
+  }
+}
 </script>
 
 <!-- ===== POPUP OVERLAY ===== -->
@@ -1925,7 +1917,7 @@ body.menu-open {
       allow="geolocation; microphone; camera; fullscreen; payment"
       src="https://form.jotform.com/260913275706459"
       frameborder="0"
-      style="min-width:100%;max-width:100%;height:539px;border:none;"
+      style="width:100%;height:420px;border:none;"
       scrolling="no"
     >
     </iframe>
@@ -1957,34 +1949,45 @@ body.menu-open {
   z-index: 9999;
 }
 
-/* ===== POPUP BOX ===== */
+/* ===== POPUP BOX (FIXED) ===== */
 .popup-container {
-  width: 800px;
-  max-width: 95%;
+  width: 650px;              /* reduced width */
+  max-width: 90%;
+  max-height: 90vh;          /* prevents overflow */
   background: #fff;
   display: flex;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  animation: fadeIn 0.3s ease;
 }
 
-/* ===== LEFT IMAGE ===== */
+/* LEFT IMAGE */
 .popup-left {
   width: 45%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .popup-left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* IMPORTANT FIX */
 }
 
-/* ===== RIGHT FORM ===== */
+/* RIGHT FORM */
 .popup-right {
   width: 55%;
-  padding: 20px;
-  background: #fff;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* FIX IFRAME SIZE */
+.popup-right iframe {
+  width: 100%;
+  height: 420px;   /* reduced height */
+  border: none;
 }
 
 /* ===== CLOSE BUTTON ===== */
