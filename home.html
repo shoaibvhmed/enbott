@@ -1894,6 +1894,1902 @@ body.menu-open {
 }
 </script>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Enbott – Campus-Integrated Career Readiness & Technology Solutions</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Enbott bridges academia and industry through campus-integrated career readiness programs, technology training, and industry-aligned solutions for institutions and enterprises.">
+  <meta name="keywords" content="Enbott, career readiness, campus hiring, industry-integrated learning, technology training, employability solutions">
+  <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <style>
+      .gallery-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  font-family: system-ui, sans-serif;
+}
+
+.gallery-main {
+  position: relative;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  font-size: 24px;
+  padding: 12px 16px;
+  cursor: pointer;
+  z-index: 10;
+}
+.nav-btn:hover {
+  background: #f1f5f9;
+}
+
+
+.nav-btn.left { left: 10px; }
+.nav-btn.right { right: 10px; }
+
+.gallery-thumbs {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 15px 0;
+}
+
+.gallery-thumbs img {
+  height: 90px;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.gallery-thumbs img:hover {
+  opacity: 1;
+}
+
+.gallery-thumbs img.active {
+  opacity: 1;
+  border-color: #0891b2; /* brand-friendly accent */
+}
+      /* POPUP LAYOUT */
+      /* Overlay */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Popup Box */
+  .popup-box {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  iframe {
+    width: 100%;
+    height: 550px;
+    border: none;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+.popup-box.two-col {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  height: 550px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* LEFT IMAGE */
+.popup-left {
+  width: 45%;
+  background: #000;
+}
+
+.popup-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT FORM */
+.popup-right {
+  width: 55%;
+}
+
+.popup-right iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .popup-box.two-col {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .popup-left {
+    width: 100%;
+    height: 180px;
+  }
+
+  .popup-right {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0891b2;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+        }
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.dropdown > a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.dropdown > a:hover {
+  color: #0891b2;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 10px 0;
+  display: none;
+  min-width: 240px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background: #f1f5f9;
+  color: #0891b2;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Show dropdown on hover */
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+      /* Mobile Menu Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #1e293b;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+/* Mobile Nav Panel */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: none;
+  flex-direction: column;
+  padding: 90px 20px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+
+.mobile-nav a {
+  padding: 14px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e293b;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+.mobile-cta {
+  background: linear-gradient(135deg, #0891b2, #3b82f6);
+  color: white !important;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Show mobile nav */
+.mobile-nav.active {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+            color: white;
+            padding: 90px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            animation: fadeInUp 0.8s;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s 0.2s backwards;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s 0.4s backwards;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0891b2;
+            padding: 16px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 16px 35px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .trust-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 45px;
+            animation: fadeInUp 0.8s 0.6s backwards;
+        }
+
+        .trust-item {
+            text-align: center;
+            font-size: 13px;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .trust-item strong {
+            display: block;
+            font-size: 17px;
+            margin-bottom: 3px;
+        }
+
+        /* Partnership Strip */
+        .partnership-strip {
+            background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+            padding: 35px 0;
+            text-align: center;
+            border-bottom: 2px solid #0891b2;
+        }
+
+        .partnership-strip p {
+            font-size: 15px;
+            color: #0c4a6e;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo {
+            background: white;
+            padding: 18px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-weight: 700;
+            color: #0c4a6e;
+            font-size: 17px;
+            transition: transform 0.3s;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner-logo.codechef {
+            background: linear-gradient(135deg, #a17845 0%, #8B4513 100%);
+            color: white;
+        }
+
+        .partner-logo.pearson {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .partner-logo.gt {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #0c4a6e;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .section-header h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            background: #f8fafc;
+            padding: 28px;
+            border-radius: 15px;
+            border-left: 4px solid #0891b2;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .reviewer-info h4 {
+            font-size: 15px;
+            margin-bottom: 3px;
+            color: #1e293b;
+        }
+
+        .reviewer-info p {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: #f8fafc;
+        }
+
+        .problem-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 17px;
+            color: #475569;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 45px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .problem-card h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .problem-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .transition-text {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 35px;
+        }
+
+        /* Programs Section - Four Pillars */
+        .programs-section {
+            background: white;
+        }
+
+        .programs-grid {
+            display: grid;
+            gap: 35px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .program-header {
+            padding: 35px;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .program-header.codechef {
+            background: linear-gradient(135deg, #a17845 0%, #8B4513 100%);
+        }
+
+        .program-header.pearson {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .program-header.iic {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .program-header.international {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .program-icon {
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .program-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .program-subtitle {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .program-content {
+            padding: 35px;
+        }
+
+        .program-content h4 {
+            font-size: 20px;
+            margin: 20px 0 12px 0;
+            color: #1e293b;
+        }
+
+        .program-content p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 18px 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .feature-list li strong {
+            color: #1e293b;
+        }
+
+        .program-outcome {
+            background: #f0f9ff;
+            padding: 18px;
+            border-radius: 10px;
+            border-left: 4px solid #0891b2;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .program-outcome strong {
+            color: #0c4a6e;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .stats-highlight {
+            background: #ecfeff;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 18px 0;
+            border: 2px solid #06b6d4;
+        }
+
+        .stats-highlight strong {
+            color: #0891b2;
+            font-size: 16px;
+        }
+
+        /* Metrics Section */
+        .metrics-section {
+            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .metric-number {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 16px;
+            opacity: 0.95;
+            display: block;
+        }
+
+        .metric-sublabel {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #f8fafc;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: #0891b2;
+        }
+
+        .faq-question {
+            padding: 22px 28px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+            color: #1e293b;
+        }
+
+        .faq-question:hover {
+            background: #e0f2fe;
+        }
+
+        .faq-answer {
+            padding: 0 28px 22px;
+            color: #64748b;
+            line-height: 1.7;
+            display: none;
+            font-size: 14px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 22px;
+            transition: transform 0.3s;
+            color: #0891b2;
+            font-weight: bold;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .emotional-text {
+            font-size: 18px;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .benefit-item {
+            background: rgba(255,255,255,0.05);
+            padding: 16px 22px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 4px solid #10b981;
+            font-size: 15px;
+        }
+
+        .cta-buttons-final {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .btn-large {
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(8, 145, 178, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 18px 45px;
+            border: 2px solid white;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 50px 0 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+
+        .footer-section h4 {
+            font-size: 17px;
+            margin-bottom: 18px;
+            color: #0891b2;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 13px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(8, 145, 178, 0.4);
+            text-decoration: none;
+            font-weight: 700;
+            z-index: 99;
+            animation: float 3s ease-in-out infinite;
+            font-size: 15px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 34px; }
+            .hero-subtitle { font-size: 17px; }
+            .section-header h2 { font-size: 30px; }
+            .program-title { font-size: 24px; }
+            .final-cta h2 { font-size: 34px; }
+        }
+
+        @media (max-width: 640px) {
+            .cta-buttons, .cta-buttons-final { flex-direction: column; align-items: stretch; }
+            .btn-primary, .btn-secondary, .btn-large, .btn-outline { text-align: center; }
+            .floating-cta { right: 18px; bottom: 18px; padding: 14px 24px; font-size: 13px; }
+        }
+
+        /* Enhanced footer layout */
+.footer-grid-enhanced {
+  grid-template-columns: 1.3fr 1fr 1fr;
+}
+
+/* Brand block */
+.footer-brand {
+  max-width: 420px;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 26px;
+}
+
+/* CTA button (Muza-inspired, Enbott-colored) */
+.footer-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #0891b2, #3b82f6);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(8,145,178,0.35);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-grid-enhanced {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    margin-bottom: 25px;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo"><a href = "/"><img src="assets/logos/logo.png" alt="Enbott hero logo" width=120px height=50px align="centre"> </a></div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <div class="dropdown">
+  <a href="/services">Services ▾</a>
+
+  <div class="dropdown-menu">
+    <a href="/services#technical-training">Coding Competency Training</a>
+    <a href="/services#iic">Industry Integrated Certification (IIC) by EI Labs </a>
+    <a href="/services#placement-readiness">Placement Readiness</a>
+    <a href="/services#internships">Internship Programs</a>
+    <a href="/services#global-immersion">Global Immersion</a>
+    <a href="/services#faculty-development">Faculty Development</a>
+  </div>
+</div>
+                <a href="/partners">Partnerships</a>
+                <a href="/clients">Client Stories</a>
+                <a href="/contact" class="nav-cta">Contact Us</a>
+            </div>
+                  <!-- Mobile Menu Button -->
+<div class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+        </div>
+
+    </nav>
+
+        <!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+<a href="/" onclick="toggleMenu()">Home</a>
+<a href="/services">Services</a>
+<a href="/services#technical-training">— Technical Training</a>
+<a href="/services#iic">Industry Integrated Certification (IIC)</a>
+<a href="/services#placement-readiness">— Placement Readiness</a>
+<a href="/services#internships">— Internships</a>
+<a href="/services#global-immersion">— Global Immersion</a>
+<a href="/services#faculty-development">— Faculty Development</a>
+<a href="/partners" onclick="toggleMenu()">Partnerships</a>
+<a href="/clients" onclick="toggleMenu()">Client Stories</a>
+<a href="/contact" class="mobile-cta" onclick="toggleMenu()">Contact Us</a>
+</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Campus Learning Into Career Success</h1>
+                <p class="hero-subtitle">Industry-ready skills through global partnerships. Master competitive programming with CodeChef, enhance communication with Pearson, and access international learning opportunities—all through your university’s Industry Integrated Certification (IIC) program</p>
+                <div class="cta-buttons">
+                    <a href="#programs" class="btn-primary">Explore Our Programs →</a>
+                    <a href="#cta" class="btn-secondary">Explore IIC Program</a>
+                </div>
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <strong>15,000+</strong>
+                        Live University Learners
+                    </div>
+                    <div class="trust-item">
+                        <strong>CodeChef</strong>
+                        Partnership
+                    </div>
+                    <div class="trust-item">
+                        <strong>Pearson</strong>
+                        Collaboration
+                    </div>
+                    <div class="trust-item">
+                        <strong>International</strong>
+                        Exchange Programs
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Strip -->
+    <section class="partnership-strip">
+        <div class="container">
+            <p>Empowering students through global partnerships and Industry Integrated Certification (IIC) programs</p>
+            <div class="partner-logos">
+                <div class="partner-logo codechef">CodeChef</div>
+                <div class="partner-logo pearson">Pearson</div>
+                <div class="partner-logo gt">GT Technologies</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">STUDENT SUCCESS</span>
+                <h2>Student Success Stories</h2>
+                <p>Real students, real results from our campus programs</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">K</div>
+                        <div class="reviewer-info">
+                            <h4>Karthik R.</h4>
+                            <p>B.Tech Student</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The CodeChef competitive programming platform gave me global ranking and helped me secure a 10 LPA package. The weekly hackathons kept me consistently improving!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">P</div>
+                        <div class="reviewer-info">
+                            <h4>Priya M.</h4>
+                            <p>MBA Student</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Pearson's communication modules with AI-enabled speaking practice transformed my confidence. The role-plays and simulations made learning practical and engaging."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">A</div>
+                        <div class="reviewer-info">
+                            <h4>Akash V.</h4>
+                            <p>Engineering Graduate</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Learning through the IIC program was so convenient. Industry-backed certifications, hands-on training, and direct placement opportunities—all within our academic journey.. Industry-backed certifications, hands-on training, and direct placement opportunities—all without leaving campus."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">THE CHALLENGE</span>
+                <h2>The Skills Gap Challenge</h2>
+            </div>
+            <p class="problem-intro">Academic qualifications alone aren't enough. Employers seek specific, demonstrable skills. Here's what most students lack:</p>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">💻</div>
+                    <h3>Theoretical Coding vs. Competitive Programming</h3>
+                    <p>You learn to code, but can you solve complex problems under time constraints? Can you compete globally? Most academic curricula don't include competitive programming.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🗣️</div>
+                    <h3>Academic English vs. Professional Communication</h3>
+                    <p>Scoring well in English exams doesn't mean you can present to stakeholders or write professional emails. Industry-specific communication skills are rarely taught.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🏫</div>
+                    <h3>Campus Limitations vs. Industry Standards</h3>
+                    <p>Most universities lack access to industry-standard platforms, certifications, and hands-on training environments that employers expect.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🌍</div>
+                    <h3>Local Experience vs. Global Perspective</h3>
+                    <p>Cross-cultural understanding and international exposure are invaluable in today's world. But few students get meaningful global learning experiences.</p>
+                </div>
+            </div>
+            <p class="transition-text">What if your campus could bridge all these gaps?</p>
+        </div>
+    </section>
+
+    <!-- Programs Section - Four Pillars -->
+    <section class="programs-section" id="programs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">OUR PROGRAMS</span>
+                <h2>Four Pathways to Career Excellence</h2>
+                <p>Comprehensive programs designed to make you industry-ready</p>
+            </div>
+            <div class="programs-grid">
+                <!-- Program 1: CodeChef -->
+                <div class="program-card">
+                    <div class="program-header codechef">
+                        <div class="program-icon">💻</div>
+                        <div class="program-title">Competitive Programming</div>
+                        <div class="program-subtitle">Partnership with CodeChef</div>
+                    </div>
+                    <div class="program-content">
+                        <p>Master competitive programming with global recognition and ranking through CodeChef's industry-standard platform.</p>
+                        
+                        <div class="stats-highlight">
+                            <strong>600,000+</strong> new users yearly | <strong>15,000+</strong> live university learners | <strong>35+</strong> languages supported
+                        </div>
+
+                        <h4>Platform Features:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Online IDE:</strong> No extra software installation needed</li>
+                            <li><strong>Plagiarism Prevention:</strong> Tab control, code similarity check, copy-paste blocker</li>
+                            <li><strong>Global Accessibility:</strong> Programming content in 35+ languages</li>
+                            <li><strong>Unified Dashboards:</strong> Efficient learning management and progress tracking</li>
+                        </ul>
+
+                        <h4>Competitive Opportunities:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Weekly Global Hackathons</strong> with live ranking</li>
+                            <li><strong>Global Certifications</strong> recognized by employers</li>
+                            <li>Build competitive programming portfolio</li>
+                            <li>Performance-based skill validation</li>
+                        </ul>
+
+                        <div class="program-outcome">
+                            <strong>Career Impact:</strong>
+                            Improved placement outcomes with 6-12 LPA job opportunities. Global rankings that validate your problem-solving abilities to top tech companies.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 2: Pearson -->
+                <div class="program-card">
+                    <div class="program-header pearson">
+                        <div class="program-icon">🗣️</div>
+                        <div class="program-title">Communicative English</div>
+                        <div class="program-subtitle">Partnership with Pearson</div>
+                    </div>
+                    <div class="program-content">
+                        <p>Enhance your professional communication with globally recognized Pearson training aligned to international standards.</p>
+                        
+                        <div class="stats-highlight">
+                            <strong>10 Levels</strong> | <strong>100</strong> theme-based modules | <strong>300+</strong> hours | <strong>800+</strong> skill tasks
+                        </div>
+
+                        <h4>Comprehensive Learning:</h4>
+                        <ul class="feature-list">
+                            <li><strong>10 proficiency levels</strong> from beginner to advanced</li>
+                            <li><strong>100 theme-based modules</strong> for structured learning</li>
+                            <li><strong>300+ hours of learning content</strong></li>
+                            <li><strong>800+ skill-based tasks</strong> for practical application</li>
+                        </ul>
+
+                        <h4>Interactive Features:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Role-plays and simulations</strong> for real-world scenarios</li>
+                            <li><strong>Illustrated themes</strong> for practical and visual learning</li>
+                            <li><strong>AI-enabled speaking practice</strong> with instant feedback</li>
+                            <li><strong>Adaptive learning</strong> mapped to your proficiency level</li>
+                        </ul>
+
+                        <h4>Global Recognition:</h4>
+                        <ul class="feature-list">
+                            <li>Aligned with <strong>Global Scale of English (GSE)</strong></li>
+                            <li>Mapped to <strong>CEFR levels</strong> (international framework)</li>
+                            <li><strong>Recognized certificates</strong> for employability</li>
+                            <li><strong>Digital badges</strong> for verified skills</li>
+                            <li><strong>Industry-specific content</strong> for job readiness</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 3: CoE -->
+                <div class="program-card">
+                    <div class="program-header iic">
+                        <div class="program-icon">🏫</div>
+                        <div class="program-title">Industry Integrated Certification (IIC)</div>
+                        <div class="program-subtitle">Career-Focused Industry-Integrated Program</div>
+                    </div>
+                    <div class="program-content">
+                        <p>Industry Integrated Certification (IIC) is a career-focused academic enhancement program designed to bridge the gap between classroom learning and real-world industry expectations.</p>
+
+<h4>Program Highlights:</h4>
+<ul class="feature-list">
+  <li><strong>Industry-designed curriculum:</strong> Built with leading technology partners</li>
+  <li><strong>Hands-on practical learning:</strong> Real-world application of skills</li>
+  <li><strong>Live projects & case studies:</strong> Industry-relevant experience</li>
+  <li><strong>Industry mentorship:</strong> Guidance from professionals</li>
+  <li><strong>Continuous assessment:</strong> Ongoing feedback and skill tracking</li>
+</ul>
+
+<h4>Career Enablement:</h4>
+<ul class="feature-list">
+  <li><strong>Internship & career guidance support</strong></li>
+  <li><strong>Co-branded certifications</strong> with industry partners</li>
+  <li><strong>Alignment with market demand</strong></li>
+  <li><strong>Future-ready skill development</strong></li>
+</ul>
+
+<h4>Course Domains:</h4>
+<ul class="feature-list">
+  <li>AI/ML, Data Science, Data Analytics</li>
+  <li>Cloud Computing & DevOps</li>
+  <li>Cybersecurity</li>
+  <li>Full Stack Development</li>
+  <li>UI/UX, AR/VR</li>
+  <li>Digital Marketing & FinTech</li>
+</ul>
+
+<div class="program-outcome">
+  <strong>Program Impact:</strong>
+  Empowers students with practical skills, industry exposure, and certifications that directly enhance employability and career readiness.
+</div>
+                    </div>
+                </div>
+
+                <!-- Program 4: International -->
+                <div class="program-card">
+                    <div class="program-header international">
+                        <div class="program-icon">✈️</div>
+                        <div class="program-title">International Learning</div>
+                        <div class="program-subtitle">Collaboration & Exchange Network</div>
+                    </div>
+                    <div class="program-content">
+                        <p>Comprehensive learning experiences blending academic innovation, cross-cultural understanding, and real-world industry insights.</p>
+
+                        <h4>What This Offers:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Comprehensive Experience:</strong> Academic innovation + practical application</li>
+                            <li><strong>Cross-Cultural Understanding:</strong> Immersive global exposure</li>
+                            <li><strong>Real-World Industry Insights:</strong> From international markets</li>
+                            <li><strong>Holistic Development:</strong> Beyond just technical skills</li>
+                        </ul>
+
+                        <h4>Transformation Journey:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Knowledge to Expertise:</strong> Forge tangible, real-world capabilities</li>
+                            <li><strong>Cross-Cultural Fluency:</strong> Cultivate profound global understanding</li>
+                            <li><strong>Cutting-Edge Skills:</strong> Perspectives that inspire innovation</li>
+                            <li><strong>Future-Ready:</strong> Prepare for globalized career opportunities</li>
+                        </ul>
+
+                        <h4>Program Components:</h4>
+                        <ul class="feature-list">
+                            <li>Student exchange programs with international institutions</li>
+                            <li>International corporate exposure through GT Technologies network</li>
+                            <li>Understanding global business practices</li>
+                            <li>Professional networking across borders</li>
+                            <li>Cultural immersion and adaptability training</li>
+                        </ul>
+
+                        <div class="program-outcome">
+                            <strong>Selection:</strong>
+                            Performance-based for high-achieving students from participating CoEs. Merit-driven opportunities with faculty recommendations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Elfsight Photo Gallery | Untitled Photo Gallery
+        <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">ENBOTT IN ACTION</span>
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-2ae40dcb-1658-4764-859a-c792fe60cc09" data-elfsight-app-lazy></div> 
+            </div>
+        </div>
+    </section> -->
+
+   <section class = "gallery-selection">
+    <div class="gallery-container">
+  <!-- Main Image -->
+  <div class="gallery-main">
+    <button class="nav-btn left" onclick="prevImage()">&#10094;</button>
+    <img id="mainImage" src="assets/images/gallery/i1 (10).jpeg" alt="Gallery Image">
+    <button class="nav-btn right" onclick="nextImage()">&#10095;</button>
+  </div>
+  <!-- Thumbnails -->
+  <div class="gallery-thumbs" id="thumbnails">
+    <img src="assets/images/gallery/i1 (10).jpeg" onclick="setImage(0)" class="active">
+    <img src="assets/images/gallery/i1 (25).jpeg" onclick="setImage(1)">
+    <img src="assets/images/gallery/i1 (26).jpg" onclick="setImage(2)">
+    <img src="assets/images/gallery/i1 (27).jpeg" onclick="setImage(3)">
+    <img src="assets/images/gallery/i1 (28).jpeg" onclick="setImage(4)">
+    <img src="assets/images/gallery/i1 (29).jpeg" onclick="setImage(5)">
+    <img src="assets/images/gallery/i1 (30).jpeg" onclick="setImage(6)">
+    <img src="assets/images/gallery/i1 (31).jpeg" onclick="setImage(7)">
+    <img src="assets/images/gallery/i1 (32).jpeg" onclick="setImage(8)">
+    <img src="assets/images/gallery/i1 (33).jpeg" onclick="setImage(9)">
+    <img src="assets/images/gallery/i1 (34).jpeg" onclick="setImage(10)">
+    <img src="assets/images/gallery/i1 (35).png" onclick="setImage(11)">
+    <img src="assets/images/gallery/i1 (36).png" onclick="setImage(12)">
+    <img src="assets/images/gallery/i1 (37).png" onclick="setImage(13)">
+    <img src="assets/images/gallery/i1 (3).jpeg" onclick="setImage(14)">
+    <img src="assets/images/gallery/i1 (2).jpeg" onclick="setImage(15)">
+    <img src="assets/images/gallery/i1 (4).jpeg" onclick="setImage(16)">
+    <img src="assets/images/gallery/i1 (5).jpeg" onclick="setImage(17)">
+    <img src="assets/images/gallery/i1 (6).jpeg" onclick="setImage(18)">
+    <img src="assets/images/gallery/i1 (7).jpeg" onclick="setImage(19)">
+    <img src="assets/images/gallery/i1 (8).jpeg" onclick="setImage(20)">
+    <img src="assets/images/gallery/i1 (9).jpeg" onclick="setImage(21)">
+    <img src="assets/images/gallery/i1 (1).jpeg" onclick="setImage(22)">
+    <img src="assets/images/gallery/i1 (11).jpeg" onclick="setImage(23)">
+    <img src="assets/images/gallery/i1 (12).jpeg" onclick="setImage(24)">
+    <img src="assets/images/gallery/i1 (13).jpeg" onclick="setImage(25)">
+    <img src="assets/images/gallery/i1 (14).jpeg" onclick="setImage(26)">
+    <img src="assets/images/gallery/i1 (15).jpeg" onclick="setImage(27)">
+    <img src="assets/images/gallery/i1 (16).jpeg" onclick="setImage(28)">
+    <img src="assets/images/gallery/i1 (17).jpeg" onclick="setImage(29)">
+    <img src="assets/images/gallery/i1 (18).jpeg" onclick="setImage(30)">
+    <img src="assets/images/gallery/i1 (19).jpeg" onclick="setImage(31)">
+    <img src="assets/images/gallery/i1 (20).jpeg" onclick="setImage(32)">
+    <img src="assets/images/gallery/i1 (21).jpeg" onclick="setImage(33)">
+    <img src="assets/images/gallery/i1 (22).jpeg" onclick="setImage(34)">
+    <img src="assets/images/gallery/i1 (23).jpeg" onclick="setImage(35)">
+    <img src="assets/images/gallery/i1 (24).jpeg" onclick="setImage(36)">
+  </div>
+</div>
+  </section>
+
+    <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-ac488602-6348-4ecd-8d0e-c519f21d14c2" data-elfsight-app-lazy></div> -->
+
+    <!-- Metrics Section -->
+    <section class="metrics-section" id="metrics">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">OUR IMPACT</span>
+                <h2 style="color: white;">Our Impact in Numbers</h2>
+                <p style="color: rgba(255,255,255,0.9);">Measurable outcomes that demonstrate real value</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-number">15,000+</span>
+                    <span class="metric-label">Live University Learners</span>
+                    <span class="metric-sublabel">Currently active on platforms</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">6 Lakh+</span>
+                    <span class="metric-label">New Users Yearly</span>
+                    <span class="metric-sublabel">On CodeChef platform</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">35+</span>
+                    <span class="metric-label">Languages</span>
+                    <span class="metric-sublabel">Programming content accessibility</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">300+</span>
+                    <span class="metric-label">Learning Hours</span>
+                    <span class="metric-sublabel">Pearson communication content</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">800+</span>
+                    <span class="metric-label">Skill Tasks</span>
+                    <span class="metric-sublabel">Hands-on learning activities</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">10</span>
+                    <span class="metric-label">Proficiency Levels</span>
+                    <span class="metric-sublabel">Beginner to advanced progression</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">6-12 LPA</span>
+                    <span class="metric-label">Placement Range</span>
+                    <span class="metric-sublabel">For program participants</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">Global</span>
+                    <span class="metric-label">Recognition</span>
+                    <span class="metric-sublabel">Weekly rankings & certifications</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">GOT QUESTIONS?</span>
+                <h2>Common Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How do I access these programs?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        If your university has an Enbott Industry Integrated Certification (IIC) program, you can enroll directly through your campus coordinator. If not, you can express interest and we'll help facilitate discussions with your administration.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What is CodeChef and how does it help placements?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        CodeChef is a global competitive programming platform with 600,000+ new users yearly. It helps you build problem-solving skills that tech companies value. Our students have secured placements in the 6-12 LPA range by showcasing their CodeChef rankings and certifications.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Are Pearson certificates recognized by employers?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Pearson certificates are aligned with Global Scale of English (GSE) and CEFR levels, making them internationally recognized. Employers value these as proof of professional communication ability.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What makes your communication program different?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Our Pearson program offers 300+ hours across 10 levels with 800+ skill-based tasks. It includes AI-enabled speaking practice with instant feedback, industry-specific scenarios, role-plays, and simulations—not just grammar lessons.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How does the platform prevent cheating?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The CodeChef platform has built-in plagiarism prevention with tab control, code similarity checking, and copy-paste blockers, ensuring authentic learning and genuine skill development.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Can I participate in both programs?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! We encourage students to develop both technical problem-solving (CodeChef) and professional communication (Pearson) skills. This combination makes you significantly more competitive.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Final CTA Section -->
+    <section class="final-cta" id="cta">
+        <div class="container">
+            <h2>Ready to Build Industry-Ready Skills?</h2>
+            <p class="emotional-text">Your degree opens doors. But industry-recognized skills, global certifications, and competitive programming rankings are what get you through them. Thousands of students are already learning through our IIC programs. Join them.</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">✅ Global competitive programming through CodeChef (600K+ users yearly)</div>
+                <div class="benefit-item">✅ Professional communication mastery with Pearson (300+ hours, AI-enabled)</div>
+                <div class="benefit-item">✅ Industry-integrated certification programs with real-world learning</div>
+                <div class="benefit-item">✅ International learning opportunities for cross-cultural expertise</div>
+                <div class="benefit-item">✅ Recognized certifications that validate your skills to employers</div>
+                <div class="benefit-item">✅ Improved career outcomes (6-12 LPA placement range)</div>
+            </div>
+
+            <div class="cta-buttons-final">
+                <a href="/contact" target="_blank" class="btn-large">🎓 Explore IIC Programs</a>
+                <a href="https://cdn.prod.website-files.com/68784b0e995e11015d1d8c5d/694190c1460f0466388b10d8_Enbott%20Learning%20Division%20Services%20%20%20.pdf" target="_blank" class="btn-outline">📧 Download Program Details</a>
+            </div>
+
+            <p style="margin-top: 40px; opacity: 0.9;">Join 15,000+ students learning through Enbott IIC Programs</p>
+        </div>
+    </section>
+
+   <!-- footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content footer-grid-enhanced">
+
+      <!-- Brand / CTA section (NEW) -->
+      <div class="footer-section footer-brand">
+        <div class="brand-row">
+          <div><a href="/home"> <img src="assets/logos/enbott-bw.png" alt="Enbott footer logo" width=120px height=50px align="centre"></a></div>
+        </div>
+
+        <p class="footer-desc">
+          Campus-integrated, industry-aligned learning solutions built with
+          <strong>25+ years</strong> of enterprise expertise.
+        </p>
+
+        <a href="/contact" class="footer-cta" target="_blank">
+          Partner with Enbott
+        </a>
+    </div>
+
+      <!-- Existing sections -->
+      <div class="footer-section">
+        <h4>For Universities</h4>
+        <ul>
+          <li><a href="/partners">Partner With Us</a></li>
+          <li><a href="/contact">Launch IIC Program</a></li>
+          <li><a href="/services">Faculty Development</a></li>
+          <li><a href="/clients">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/partners">About Enbott</a></li>
+          <li><a href="/leadership">Leadership</a></li>
+          <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
+      <p style="margin-top: 10px;">
+        🏫 Campus-Integrated Learning | 🌍 Global Partnerships |
+        📜 Recognized Certifications | 🏢 25 Years Industry Legacy
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Floating CTA
+    <a href="#cta" class="floating-cta">💬 Find Your CoE</a> -->
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileNav").classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  }
+</script>
+
+  <script>
+  const images = [
+    "assets/images/gallery/i1 (10).jpeg",
+    "assets/images/gallery/i1 (25).jpeg",
+    "assets/images/gallery/i1 (26).jpg",
+    "assets/images/gallery/i1 (27).jpeg",
+    "assets/images/gallery/i1 (28).jpeg",
+    "assets/images/gallery/i1 (29).jpeg",
+    "assets/images/gallery/i1 (30).jpeg",
+    "assets/images/gallery/i1 (31).jpeg",
+    "assets/images/gallery/i1 (32).jpeg",
+    "assets/images/gallery/i1 (33).jpeg",
+    "assets/images/gallery/i1 (34).jpeg",
+    "assets/images/gallery/i1 (35).png",
+    "assets/images/gallery/i1 (36).png",
+    "assets/images/gallery/i1 (37).png",
+    "assets/images/gallery/i1 (3).jpeg",
+    "assets/images/gallery/i1 (2).jpeg",
+    "assets/images/gallery/i1 (4).jpeg",
+    "assets/images/gallery/i1 (5).jpeg",
+    "assets/images/gallery/i1 (6).jpeg",
+    "assets/images/gallery/i1 (7).jpeg",
+    "assets/images/gallery/i1 (8).jpeg",
+    "assets/images/gallery/i1 (9).jpeg",
+    "assets/images/gallery/i1 (1).jpeg",
+    "assets/images/gallery/i1 (11).jpeg",
+    "assets/images/gallery/i1 (12).jpeg",
+    "assets/images/gallery/i1 (13).jpeg",
+    "assets/images/gallery/i1 (14).jpeg",
+    "assets/images/gallery/i1 (15).jpeg",
+    "assets/images/gallery/i1 (16).jpeg",
+    "assets/images/gallery/i1 (17).jpeg",
+    "assets/images/gallery/i1 (18).jpeg",
+    "assets/images/gallery/i1 (19).jpeg",
+    "assets/images/gallery/i1 (20).jpeg",
+    "assets/images/gallery/i1 (21).jpeg",
+    "assets/images/gallery/i1 (22).jpeg",
+    "assets/images/gallery/i1 (23).jpeg",
+    "assets/images/gallery/i1 (24).jpeg"
+  ];
+
+  let currentIndex = 0;
+
+  const mainImage = document.getElementById("mainImage");
+  const thumbnails = document.querySelectorAll("#thumbnails img");
+
+  function setImage(index) {
+    currentIndex = index;
+    mainImage.src = images[index];
+
+    thumbnails.forEach(img => img.classList.remove("active"));
+    thumbnails[index].classList.add("active");
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    setImage(currentIndex);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    setImage(currentIndex);
+  }
+  
+  @media(max-width: 768px){
+  .popup-container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .popup-left {
+    height: 180px;
+    width: 100%;
+  }
+
+  .popup-right iframe {
+    height: 400px;
+  }
+}
+</script>
+
 <!-- ===== POPUP OVERLAY ===== -->
 <div id="popupOverlay" class="popup-overlay">
   <div class="popup-container">
@@ -1903,29 +3799,18 @@ body.menu-open {
 
     <!-- LEFT IMAGE -->
     <div class="popup-left">
-      <img src="assets/images/gallery/takpopv3.jpeg" alt="promo">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="promo">
     </div>
 
     <!-- RIGHT FORM -->
     <div class="popup-right">
-
-    <iframe
-      id="JotFormIFrame-260913275706459"
-      title="Course Registration Form"
-      onload="window.parent.scrollTo(0,0)"
-      allowtransparency="true"
-      allow="geolocation; microphone; camera; fullscreen; payment"
-      src="https://form.jotform.com/260913275706459"
-      style="width:100%;height:500px;border:none;"
-      frameborder="0"
-      scrolling="no"
-    >
-    <!-- style="width:100%;height:300px;border:none;" -->
-      
-    </iframe>
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-260913275706459']", "https://form.jotform.com/")</script>
-    
+      <!--<iframe 
+        aria-label="Launch your career in AR/VR with Enbott"
+        frameborder="0"
+        style="height:500px;width:100%;border:none;"
+        src="https://forms.zohopublic.in/shoaibflywheelgm1/form/SignUp/formperma/CI7WjfgOpeznOxQZ2rGyWKmKHo5cDpZiPXAGxw7cUHY">
+      </iframe> -->
+      <script type="text/javascript" src="https://form.jotform.com/jsform/260913275706459"></script>
     </div>
 
   </div>
@@ -1951,42 +3836,34 @@ body.menu-open {
   z-index: 9999;
 }
 
-/* ===== POPUP BOX (FIXED) ===== */
+/* ===== POPUP BOX ===== */
 .popup-container {
-  width: 650px;
-  max-width: 90%;
-  height: 500px;   /* FIXED HEIGHT */
+  width: 800px;
+  max-width: 95%;
+  background: #fff;
   display: flex;
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
+  animation: fadeIn 0.3s ease;
 }
 
-/* LEFT IMAGE */
+/* ===== LEFT IMAGE ===== */
 .popup-left {
-  width: 50%;
-  background: #f5f5f5 ; /*linear-gradient(90deg, #000000 0%, #2d2cae 100%);*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 45%;
 }
 
 .popup-left img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;  /* IMPORTANT FIX */
-}
-
-/* RIGHT FORM */
-.popup-right {
-  width: 50%;
-  padding: 10px;
-  overflow: hidden;
-}
-
-/* FIX IFRAME SIZE */
-.popup-right iframe {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+/* ===== RIGHT FORM ===== */
+.popup-right {
+  width: 55%;
+  padding: 20px;
+  background: #fff;
 }
 
 /* ===== CLOSE BUTTON ===== */
@@ -2068,7 +3945,6 @@ document.addEventListener("mouseout", function(e) {
   }
 });
 </script>
-
 
 </body>
 </html>
