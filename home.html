@@ -1188,6 +1188,46 @@ body.menu-open {
   }
 }
 
+      .mobile-dropdown {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-dropdown-toggle {
+  padding: 14px 10px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-dropdown-content {
+  display: none;
+  flex-direction: column;
+  padding-left: 10px;
+  background: #f9fafb;
+}
+
+.mobile-dropdown-content a {
+  padding: 12px 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-dropdown.active .mobile-dropdown-content {
+  display: flex;
+}
+
+.mobile-dropdown.active .arrow {
+  transform: rotate(45deg);
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
     </style>
 </head>
 <body>
@@ -1227,18 +1267,42 @@ body.menu-open {
 
         <!-- Mobile Navigation -->
 <div class="mobile-nav" id="mobileNav">
-<a href="/" onclick="toggleMenu()">Home</a>
-<a href="/services">Services</a>
-<a href="/services#technical-training">— Technical Training</a>
-<a href="/services#iic">Industry Integrated Certification (IIC)</a>
-<a href="/services#placement-readiness">— Placement Readiness</a>
-<a href="/services#internships">— Internships</a>
-<a href="/services#global-immersion">— Global Immersion</a>
-<a href="/services#faculty-development">— Faculty Development</a>
-<a href="/partners" onclick="toggleMenu()">Partnerships</a>
-<a href="/clients" onclick="toggleMenu()">Client Stories</a>
-<a href="https://eilabs.enbott.com" target="_blank"><img src="/assets/images/login-button.png" height=40px width=100% align="middle"></img></a>
+
+  <a href="/" onclick="toggleMenu()">Home</a>
+
+  <!-- SERVICES COLLAPSIBLE -->
+  <div class="mobile-dropdown">
+    <div class="mobile-dropdown-toggle" onclick="toggleDropdown(this)">
+      Services
+      <span class="arrow">+</span>
+    </div>
+
+    <div class="mobile-dropdown-content">
+      <a href="/services">Overview</a>
+      <a href="/services#technical-training">— Technical Training</a>
+      <a href="/services#iic">Industry Integrated Certification (IIC)</a>
+      <a href="/services#placement-readiness">— Placement Readiness</a>
+      <a href="/services#internships">— Internships</a>
+      <a href="/services#global-immersion">— Global Immersion</a>
+      <a href="/services#faculty-development">— Faculty Development</a>
+    </div>
+  </div>
+
+  <a href="/partners" onclick="toggleMenu()">Partnerships</a>
+  <a href="/clients" onclick="toggleMenu()">Client Stories</a>
+
+  <a href="https://eilabs.enbott.com" target="_blank">
+    <img src="/assets/images/login-button.png" height="40px" width="100px">
+  </a>
+
 </div>
+
+  <script>
+  function toggleDropdown(el) {
+    el.parentElement.classList.toggle("active");
+  }
+</script>
+  
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
