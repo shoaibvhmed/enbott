@@ -497,7 +497,7 @@ body.menu-open {
   stroke-width: 2;
 }
 
-      .ecosystem-hero{
+.ecosystem-hero{
     position:relative;
     overflow:hidden;
     min-height:90vh;
@@ -574,15 +574,12 @@ body.menu-open {
     position:relative;
     width:600px;
     height:600px;
-    margin:auto;
 }
-
-/* Rings */
 
 .orbit{
     position:absolute;
-    border-radius:50%;
     border:2px dashed rgba(255,255,255,.35);
+    border-radius:50%;
 }
 
 .orbit-1{
@@ -590,29 +587,30 @@ body.menu-open {
     height:260px;
     top:170px;
     left:170px;
+    animation:spin 30s linear infinite;
 }
 
 .orbit-2{
-    width:400px;
-    height:400px;
-    top:100px;
-    left:100px;
+    width:380px;
+    height:380px;
+    top:110px;
+    left:110px;
+    animation:spin-reverse 40s linear infinite;
 }
 
 .orbit-3{
-    width:540px;
-    height:540px;
-    top:30px;
-    left:30px;
+    width:520px;
+    height:520px;
+    top:40px;
+    left:40px;
+    animation:spin 50s linear infinite;
 }
 
-/* Center */
-
 .ecosystem-center{
-    position:absolute;
     width:180px;
     height:180px;
 
+    position:absolute;
     top:210px;
     left:210px;
 
@@ -626,190 +624,94 @@ body.menu-open {
     );
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     box-shadow:
-      0 0 50px rgba(32,103,161,.5);
-
-    z-index:10;
+    0 0 60px rgba(32,103,161,.6);
 }
 
 .ecosystem-center img{
     width:110px;
     height:auto;
-}
-
-/* Orbit Items */
-
-.orbit-item{
-    position:absolute;
-    inset:0;
-    transform-origin:center center;
-}
-
-/* Different Speeds */
-
-.orbit-item-1{
-    animation:orbitCW 25s linear infinite;
-}
-
-.orbit-item-2{
-    animation:orbitCCW 30s linear infinite;
-}
-
-.orbit-item-3{
-    animation:orbitCW 35s linear infinite;
-}
-
-.orbit-item-4{
-    animation:orbitCCW 40s linear infinite;
-}
-
-.orbit-item-5{
-    animation:orbitCW 45s linear infinite;
+    object-fit:contain;
 }
 
 /* Labels */
 
 .orbit-label{
     position:absolute;
-
-    top:50%;
-    left:50%;
-
     background:white;
     color:#105386;
 
     padding:12px 18px;
 
-    border-radius:14px;
+    border-radius:12px;
 
     font-size:14px;
     font-weight:600;
 
     box-shadow:
-      0 10px 30px rgba(0,0,0,.15);
-
-    white-space:nowrap;
+    0 10px 30px rgba(0,0,0,.15);
 }
 
-/* Different Orbit Distances */
-
-.orbit-item-1 .orbit-label{
-    transform:
-    translate(-50%,-50%)
-    translateY(-170px);
+.label-1{
+    top:100px;
+    left:240px;
 }
 
-.orbit-item-2 .orbit-label{
-    transform:
-    translate(-50%,-50%)
-    translateY(-260px);
+.label-2{
+    top:200px;
+    right:0;
 }
 
-.orbit-item-3 .orbit-label{
-    transform:
-    translate(-50%,-50%)
-    translateY(-320px);
+.label-3{
+    bottom:80px;
+    right:70px;
 }
 
-.orbit-item-4 .orbit-label{
-    transform:
-    translate(-50%,-50%)
-    translateY(-250px);
+.label-4{
+    bottom:100px;
+    left:30px;
 }
 
-.orbit-item-5 .orbit-label{
-    transform:
-    translate(-50%,-50%)
-    translateY(-370px);
+.label-5{
+    top:250px;
+    left:-10px;
 }
 
-/* Rotation */
+@keyframes spin{
+  from{
+      transform:rotate(0deg);
+  }
+  to{
+      transform:rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse{
+  from{
+      transform:rotate(360deg);
+  }
+  to{
+      transform:rotate(0deg);
+  }
+}
 
 @media(max-width:991px){
 
-    .ecosystem-wrapper{
-        grid-template-columns:1fr;
-        gap:40px;
-        text-align:center;
-    }
+  .ecosystem-wrapper{
+      grid-template-columns:1fr;
+      text-align:center;
+  }
 
-    .ecosystem-content h1{
-        font-size:42px;
-    }
+  .ecosystem-content h1{
+      font-size:48px;
+  }
 
-    .ecosystem-content p{
-        font-size:18px;
-    }
-
-    .orbit-system{
-        width:360px;
-        height:360px;
-    }
-
-    .orbit-1{
-        width:160px;
-        height:160px;
-        top:100px;
-        left:100px;
-    }
-
-    .orbit-2{
-        width:240px;
-        height:240px;
-        top:60px;
-        left:60px;
-    }
-
-    .orbit-3{
-        width:320px;
-        height:320px;
-        top:20px;
-        left:20px;
-    }
-
-    .ecosystem-center{
-        width:100px;
-        height:100px;
-        top:130px;
-        left:130px;
-    }
-
-    .ecosystem-center img{
-        width:60px;
-    }
-
-    .orbit-label{
-        font-size:10px;
-        max-width:100px;
-        white-space:normal;
-        text-align:center;
-        padding:8px;
-    }
-
-    .orbit-item-1 .orbit-label{
-        transform:translate(-50%,-50%) translateY(-110px);
-    }
-
-    .orbit-item-2 .orbit-label{
-        transform:translate(-50%,-50%) translateY(-150px);
-    }
-
-    .orbit-item-3 .orbit-label{
-        transform:translate(-50%,-50%) translateY(-190px);
-    }
-
-    .orbit-item-4 .orbit-label{
-        transform:translate(-50%,-50%) translateY(-150px);
-    }
-
-    .orbit-item-5 .orbit-label{
-        transform:translate(-50%,-50%) translateY(-220px);
-    }
-}
-    }
+  .orbit-system{
+      transform:scale(.75);
+  }
 }
       
     </style>
