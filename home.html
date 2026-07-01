@@ -379,8 +379,44 @@
 
         /* Responsive */
         @media (max-width: 968px) {
+            nav .container {
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                align-items: center;
+                padding: 12px 20px;
+            }
+
+            .logo {
+                margin-right: 0;
+                justify-self: start;
+                display: flex;
+                align-items: center;
+            }
+
+            .mobile-header-contact {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                justify-self: center;
+                background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+                color: white !important;
+                padding: 10px 25px;
+                border-radius: 25px;
+                font-weight: 600;
+                font-size: 14px;
+                text-decoration: none;
+                white-space: nowrap;
+                transition: transform 0.3s;
+            }
+
+            .mobile-header-contact:hover {
+                transform: translateY(-2px);
+            }
+
             .menu-toggle {
                 display: flex;
+                justify-self: end;
+                flex-shrink: 0;
             }
         }
 
@@ -1318,6 +1354,46 @@
         }
 
         @media (max-width: 968px) {
+            nav .container {
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                align-items: center;
+                padding: 12px 20px;
+            }
+
+            .logo {
+                margin-right: 0;
+                justify-self: start;
+                display: flex;
+                align-items: center;
+            }
+
+            .mobile-header-contact {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                justify-self: center;
+                background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+                color: white !important;
+                padding: 10px 25px;
+                border-radius: 25px;
+                font-weight: 600;
+                font-size: 14px;
+                text-decoration: none;
+                white-space: nowrap;
+                transition: transform 0.3s;
+            }
+
+            .mobile-header-contact:hover {
+                transform: translateY(-2px);
+            }
+
+            .menu-toggle {
+                display: flex;
+                justify-self: end;
+                flex-shrink: 0;
+            }
+
             .nav-links {
                 display: none;
             }
@@ -1588,6 +1664,76 @@
                 max-width: 110px
             }
         }
+
+        .mobile-nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 24px
+        }
+
+        .mobile-contact-btn,
+        .mobile-login-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 52px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: .25s
+        }
+
+        .mobile-contact-btn {
+            background: linear-gradient(135deg, #0891b2, #3b82f6);
+            color: #fff !important
+        }
+
+        .mobile-login-btn {
+            background: #111;
+            color: #fff !important
+        }
+
+        .mobile-nav {
+            overflow-y: auto;
+        }
+
+        .mobile-header-contact {
+            display: none;
+            text-decoration: none;
+            background: linear-gradient(135deg, #0891b2, #3b82f6);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: .25s
+        }
+
+        .mobile-header-contact:hover {
+            transform: translateY(-2px)
+        }
+
+        /* Desktop-only navbar contact */
+        .desktop-contact-btn {
+            display: inline-flex;
+        }
+
+        .mobile-header-contact {
+            display: none !important;
+        }
+
+        @media (max-width:968px) {
+            .desktop-contact-btn {
+                display: none !important;
+            }
+
+            .mobile-header-contact {
+                display: inline-flex !important;
+                transform: translateX(75px);
+            }
     </style>
 </head>
 
@@ -1613,10 +1759,12 @@
                 </div>
                 <a href="/partners">Partnerships</a>
                 <a href="/clients">Client Stories</a>
-                <a href="/contact" class="nav-cta">Contact Us</a>
+                <a href="/contact" class="nav-cta desktop-contact-btn">Contact Us</a>
                 <a href="https://eilabs.enbott.com/login" target="_blank"><img src="assets/images/login-gradient.png"
                         height=40px width=100% align="middle"></a>
             </div>
+            <a href="/contact" class="mobile-header-contact">Contact Us</a>
+
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -1649,9 +1797,11 @@
 
         <a href="/partners" onclick="toggleMenu()">Partnerships</a>
         <a href="/clients" onclick="toggleMenu()">Client Stories</a>
-        <a href="https://eilabs.enbott.com/login" target="_blank">
-            <img src="assets/images/login-gradient.png" height="60px" width="100%">
-        </a>
+
+        <div class="mobile-nav-buttons">
+            <a href="/contact" class="mobile-contact-btn" onclick="toggleMenu()">Contact Us</a>
+            <a href="https://eilabs.enbott.com/login" target="_blank" class="mobile-login-btn">Login to EI Labs</a>
+        </div>
 
     </div>
 
