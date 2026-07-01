@@ -1,200 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Enbott – Campus-Integrated Career Readiness & Technology Solutions</title>
+    <title>Enbott – Campus-Integrated Career Readiness & Technology Solutions</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Enbott bridges academia and industry through campus-integrated career readiness programs, technology training, and industry-aligned solutions for institutions and enterprises.">
-  <meta name="keywords" content="Enbott, career readiness, campus hiring, industry-integrated learning, technology training, employability solutions">
-  <meta name="robots" content="index, follow">
+    <meta name="description"
+        content="Enbott bridges academia and industry through campus-integrated career readiness programs, technology training, and industry-aligned solutions for institutions and enterprises.">
+    <meta name="keywords"
+        content="Enbott, career readiness, campus hiring, industry-integrated learning, technology training, employability solutions">
+    <meta name="robots" content="index, follow">
 
-    <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <style>
-      .gallery-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  font-family: system-ui, sans-serif;
-}
+        .gallery-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            font-family: system-ui, sans-serif;
+        }
 
-.gallery-main {
-  position: relative;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-}
+        .gallery-main {
+            position: relative;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-.gallery-main img {
-  width: 100%;
-  height: 520px;
-  object-fit: contain;
-  background: #ffffff;
-}
+        .gallery-main img {
+            width: 100%;
+            height: 520px;
+            object-fit: contain;
+            background: #ffffff;
+        }
 
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  font-size: 24px;
-  padding: 12px 16px;
-  cursor: pointer;
-  z-index: 10;
-}
-.nav-btn:hover {
-  background: #f1f5f9;
-}
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            font-size: 24px;
+            padding: 12px 16px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .nav-btn:hover {
+            background: #f1f5f9;
+        }
 
 
-.nav-btn.left { left: 10px; }
-.nav-btn.right { right: 10px; }
+        .nav-btn.left {
+            left: 10px;
+        }
 
-.gallery-thumbs {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 15px 0;
-}
+        .nav-btn.right {
+            right: 10px;
+        }
 
-.gallery-thumbs img {
-  height: 90px;
-  cursor: pointer;
-  border-radius: 6px;
-  opacity: 0.6;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
-}
+        .gallery-thumbs {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 15px 0;
+        }
 
-.gallery-thumbs img:hover {
-  opacity: 1;
-}
+        .gallery-thumbs img {
+            height: 90px;
+            cursor: pointer;
+            border-radius: 6px;
+            opacity: 0.6;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
 
-.gallery-thumbs img.active {
-  opacity: 1;
-  border-color: #0891b2; /* brand-friendly accent */
-}
-      /* POPUP LAYOUT */
-      /* Overlay */
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
+        .gallery-thumbs img:hover {
+            opacity: 1;
+        }
 
-  /* Popup Box */
-  .popup-box {
-    background: #fff;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    animation: fadeIn 0.3s ease;
-  }
+        .gallery-thumbs img.active {
+            opacity: 1;
+            border-color: #0891b2;
+            /* brand-friendly accent */
+        }
 
-  /* Close Button */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 10;
-  }
+        /* POPUP LAYOUT */
+        /* Overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
 
-  iframe {
-    width: 100%;
-    height: 550px;
-    border: none;
-  }
+        /* Popup Box */
+        .popup-box {
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
-.popup-box.two-col {
-  display: flex;
-  width: 90%;
-  max-width: 900px;
-  height: 550px;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-}
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 10;
+        }
 
-/* LEFT IMAGE */
-.popup-left {
-  width: 45%;
-  background: #000;
-}
+        iframe {
+            width: 100%;
+            height: 550px;
+            border: none;
+        }
 
-.popup-left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
 
-/* RIGHT FORM */
-.popup-right {
-  width: 55%;
-}
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-.popup-right iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+        .popup-box.two-col {
+            display: flex;
+            width: 90%;
+            max-width: 900px;
+            height: 550px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
 
-/* CLOSE BUTTON */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10;
-}
+        /* LEFT IMAGE */
+        .popup-left {
+            width: 45%;
+            background: #000;
+        }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .popup-box.two-col {
-    flex-direction: column;
-    height: auto;
-  }
+        .popup-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-  .popup-left {
-    width: 100%;
-    height: 180px;
-  }
+        /* RIGHT FORM */
+        .popup-right {
+            width: 55%;
+        }
 
-  .popup-right {
-    width: 100%;
-    height: 400px;
-  }
-}
+        .popup-right iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10;
-}
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .popup-box.two-col {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .popup-left {
+                width: 100%;
+                height: 180px;
+            }
+
+            .popup-right {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -216,7 +216,7 @@
         /* Navigation */
         nav {
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -266,251 +266,468 @@
         .nav-cta:hover {
             transform: translateY(-2px);
         }
-/* Dropdown */
-.dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.dropdown > a {
-  text-decoration: none;
-  color: #4b5563;
-  font-weight: 500;
-  transition: color 0.3s;
-}
 
-.dropdown > a:hover {
-  color: #0891b2;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  border-radius: 10px;
-  padding: 10px 0;
-  display: none;
-  min-width: 240px;
-  z-index: 1000;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 12px 20px;
-  color: #334155;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.dropdown-menu a:hover {
-  background: #f1f5f9;
-  color: #0891b2;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Show dropdown on hover */
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-      /* Mobile Menu Button */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  width: 26px;
-  height: 3px;
-  background: #1e293b;
-  border-radius: 3px;
-  transition: all 0.3s;
-}
-
-/* Mobile Nav Panel */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: white;
-  display: none;
-  flex-direction: column;
-  padding: 90px 20px 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  z-index: 999;
-}
-
-body.menu-open {
-  overflow: hidden;
-}
-
-
-.mobile-nav a {
-  padding: 14px 10px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #1e293b;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.mobile-nav a:last-child {
-  border-bottom: none;
-}
-
-.mobile-cta {
-  background: linear-gradient(135deg, #0891b2, #3b82f6);
-  color: white !important;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 12px;
-}
-
-/* Show mobile nav */
-.mobile-nav.active {
-  display: flex;
-}
-
-/* Responsive */
-@media (max-width: 968px) {
-  .menu-toggle {
-    display: flex;
-  }
-}
-
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
-            color: white;
-            padding: 90px 0 70px;
+        /* Dropdown */
+        .dropdown {
             position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown>a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .dropdown>a:hover {
+            color: #0891b2;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+            padding: 10px 0;
+            display: none;
+            min-width: 240px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #334155;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f1f5f9;
+            color: #0891b2;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 26px;
+            height: 3px;
+            background: #1e293b;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        /* Mobile Nav Panel */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            display: none;
+            flex-direction: column;
+            padding: 90px 20px 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            z-index: 999;
+        }
+
+        body.menu-open {
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+
+        .mobile-nav a {
+            padding: 14px 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #1e293b;
+            border-bottom: 1px solid #e5e7eb;
         }
 
-        .hero .container {
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-cta {
+            background: linear-gradient(135deg, #0891b2, #3b82f6);
+            color: white !important;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        /* Show mobile nav */
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .menu-toggle {
+                display: flex;
+            }
+        }
+
+
+        /* ==========================================================================
+     NEW UNIQUE HERO SECTION (KINETIC PATHWAY MESH - REFINED)
+     ========================================================================== */
+        .kinetic-hero {
             position: relative;
+            background-color: #1e3e70;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 120px 0;
+        }
+
+        .mesh-backdrop {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
             z-index: 1;
         }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
+        .radial-glow-source {
+            position: absolute;
+            width: 900px;
+            height: 900px;
+            right: -10%;
+            top: -10%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 80%);
         }
 
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 25px;
-            animation: fadeInUp 0.8s;
-            line-height: 1.2;
+        .pipeline-svg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 51%;
+            height: 100%;
+            opacity: 0.85;
         }
 
-        .hero-subtitle {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            line-height: 1.6;
-            animation: fadeInUp 0.8s 0.2s backwards;
+        .track-line {
+            stroke: rgba(255, 255, 255, 0.15);
+            stroke-width: 2px;
+            fill: none;
+        }
+
+        /* --- UPGRADED PERFORMANCE INFRASTRUCTURE & PULSES --- */
+        .pulse-stream,
+        .mesh-card,
+        .node-status-bar {
+            will-change: filter, opacity, transform, stroke-width;
+            transform: translateZ(0);
+            /* Force Hardware GPU Acceleration */
+        }
+
+        .pulse-stream {
+            fill: none;
+            stroke: url(#stream-gradient);
+            stroke-width: 3px;
+            stroke-linecap: round;
+            stroke-dasharray: 120 400;
+            animation: routePulse 6s linear infinite;
+            transition: opacity 0.35s ease, stroke-width 0.3s ease, filter 0.3s ease;
+        }
+
+        /* Specific Stream Tuning */
+        .stream-1 {
+            stroke-width: 3.8px;
+            opacity: 0.9 !important;
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+            /* Sophisticated environment matching glow */
+        }
+
+        .stream-2 {
+            animation-delay: 2s;
+            animation-duration: 8s;
+        }
+
+        .stream-3 {
+            animation-delay: 4s;
+            animation-duration: 5s;
+            stroke-dasharray: 60 200;
+        }
+
+        @keyframes routePulse {
+            0% {
+                stroke-dashoffset: 600;
+            }
+
+            100% {
+                stroke-dashoffset: -600;
+            }
+        }
+
+        /* --- THE ISOLATION EFFECT (CSS :has() Coordination Loops) --- */
+        /* Universal mesh card hover state triggers */
+        .kinetic-hero:has(.mesh-card:hover) .pulse-stream {
+            opacity: 0.2 !important;
+            filter: drop-shadow(0 0 0 transparent);
+        }
+
+        /* Link Card 1 to Stream 1 (Competitive Coding) */
+        .kinetic-hero:has(.positioning-card-1:hover) .stream-1 {
+            opacity: 1 !important;
+            stroke-width: 4.8px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+        }
+
+        /* Link Card 2 to Stream 3 (Global Communication Network Path) */
+        .kinetic-hero:has(.positioning-card-2:hover) .stream-3 {
+            opacity: 1 !important;
+            stroke-width: 4.5px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+        }
+
+        /* Link Card 3 to Stream 2 (Industry Infrastructure Axis) */
+        .kinetic-hero:has(.positioning-card-3:hover) .stream-2 {
+            opacity: 1 !important;
+            stroke-width: 4.5px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+        }
+
+        .hero-layout-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+            align-items: center;
+        }
+
+        .hero-narrative {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .live-signal {
+            font-size: 11px;
+            color: #bae6fd;
+            letter-spacing: 2px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ffffff;
+            animation: signalBlink 1.5s infinite ease-in-out;
+        }
+
+        @keyframes signalBlink {
+
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(0.9);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.3);
+            }
+        }
+
+        .hero-narrative h1 {
+            color: #ffffff;
+            font-size: 54px;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+        }
+
+        .gradient-glitch {
+            background: linear-gradient(135deg, #ffffff 0%, #bae6fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-narrative p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 17px;
+            margin: 0 0 40px 0;
+            line-height: 1.7;
+            max-width: 540px;
         }
 
         .cta-buttons {
             display: flex;
             gap: 20px;
-            justify-content: center;
             flex-wrap: wrap;
-            animation: fadeInUp 0.8s 0.4s backwards;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .btn-primary {
-            background: white;
-            color: #0891b2;
-            padding: 16px 35px;
+            background: #ffffff;
+            color: #1e3e70;
+            padding: 16px 36px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 17px;
-            transition: all 0.3s;
-            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2);
+            background: #f8fafc;
         }
 
         .btn-secondary {
-            background: transparent;
+            background: rgba(255, 255, 255, 0.1);
             color: white;
-            padding: 16px 35px;
-            border: 2px solid white;
+            padding: 16px 36px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 30px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 17px;
-            transition: all 0.3s;
+            font-weight: 600;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
         }
 
-        .trust-bar {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 45px;
-            animation: fadeInUp 0.8s 0.6s backwards;
+        .hero-interactive-grid {
+            position: relative;
+            height: 480px;
+            width: 100%;
         }
 
-        .trust-item {
-            text-align: center;
-            font-size: 13px;
-            padding: 12px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
+        .mesh-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 24px;
+            border-radius: 12px;
+            width: 290px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
 
-        .trust-item strong {
-            display: block;
-            font-size: 17px;
-            margin-bottom: 3px;
+        .node-status-bar {
+            width: 30px;
+            height: 3px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            transition: width 0.3s ease, background-color 0.3s ease;
         }
+
+        .mesh-card h3 {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .mesh-card p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .positioning-card-1 {
+            top: 4%;
+            left: 4%;
+        }
+
+        .positioning-card-2 {
+            top: 35%;
+            left: auto;
+            right: 4%;
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .positioning-card-3 {
+            bottom: 5%;
+            left: 4%;
+        }
+
+        .mesh-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            border-color: #ffffff;
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+            z-index: 10;
+        }
+
+        .mesh-card:hover .node-status-bar {
+            width: 60px !important;
+            background: #ffffff !important;
+        }
+
+        @media (max-width: 992px) {
+            .hero-layout-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pipeline-svg {
+                display: none;
+            }
+
+            .hero-interactive-grid {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 40px;
+            }
+
+            .mesh-card {
+                position: relative;
+                inset: auto;
+                width: 100%;
+            }
+        }
+
 
         /* Partnership Strip */
         .partnership-strip {
-            background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             padding: 35px 0;
             text-align: center;
-            border-bottom: 2px solid #0891b2;
+            border-bottom: 2px solid #1c859f;
         }
 
         .partnership-strip p {
             font-size: 15px;
-            color: #0c4a6e;
+            color: #f0f3f5;
             margin-bottom: 20px;
             font-weight: 500;
         }
@@ -527,7 +744,7 @@ body.menu-open {
             background: white;
             padding: 18px 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             font-weight: 700;
             color: #0c4a6e;
             font-size: 17px;
@@ -555,7 +772,7 @@ body.menu-open {
 
         /* Section Styles */
         section {
-            padding: 70px 0;
+            padding: 40px 0;
         }
 
         .section-header {
@@ -608,7 +825,7 @@ body.menu-open {
 
         .review-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .review-header {
@@ -678,7 +895,7 @@ body.menu-open {
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
         }
 
@@ -729,7 +946,7 @@ body.menu-open {
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
 
@@ -848,7 +1065,7 @@ body.menu-open {
 
         /* Metrics Section */
         .metrics-section {
-            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
+            background: linear-gradient(135deg, #0c4a6e 0%, #1e3e70 100%);
             color: white;
             padding: 70px 0;
         }
@@ -864,10 +1081,10 @@ body.menu-open {
         .metric-card {
             text-align: center;
             padding: 30px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 15px;
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
         .metric-number {
@@ -980,7 +1197,7 @@ body.menu-open {
         }
 
         .benefit-item {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 16px 22px;
             border-radius: 10px;
             margin-bottom: 12px;
@@ -1026,7 +1243,7 @@ body.menu-open {
         }
 
         .btn-outline:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* Footer */
@@ -1071,31 +1288,21 @@ body.menu-open {
         .footer-bottom {
             text-align: center;
             padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #94a3b8;
             font-size: 13px;
         }
 
-        /* Floating CTA */
-        .floating-cta {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 50px;
-            box-shadow: 0 6px 20px rgba(8, 145, 178, 0.4);
-            text-decoration: none;
-            font-weight: 700;
-            z-index: 99;
-            animation: float 3s ease-in-out infinite;
-            font-size: 15px;
-        }
-
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
 
         @keyframes fadeInUp {
@@ -1103,6 +1310,7 @@ body.menu-open {
                 opacity: 0;
                 transform: translateY(25px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1110,2140 +1318,477 @@ body.menu-open {
         }
 
         @media (max-width: 968px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 34px; }
-            .hero-subtitle { font-size: 17px; }
-            .section-header h2 { font-size: 30px; }
-            .program-title { font-size: 24px; }
-            .final-cta h2 { font-size: 34px; }
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+
+            .program-title {
+                font-size: 24px;
+            }
+
+            .final-cta h2 {
+                font-size: 34px;
+            }
         }
 
         @media (max-width: 640px) {
-            .cta-buttons, .cta-buttons-final { flex-direction: column; align-items: stretch; }
-            .btn-primary, .btn-secondary, .btn-large, .btn-outline { text-align: center; }
-            .floating-cta { right: 18px; bottom: 18px; padding: 14px 24px; font-size: 13px; }
+
+            .cta-buttons,
+            .cta-buttons-final {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-primary,
+            .btn-secondary,
+            .btn-large,
+            .btn-outline {
+                text-align: center;
+            }
         }
 
         /* Enhanced footer layout */
-.footer-grid-enhanced {
-  grid-template-columns: 1.3fr 1fr 1fr;
-}
-
-/* Brand block */
-.footer-brand {
-  max-width: 420px;
-}
-
-.brand-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.brand-logo {
-  width: 36px;
-  height: 36px;
-  border: 2px solid white;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 14px;
-}
-
-.brand-name {
-  font-size: 22px;
-  font-weight: 700;
-  color: white;
-}
-
-.footer-desc {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #94a3b8;
-  margin-bottom: 26px;
-}
-
-/* CTA button (Muza-inspired, Enbott-colored) */
-.footer-cta {
-  display: inline-block;
-  background: linear-gradient(135deg, #0891b2, #3b82f6);
-  color: white;
-  padding: 14px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  box-shadow: 0 8px 20px rgba(8,145,178,0.35);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .footer-grid-enhanced {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-brand {
-    margin-bottom: 25px;
-  }
-}
-
-      .mobile-dropdown {
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.mobile-dropdown-toggle {
-  padding: 14px 10px;
-  font-weight: 600;
-  color: #1e293b;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mobile-dropdown-content {
-  display: none;
-  flex-direction: column;
-  padding-left: 10px;
-  background: #f9fafb;
-}
-
-.mobile-dropdown-content a {
-  padding: 12px 10px;
-  font-size: 14px;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.mobile-dropdown.active .mobile-dropdown-content {
-  display: flex;
-}
-
-.mobile-dropdown.active .arrow {
-  transform: rotate(45deg);
-}
-
-.arrow {
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-    </style>
-</head>
-<body>
-
-<!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo"><a href = "/"><img src="assets/logos/logo.png" alt="Enbott hero logo" width=120px height=50px align="centre"> </a></div>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <div class="dropdown">
-  <a href="/services">Services ▾</a>
-
-  <div class="dropdown-menu">
-    <a href="/services#technical-training">Coding Competency Training</a>
-    <a href="/services#iic">Industry Integrated Certification (IIC) by EI Labs </a>
-    <a href="/services#placement-readiness">Placement Readiness</a>
-    <a href="/services#internships">Internship Programs</a>
-    <a href="/services#global-immersion">Global Immersion</a>
-    <a href="/services#faculty-development">Faculty Development</a>
-  </div>
-</div>
-                <a href="/partners">Partnerships</a>
-                <a href="/clients">Client Stories</a>
-                <a href="/contact" class="nav-cta">Contact Us</a>
-                <a href="https://eilabs.enbott.com/login" target="_blank"><img src="/assets/images/login-gradient.png" height=40px width=100% align="middle"></img></a>
-            </div>
-                  <!-- Mobile Menu Button -->
-<div class="menu-toggle" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-        </div>
-
-    </nav>
-
-        <!-- Mobile Navigation -->
-<div class="mobile-nav" id="mobileNav">
-
-  <a href="/" onclick="toggleMenu()">Home</a>
-
-  <!-- SERVICES COLLAPSIBLE -->
-  <div class="mobile-dropdown">
-    <div class="mobile-dropdown-toggle" onclick="toggleDropdown(this)">
-      Services
-      <span class="arrow">+</span>
-    </div>
-
-    <div class="mobile-dropdown-content">
-      <a href="/services">Overview</a>
-      <a href="/services#technical-training">— Technical Training</a>
-      <a href="/services#iic">Industry Integrated Certification (IIC)</a>
-      <a href="/services#placement-readiness">— Placement Readiness</a>
-      <a href="/services#internships">— Internships</a>
-      <a href="/services#global-immersion">— Global Immersion</a>
-      <a href="/services#faculty-development">— Faculty Development</a>
-    </div>
-  </div>
-
-  <a href="/partners" onclick="toggleMenu()">Partnerships</a>
-  <a href="/clients" onclick="toggleMenu()">Client Stories</a>
-  <!-- <a href="/contact" class="mobile-cta" onclick="toggleMenu()">Contact Us</a> -->
-  <a href="https://eilabs.enbott.com/login" target="_blank">
-    <img src="/assets/images/login-gradient.png" height="60px" width="100%">
-  </a>
-
-</div>
-
-  <script>
-  function toggleDropdown(el) {
-    el.parentElement.classList.toggle("active");
-  }
-</script>
-  
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Campus Learning Into Career Success</h1>
-                <p class="hero-subtitle">Industry-ready skills through global partnerships. Master competitive programming with CodeChef, enhance communication with Pearson, and access international learning opportunities—all through your university’s Industry Integrated Certification (IIC) program</p>
-                <div class="cta-buttons">
-                    <a href="#programs" class="btn-primary">Explore Our Programs →</a>
-                    <a href="#cta" class="btn-secondary">Explore IIC Program</a>
-                </div>
-                <div class="trust-bar">
-                    <div class="trust-item">
-                        <strong>15,000+</strong>
-                        Live University Learners
-                    </div>
-                    <div class="trust-item">
-                        <strong>CodeChef</strong>
-                        Partnership
-                    </div>
-                    <div class="trust-item">
-                        <strong>Pearson</strong>
-                        Collaboration
-                    </div>
-                    <div class="trust-item">
-                        <strong>International</strong>
-                        Exchange Programs
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partnership Strip -->
-    <section class="partnership-strip">
-        <div class="container">
-            <p>Empowering students through global partnerships and Industry Integrated Certification (IIC) programs</p>
-            <div class="partner-logos">
-                <div class="partner-logo codechef">CodeChef</div>
-                <div class="partner-logo pearson">Pearson</div>
-                <div class="partner-logo gt">GT Technologies</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">STUDENT SUCCESS</span>
-                <h2>Student Success Stories</h2>
-                <p>Real students, real results from our campus programs</p>
-            </div>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-avatar">K</div>
-                        <div class="reviewer-info">
-                            <h4>Karthik R.</h4>
-                            <p>B.Tech Student</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"The CodeChef competitive programming platform gave me global ranking and helped me secure a 10 LPA package. The weekly hackathons kept me consistently improving!"</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-avatar">P</div>
-                        <div class="reviewer-info">
-                            <h4>Priya M.</h4>
-                            <p>MBA Student</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Pearson's communication modules with AI-enabled speaking practice transformed my confidence. The role-plays and simulations made learning practical and engaging."</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-avatar">A</div>
-                        <div class="reviewer-info">
-                            <h4>Akash V.</h4>
-                            <p>Engineering Graduate</p>
-                        </div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Learning through the IIC program was so convenient. Industry-backed certifications, hands-on training, and direct placement opportunities—all within our academic journey.. Industry-backed certifications, hands-on training, and direct placement opportunities—all without leaving campus."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">THE CHALLENGE</span>
-                <h2>The Skills Gap Challenge</h2>
-            </div>
-            <p class="problem-intro">Academic qualifications alone aren't enough. Employers seek specific, demonstrable skills. Here's what most students lack:</p>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">💻</div>
-                    <h3>Theoretical Coding vs. Competitive Programming</h3>
-                    <p>You learn to code, but can you solve complex problems under time constraints? Can you compete globally? Most academic curricula don't include competitive programming.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🗣️</div>
-                    <h3>Academic English vs. Professional Communication</h3>
-                    <p>Scoring well in English exams doesn't mean you can present to stakeholders or write professional emails. Industry-specific communication skills are rarely taught.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🏫</div>
-                    <h3>Campus Limitations vs. Industry Standards</h3>
-                    <p>Most universities lack access to industry-standard platforms, certifications, and hands-on training environments that employers expect.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">🌍</div>
-                    <h3>Local Experience vs. Global Perspective</h3>
-                    <p>Cross-cultural understanding and international exposure are invaluable in today's world. But few students get meaningful global learning experiences.</p>
-                </div>
-            </div>
-            <p class="transition-text">What if your campus could bridge all these gaps?</p>
-        </div>
-    </section>
-
-    <!-- Programs Section - Four Pillars -->
-    <section class="programs-section" id="programs">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">OUR PROGRAMS</span>
-                <h2>Four Pathways to Career Excellence</h2>
-                <p>Comprehensive programs designed to make you industry-ready</p>
-            </div>
-            <div class="programs-grid">
-                <!-- Program 1: CodeChef -->
-                <div class="program-card">
-                    <div class="program-header codechef">
-                        <div class="program-icon">💻</div>
-                        <div class="program-title">Competitive Programming</div>
-                        <div class="program-subtitle">Partnership with CodeChef</div>
-                    </div>
-                    <div class="program-content">
-                        <p>Master competitive programming with global recognition and ranking through CodeChef's industry-standard platform.</p>
-                        
-                        <div class="stats-highlight">
-                            <strong>600,000+</strong> new users yearly | <strong>15,000+</strong> live university learners | <strong>35+</strong> languages supported
-                        </div>
-
-                        <h4>Platform Features:</h4>
-                        <ul class="feature-list">
-                            <li><strong>Online IDE:</strong> No extra software installation needed</li>
-                            <li><strong>Plagiarism Prevention:</strong> Tab control, code similarity check, copy-paste blocker</li>
-                            <li><strong>Global Accessibility:</strong> Programming content in 35+ languages</li>
-                            <li><strong>Unified Dashboards:</strong> Efficient learning management and progress tracking</li>
-                        </ul>
-
-                        <h4>Competitive Opportunities:</h4>
-                        <ul class="feature-list">
-                            <li><strong>Weekly Global Hackathons</strong> with live ranking</li>
-                            <li><strong>Global Certifications</strong> recognized by employers</li>
-                            <li>Build competitive programming portfolio</li>
-                            <li>Performance-based skill validation</li>
-                        </ul>
-
-                        <div class="program-outcome">
-                            <strong>Career Impact:</strong>
-                            Improved placement outcomes with 6-12 LPA job opportunities. Global rankings that validate your problem-solving abilities to top tech companies.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Program 2: Pearson -->
-                <div class="program-card">
-                    <div class="program-header pearson">
-                        <div class="program-icon">🗣️</div>
-                        <div class="program-title">Communicative English</div>
-                        <div class="program-subtitle">Partnership with Pearson</div>
-                    </div>
-                    <div class="program-content">
-                        <p>Enhance your professional communication with globally recognized Pearson training aligned to international standards.</p>
-                        
-                        <div class="stats-highlight">
-                            <strong>10 Levels</strong> | <strong>100</strong> theme-based modules | <strong>300+</strong> hours | <strong>800+</strong> skill tasks
-                        </div>
-
-                        <h4>Comprehensive Learning:</h4>
-                        <ul class="feature-list">
-                            <li><strong>10 proficiency levels</strong> from beginner to advanced</li>
-                            <li><strong>100 theme-based modules</strong> for structured learning</li>
-                            <li><strong>300+ hours of learning content</strong></li>
-                            <li><strong>800+ skill-based tasks</strong> for practical application</li>
-                        </ul>
-
-                        <h4>Interactive Features:</h4>
-                        <ul class="feature-list">
-                            <li><strong>Role-plays and simulations</strong> for real-world scenarios</li>
-                            <li><strong>Illustrated themes</strong> for practical and visual learning</li>
-                            <li><strong>AI-enabled speaking practice</strong> with instant feedback</li>
-                            <li><strong>Adaptive learning</strong> mapped to your proficiency level</li>
-                        </ul>
-
-                        <h4>Global Recognition:</h4>
-                        <ul class="feature-list">
-                            <li>Aligned with <strong>Global Scale of English (GSE)</strong></li>
-                            <li>Mapped to <strong>CEFR levels</strong> (international framework)</li>
-                            <li><strong>Recognized certificates</strong> for employability</li>
-                            <li><strong>Digital badges</strong> for verified skills</li>
-                            <li><strong>Industry-specific content</strong> for job readiness</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Program 3: CoE -->
-                <div class="program-card">
-                    <div class="program-header iic">
-                        <div class="program-icon">🏫</div>
-                        <div class="program-title">Industry Integrated Certification (IIC)</div>
-                        <div class="program-subtitle">Career-Focused Industry-Integrated Program</div>
-                    </div>
-                    <div class="program-content">
-                        <p>Industry Integrated Certification (IIC) is a career-focused academic enhancement program designed to bridge the gap between classroom learning and real-world industry expectations.</p>
-
-<h4>Program Highlights:</h4>
-<ul class="feature-list">
-  <li><strong>Industry-designed curriculum:</strong> Built with leading technology partners</li>
-  <li><strong>Hands-on practical learning:</strong> Real-world application of skills</li>
-  <li><strong>Live projects & case studies:</strong> Industry-relevant experience</li>
-  <li><strong>Industry mentorship:</strong> Guidance from professionals</li>
-  <li><strong>Continuous assessment:</strong> Ongoing feedback and skill tracking</li>
-</ul>
-
-<h4>Career Enablement:</h4>
-<ul class="feature-list">
-  <li><strong>Internship & career guidance support</strong></li>
-  <li><strong>Co-branded certifications</strong> with industry partners</li>
-  <li><strong>Alignment with market demand</strong></li>
-  <li><strong>Future-ready skill development</strong></li>
-</ul>
-
-<h4>Course Domains:</h4>
-<ul class="feature-list">
-  <li>AI/ML, Data Science, Data Analytics</li>
-  <li>Cloud Computing & DevOps</li>
-  <li>Cybersecurity</li>
-  <li>Full Stack Development</li>
-  <li>UI/UX, AR/VR</li>
-  <li>Digital Marketing & FinTech</li>
-</ul>
-
-<div class="program-outcome">
-  <strong>Program Impact:</strong>
-  Empowers students with practical skills, industry exposure, and certifications that directly enhance employability and career readiness.
-</div>
-                    </div>
-                </div>
-
-                <!-- Program 4: International -->
-                <div class="program-card">
-                    <div class="program-header international">
-                        <div class="program-icon">✈️</div>
-                        <div class="program-title">International Learning</div>
-                        <div class="program-subtitle">Collaboration & Exchange Network</div>
-                    </div>
-                    <div class="program-content">
-                        <p>Comprehensive learning experiences blending academic innovation, cross-cultural understanding, and real-world industry insights.</p>
-
-                        <h4>What This Offers:</h4>
-                        <ul class="feature-list">
-                            <li><strong>Comprehensive Experience:</strong> Academic innovation + practical application</li>
-                            <li><strong>Cross-Cultural Understanding:</strong> Immersive global exposure</li>
-                            <li><strong>Real-World Industry Insights:</strong> From international markets</li>
-                            <li><strong>Holistic Development:</strong> Beyond just technical skills</li>
-                        </ul>
-
-                        <h4>Transformation Journey:</h4>
-                        <ul class="feature-list">
-                            <li><strong>Knowledge to Expertise:</strong> Forge tangible, real-world capabilities</li>
-                            <li><strong>Cross-Cultural Fluency:</strong> Cultivate profound global understanding</li>
-                            <li><strong>Cutting-Edge Skills:</strong> Perspectives that inspire innovation</li>
-                            <li><strong>Future-Ready:</strong> Prepare for globalized career opportunities</li>
-                        </ul>
-
-                        <h4>Program Components:</h4>
-                        <ul class="feature-list">
-                            <li>Student exchange programs with international institutions</li>
-                            <li>International corporate exposure through GT Technologies network</li>
-                            <li>Understanding global business practices</li>
-                            <li>Professional networking across borders</li>
-                            <li>Cultural immersion and adaptability training</li>
-                        </ul>
-
-                        <div class="program-outcome">
-                            <strong>Selection:</strong>
-                            Performance-based for high-achieving students from participating CoEs. Merit-driven opportunities with faculty recommendations.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-            <!-- Elfsight Photo Gallery | Untitled Photo Gallery
-        <section class="reviews-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">ENBOTT IN ACTION</span>
-            <script src="https://elfsightcdn.com/platform.js" async></script>
-            <div class="elfsight-app-2ae40dcb-1658-4764-859a-c792fe60cc09" data-elfsight-app-lazy></div> 
-            </div>
-        </div>
-    </section> -->
-
-   <section class = "gallery-selection">
-    <div class="gallery-container">
-  <!-- Main Image -->
-  <div class="gallery-main">
-    <button class="nav-btn left" onclick="prevImage()">&#10094;</button>
-    <img id="mainImage" src="assets/images/gallery/i1 (10).jpeg" alt="Gallery Image">
-    <button class="nav-btn right" onclick="nextImage()">&#10095;</button>
-  </div>
-  <!-- Thumbnails -->
-  <div class="gallery-thumbs" id="thumbnails">
-    <img src="assets/images/gallery/i1 (10).jpeg" onclick="setImage(0)" class="active">
-    <img src="assets/images/gallery/i1 (25).jpeg" onclick="setImage(1)">
-    <img src="assets/images/gallery/i1 (26).jpg" onclick="setImage(2)">
-    <img src="assets/images/gallery/i1 (27).jpeg" onclick="setImage(3)">
-    <img src="assets/images/gallery/i1 (28).jpeg" onclick="setImage(4)">
-    <img src="assets/images/gallery/i1 (29).jpeg" onclick="setImage(5)">
-    <img src="assets/images/gallery/i1 (30).jpeg" onclick="setImage(6)">
-    <img src="assets/images/gallery/i1 (31).jpeg" onclick="setImage(7)">
-    <img src="assets/images/gallery/i1 (32).jpeg" onclick="setImage(8)">
-    <img src="assets/images/gallery/i1 (33).jpeg" onclick="setImage(9)">
-    <img src="assets/images/gallery/i1 (34).jpeg" onclick="setImage(10)">
-    <img src="assets/images/gallery/i1 (35).png" onclick="setImage(11)">
-    <img src="assets/images/gallery/i1 (36).png" onclick="setImage(12)">
-    <img src="assets/images/gallery/i1 (37).png" onclick="setImage(13)">
-    <img src="assets/images/gallery/i1 (3).jpeg" onclick="setImage(14)">
-    <img src="assets/images/gallery/i1 (2).jpeg" onclick="setImage(15)">
-    <img src="assets/images/gallery/i1 (4).jpeg" onclick="setImage(16)">
-    <img src="assets/images/gallery/i1 (5).jpeg" onclick="setImage(17)">
-    <img src="assets/images/gallery/i1 (6).jpeg" onclick="setImage(18)">
-    <img src="assets/images/gallery/i1 (7).jpeg" onclick="setImage(19)">
-    <img src="assets/images/gallery/i1 (8).jpeg" onclick="setImage(20)">
-    <img src="assets/images/gallery/i1 (9).jpeg" onclick="setImage(21)">
-    <img src="assets/images/gallery/i1 (1).jpeg" onclick="setImage(22)">
-    <img src="assets/images/gallery/i1 (11).jpeg" onclick="setImage(23)">
-    <img src="assets/images/gallery/i1 (12).jpeg" onclick="setImage(24)">
-    <img src="assets/images/gallery/i1 (13).jpeg" onclick="setImage(25)">
-    <img src="assets/images/gallery/i1 (14).jpeg" onclick="setImage(26)">
-    <img src="assets/images/gallery/i1 (15).jpeg" onclick="setImage(27)">
-    <img src="assets/images/gallery/i1 (16).jpeg" onclick="setImage(28)">
-    <img src="assets/images/gallery/i1 (17).jpeg" onclick="setImage(29)">
-    <img src="assets/images/gallery/i1 (18).jpeg" onclick="setImage(30)">
-    <img src="assets/images/gallery/i1 (19).jpeg" onclick="setImage(31)">
-    <img src="assets/images/gallery/i1 (20).jpeg" onclick="setImage(32)">
-    <img src="assets/images/gallery/i1 (21).jpeg" onclick="setImage(33)">
-    <img src="assets/images/gallery/i1 (22).jpeg" onclick="setImage(34)">
-    <img src="assets/images/gallery/i1 (23).jpeg" onclick="setImage(35)">
-    <img src="assets/images/gallery/i1 (24).jpeg" onclick="setImage(36)">
-  </div>
-</div>
-  </section>
-
-    <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ac488602-6348-4ecd-8d0e-c519f21d14c2" data-elfsight-app-lazy></div> -->
-
-    <!-- Metrics Section -->
-    <section class="metrics-section" id="metrics">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">OUR IMPACT</span>
-                <h2 style="color: white;">Our Impact in Numbers</h2>
-                <p style="color: rgba(255,255,255,0.9);">Measurable outcomes that demonstrate real value</p>
-            </div>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <span class="metric-number">15,000+</span>
-                    <span class="metric-label">Live University Learners</span>
-                    <span class="metric-sublabel">Currently active on platforms</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">6 Lakh+</span>
-                    <span class="metric-label">New Users Yearly</span>
-                    <span class="metric-sublabel">On CodeChef platform</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">35+</span>
-                    <span class="metric-label">Languages</span>
-                    <span class="metric-sublabel">Programming content accessibility</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">300+</span>
-                    <span class="metric-label">Learning Hours</span>
-                    <span class="metric-sublabel">Pearson communication content</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">800+</span>
-                    <span class="metric-label">Skill Tasks</span>
-                    <span class="metric-sublabel">Hands-on learning activities</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">10</span>
-                    <span class="metric-label">Proficiency Levels</span>
-                    <span class="metric-sublabel">Beginner to advanced progression</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">6-12 LPA</span>
-                    <span class="metric-label">Placement Range</span>
-                    <span class="metric-sublabel">For program participants</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">Global</span>
-                    <span class="metric-label">Recognition</span>
-                    <span class="metric-sublabel">Weekly rankings & certifications</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">GOT QUESTIONS?</span>
-                <h2>Common Questions</h2>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>How do I access these programs?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        If your university has an Enbott Industry Integrated Certification (IIC) program, you can enroll directly through your campus coordinator. If not, you can express interest and we'll help facilitate discussions with your administration.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>What is CodeChef and how does it help placements?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        CodeChef is a global competitive programming platform with 600,000+ new users yearly. It helps you build problem-solving skills that tech companies value. Our students have secured placements in the 6-12 LPA range by showcasing their CodeChef rankings and certifications.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>Are Pearson certificates recognized by employers?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        Yes! Pearson certificates are aligned with Global Scale of English (GSE) and CEFR levels, making them internationally recognized. Employers value these as proof of professional communication ability.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>What makes your communication program different?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        Our Pearson program offers 300+ hours across 10 levels with 800+ skill-based tasks. It includes AI-enabled speaking practice with instant feedback, industry-specific scenarios, role-plays, and simulations—not just grammar lessons.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>How does the platform prevent cheating?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        The CodeChef platform has built-in plagiarism prevention with tab control, code similarity checking, and copy-paste blockers, ensuring authentic learning and genuine skill development.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>Can I participate in both programs?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        Absolutely! We encourage students to develop both technical problem-solving (CodeChef) and professional communication (Pearson) skills. This combination makes you significantly more competitive.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-      <!-- Final CTA Section -->
-    <section class="final-cta" id="cta">
-        <div class="container">
-            <h2>Ready to Build Industry-Ready Skills?</h2>
-            <p class="emotional-text">Your degree opens doors. But industry-recognized skills, global certifications, and competitive programming rankings are what get you through them. Thousands of students are already learning through our IIC programs. Join them.</p>
-            
-            <div class="benefits-list">
-                <div class="benefit-item">✅ Global competitive programming through CodeChef (600K+ users yearly)</div>
-                <div class="benefit-item">✅ Professional communication mastery with Pearson (300+ hours, AI-enabled)</div>
-                <div class="benefit-item">✅ Industry-integrated certification programs with real-world learning</div>
-                <div class="benefit-item">✅ International learning opportunities for cross-cultural expertise</div>
-                <div class="benefit-item">✅ Recognized certifications that validate your skills to employers</div>
-                <div class="benefit-item">✅ Improved career outcomes (6-12 LPA placement range)</div>
-            </div>
-
-            <div class="cta-buttons-final">
-                <a href="/contact" target="_blank" class="btn-large">🎓 Explore IIC Programs</a>
-                <a href="https://cdn.prod.website-files.com/68784b0e995e11015d1d8c5d/694190c1460f0466388b10d8_Enbott%20Learning%20Division%20Services%20%20%20.pdf" target="_blank" class="btn-outline">📧 Download Program Details</a>
-            </div>
-
-            <p style="margin-top: 40px; opacity: 0.9;">Join 15,000+ students learning through Enbott IIC Programs</p>
-        </div>
-    </section>
-
-   <!-- footer -->
-<footer>
-  <div class="container">
-    <div class="footer-content footer-grid-enhanced">
-
-      <!-- Brand / CTA section (NEW) -->
-      <div class="footer-section footer-brand">
-        <div class="brand-row">
-          <div><a href="/home"> <img src="assets/logos/enbott-bw.png" alt="Enbott footer logo" width=120px height=50px align="centre"></a></div>
-        </div>
-
-        <p class="footer-desc">
-          Campus-integrated, industry-aligned learning solutions built with
-          <strong>25+ years</strong> of enterprise expertise.
-        </p>
-
-        <a href="/contact" class="footer-cta" target="_blank">
-          Partner with Enbott
-        </a>
-    </div>
-
-      <!-- Existing sections -->
-      <div class="footer-section">
-        <h4>For Universities</h4>
-        <ul>
-          <li><a href="/partners">Partner With Us</a></li>
-          <li><a href="/contact">Launch IIC Program</a></li>
-          <li><a href="/services">Faculty Development</a></li>
-          <li><a href="/clients">Success Stories</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/partners">About Enbott</a></li>
-          <li><a href="/leadership">Leadership</a></li>
-          <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
-          <li><a href="/contact">Contact Us</a></li>
-          
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
-      <p style="margin-top: 10px;">
-        🏫 Campus-Integrated Learning | 🌍 Global Partnerships |
-        📜 Recognized Certifications | 🏢 25 Years Industry Legacy
-      </p>
-    </div>
-  </div>
-</footer>
-
-
-    <!-- Floating CTA
-    <a href="#cta" class="floating-cta">💬 Find Your CoE</a> -->
-
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileNav").classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-  }
-</script>
-
-  <script>
-  const images = [
-    "assets/images/gallery/i1 (10).jpeg",
-    "assets/images/gallery/i1 (25).jpeg",
-    "assets/images/gallery/i1 (26).jpg",
-    "assets/images/gallery/i1 (27).jpeg",
-    "assets/images/gallery/i1 (28).jpeg",
-    "assets/images/gallery/i1 (29).jpeg",
-    "assets/images/gallery/i1 (30).jpeg",
-    "assets/images/gallery/i1 (31).jpeg",
-    "assets/images/gallery/i1 (32).jpeg",
-    "assets/images/gallery/i1 (33).jpeg",
-    "assets/images/gallery/i1 (34).jpeg",
-    "assets/images/gallery/i1 (35).png",
-    "assets/images/gallery/i1 (36).png",
-    "assets/images/gallery/i1 (37).png",
-    "assets/images/gallery/i1 (3).jpeg",
-    "assets/images/gallery/i1 (2).jpeg",
-    "assets/images/gallery/i1 (4).jpeg",
-    "assets/images/gallery/i1 (5).jpeg",
-    "assets/images/gallery/i1 (6).jpeg",
-    "assets/images/gallery/i1 (7).jpeg",
-    "assets/images/gallery/i1 (8).jpeg",
-    "assets/images/gallery/i1 (9).jpeg",
-    "assets/images/gallery/i1 (1).jpeg",
-    "assets/images/gallery/i1 (11).jpeg",
-    "assets/images/gallery/i1 (12).jpeg",
-    "assets/images/gallery/i1 (13).jpeg",
-    "assets/images/gallery/i1 (14).jpeg",
-    "assets/images/gallery/i1 (15).jpeg",
-    "assets/images/gallery/i1 (16).jpeg",
-    "assets/images/gallery/i1 (17).jpeg",
-    "assets/images/gallery/i1 (18).jpeg",
-    "assets/images/gallery/i1 (19).jpeg",
-    "assets/images/gallery/i1 (20).jpeg",
-    "assets/images/gallery/i1 (21).jpeg",
-    "assets/images/gallery/i1 (22).jpeg",
-    "assets/images/gallery/i1 (23).jpeg",
-    "assets/images/gallery/i1 (24).jpeg"
-  ];
-
-  let currentIndex = 0;
-
-  const mainImage = document.getElementById("mainImage");
-  const thumbnails = document.querySelectorAll("#thumbnails img");
-
-  function setImage(index) {
-    currentIndex = index;
-    mainImage.src = images[index];
-
-    thumbnails.forEach(img => img.classList.remove("active"));
-    thumbnails[index].classList.add("active");
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    setImage(currentIndex);
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    setImage(currentIndex);
-  }
-  
-  @media(max-width: 768px){
-  .popup-container {
-    flex-direction: column;
-    width: 95%;
-  }
-
-  .popup-left {
-    height: 180px;
-    width: 100%;
-  }
-
-  .popup-right iframe {
-    height: 400px;
-  }
-}
-</script>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Enbott – Campus-Integrated Career Readiness & Technology Solutions</title>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Enbott bridges academia and industry through campus-integrated career readiness programs, technology training, and industry-aligned solutions for institutions and enterprises.">
-  <meta name="keywords" content="Enbott, career readiness, campus hiring, industry-integrated learning, technology training, employability solutions">
-  <meta name="robots" content="index, follow">
-
-    <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <style>
-      .gallery-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  font-family: system-ui, sans-serif;
-}
-
-.gallery-main {
-  position: relative;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.gallery-main img {
-  width: 100%;
-  height: 520px;
-  object-fit: contain;
-  background: #ffffff;
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
-  color: #000;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  font-size: 24px;
-  padding: 12px 16px;
-  cursor: pointer;
-  z-index: 10;
-}
-.nav-btn:hover {
-  background: #f1f5f9;
-}
-
-
-.nav-btn.left { left: 10px; }
-.nav-btn.right { right: 10px; }
-
-.gallery-thumbs {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 15px 0;
-}
-
-.gallery-thumbs img {
-  height: 90px;
-  cursor: pointer;
-  border-radius: 6px;
-  opacity: 0.6;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.gallery-thumbs img:hover {
-  opacity: 1;
-}
-
-.gallery-thumbs img.active {
-  opacity: 1;
-  border-color: #0891b2; /* brand-friendly accent */
-}
-      /* POPUP LAYOUT */
-      /* Overlay */
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-
-  /* Popup Box */
-  .popup-box {
-    background: #fff;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    animation: fadeIn 0.3s ease;
-  }
-
-  /* Close Button */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 10;
-  }
-
-  iframe {
-    width: 100%;
-    height: 550px;
-    border: none;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
-.popup-box.two-col {
-  display: flex;
-  width: 90%;
-  max-width: 900px;
-  height: 550px;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-}
-
-/* LEFT IMAGE */
-.popup-left {
-  width: 45%;
-  background: #000;
-}
-
-.popup-left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* RIGHT FORM */
-.popup-right {
-  width: 55%;
-}
-
-.popup-right iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* CLOSE BUTTON */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .popup-box.two-col {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .popup-left {
-    width: 100%;
-    height: 180px;
-  }
-
-  .popup-right {
-    width: 100%;
-    height: 400px;
-  }
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 10;
-}
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .footer-grid-enhanced {
+            grid-template-columns: 1.3fr 1fr 1fr;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        /* Brand block */
+        .footer-brand {
+            max-width: 420px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav .container {
+        .brand-row {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #4b5563;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #0891b2;
-        }
-
-        .nav-cta {
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-            color: white !important;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: transform 0.3s;
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-2px);
-        }
-/* Dropdown */
-.dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.dropdown > a {
-  text-decoration: none;
-  color: #4b5563;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.dropdown > a:hover {
-  color: #0891b2;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  border-radius: 10px;
-  padding: 10px 0;
-  display: none;
-  min-width: 240px;
-  z-index: 1000;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 12px 20px;
-  color: #334155;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.dropdown-menu a:hover {
-  background: #f1f5f9;
-  color: #0891b2;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Show dropdown on hover */
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-      /* Mobile Menu Button */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  width: 26px;
-  height: 3px;
-  background: #1e293b;
-  border-radius: 3px;
-  transition: all 0.3s;
-}
-
-/* Mobile Nav Panel */
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: white;
-  display: none;
-  flex-direction: column;
-  padding: 90px 20px 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  z-index: 999;
-}
-
-body.menu-open {
-  overflow: hidden;
-}
-
-
-.mobile-nav a {
-  padding: 14px 10px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #1e293b;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.mobile-nav a:last-child {
-  border-bottom: none;
-}
-
-.mobile-cta {
-  background: linear-gradient(135deg, #0891b2, #3b82f6);
-  color: white !important;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 12px;
-}
-
-/* Show mobile nav */
-.mobile-nav.active {
-  display: flex;
-}
-
-/* Responsive */
-@media (max-width: 968px) {
-  .menu-toggle {
-    display: flex;
-  }
-}
-
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
-            color: white;
-            padding: 90px 0 70px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 25px;
-            animation: fadeInUp 0.8s;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            line-height: 1.6;
-            animation: fadeInUp 0.8s 0.2s backwards;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s 0.4s backwards;
-            margin-bottom: 50px;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #0891b2;
-            padding: 16px 35px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 17px;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 16px 35px;
-            border: 2px solid white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 17px;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .trust-bar {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 45px;
-            animation: fadeInUp 0.8s 0.6s backwards;
-        }
-
-        .trust-item {
-            text-align: center;
-            font-size: 13px;
-            padding: 12px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-
-        .trust-item strong {
-            display: block;
-            font-size: 17px;
-            margin-bottom: 3px;
-        }
-
-        /* Partnership Strip */
-        .partnership-strip {
-            background: linear-gradient(to right, #f0f9ff, #e0f2fe);
-            padding: 35px 0;
-            text-align: center;
-            border-bottom: 2px solid #0891b2;
-        }
-
-        .partnership-strip p {
-            font-size: 15px;
-            color: #0c4a6e;
+            gap: 12px;
             margin-bottom: 20px;
-            font-weight: 500;
         }
 
-        .partner-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .partner-logo {
-            background: white;
-            padding: 18px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            font-weight: 700;
-            color: #0c4a6e;
-            font-size: 17px;
-            transition: transform 0.3s;
-        }
-
-        .partner-logo:hover {
-            transform: translateY(-5px);
-        }
-
-        .partner-logo.codechef {
-            background: linear-gradient(135deg, #a17845 0%, #8B4513 100%);
-            color: white;
-        }
-
-        .partner-logo.pearson {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
-        }
-
-        .partner-logo.gt {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 70px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: #dbeafe;
-            color: #0c4a6e;
-            padding: 7px 18px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 18px;
-        }
-
-        .section-header h2 {
-            font-size: 38px;
-            margin-bottom: 12px;
-            color: #1e293b;
-        }
-
-        .section-header p {
-            font-size: 18px;
-            color: #64748b;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Reviews Section */
-        .reviews-section {
-            background: white;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-            gap: 25px;
-        }
-
-        .review-card {
-            background: #f8fafc;
-            padding: 28px;
-            border-radius: 15px;
-            border-left: 4px solid #0891b2;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .review-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .reviewer-avatar {
-            width: 48px;
-            height: 48px;
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            border: 2px solid white;
             border-radius: 50%;
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 19px;
-        }
-
-        .reviewer-info h4 {
-            font-size: 15px;
-            margin-bottom: 3px;
-            color: #1e293b;
-        }
-
-        .reviewer-info p {
-            font-size: 12px;
-            color: #64748b;
-        }
-
-        .stars {
-            color: #f59e0b;
-            font-size: 15px;
-            margin-bottom: 10px;
-        }
-
-        .review-text {
-            color: #475569;
-            line-height: 1.7;
+            display: grid;
+            place-items: center;
             font-size: 14px;
         }
 
-        /* Problem Section */
-        .problem-section {
-            background: #f8fafc;
-        }
-
-        .problem-intro {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-size: 17px;
-            color: #475569;
-        }
-
-        .problems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 45px;
-        }
-
-        .problem-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-
-        .problem-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .problem-icon {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .problem-card h3 {
-            font-size: 19px;
-            margin-bottom: 12px;
-            color: #1e293b;
-        }
-
-        .problem-card p {
-            color: #64748b;
-            line-height: 1.7;
-            font-size: 14px;
-        }
-
-        .transition-text {
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-top: 35px;
-        }
-
-        /* Programs Section - Four Pillars */
-        .programs-section {
-            background: white;
-        }
-
-        .programs-grid {
-            display: grid;
-            gap: 35px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .program-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .program-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .program-header {
-            padding: 35px;
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
+        .brand-name {
+            font-size: 22px;
+            font-weight: 700;
             color: white;
         }
 
-        .program-header.codechef {
-            background: linear-gradient(135deg, #a17845 0%, #8B4513 100%);
-        }
-
-        .program-header.pearson {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .program-header.iic {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .program-header.international {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .program-icon {
-            font-size: 44px;
-            margin-bottom: 12px;
-        }
-
-        .program-title {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .program-subtitle {
-            font-size: 16px;
-            opacity: 0.95;
-        }
-
-        .program-content {
-            padding: 35px;
-        }
-
-        .program-content h4 {
-            font-size: 20px;
-            margin: 20px 0 12px 0;
-            color: #1e293b;
-        }
-
-        .program-content p {
-            color: #64748b;
+        .footer-desc {
+            font-size: 14px;
             line-height: 1.7;
-            margin-bottom: 18px;
-            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 26px;
         }
 
-        .feature-list {
-            list-style: none;
-            margin: 18px 0;
-        }
-
-        .feature-list li {
-            padding: 8px 0;
-            padding-left: 28px;
-            position: relative;
-            color: #475569;
-            font-size: 14px;
-        }
-
-        .feature-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .feature-list li strong {
-            color: #1e293b;
-        }
-
-        .program-outcome {
-            background: #f0f9ff;
-            padding: 18px;
+        /* CTA button (Muza-inspired, Enbott-colored) */
+        .footer-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #0891b2, #3b82f6);
+            color: white;
+            padding: 14px 24px;
             border-radius: 10px;
-            border-left: 4px solid #0891b2;
-            margin-top: 18px;
-            font-size: 14px;
-        }
-
-        .program-outcome strong {
-            color: #0c4a6e;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .stats-highlight {
-            background: #ecfeff;
-            padding: 18px;
-            border-radius: 10px;
-            margin: 18px 0;
-            border: 2px solid #06b6d4;
-        }
-
-        .stats-highlight strong {
-            color: #0891b2;
-            font-size: 16px;
-        }
-
-        /* Metrics Section */
-        .metrics-section {
-            background: linear-gradient(135deg, #0c4a6e 0%, #1e40af 100%);
-            color: white;
-            padding: 70px 0;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .metric-card {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 2px solid rgba(255,255,255,0.2);
-        }
-
-        .metric-number {
-            font-size: 42px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .metric-label {
-            font-size: 16px;
-            opacity: 0.95;
-            display: block;
-        }
-
-        .metric-sublabel {
-            font-size: 13px;
-            opacity: 0.8;
-            margin-top: 5px;
-            display: block;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            background: #f8fafc;
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            margin-bottom: 12px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s;
-        }
-
-        .faq-item:hover {
-            border-color: #0891b2;
-        }
-
-        .faq-question {
-            padding: 22px 28px;
-            cursor: pointer;
+            text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 14px;
+            box-shadow: 0 8px 20px rgba(8, 145, 178, 0.35);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .footer-grid-enhanced {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-brand {
+                margin-bottom: 25px;
+            }
+        }
+
+        .mobile-dropdown {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .mobile-dropdown-toggle {
+            padding: 14px 10px;
+            font-weight: 600;
+            color: #1e293b;
+            cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s;
-            color: #1e293b;
         }
 
-        .faq-question:hover {
-            background: #e0f2fe;
-        }
-
-        .faq-answer {
-            padding: 0 28px 22px;
-            color: #64748b;
-            line-height: 1.7;
+        .mobile-dropdown-content {
             display: none;
+            flex-direction: column;
+            padding-left: 10px;
+            background: #f9fafb;
+        }
+
+        .mobile-dropdown-content a {
+            padding: 12px 10px;
             font-size: 14px;
+            border-bottom: 1px solid #e5e7eb;
         }
 
-        .faq-item.active .faq-answer {
-            display: block;
+        .mobile-dropdown.active .mobile-dropdown-content {
+            display: flex;
         }
 
-        .faq-toggle {
-            font-size: 22px;
-            transition: transform 0.3s;
-            color: #0891b2;
-            font-weight: bold;
-        }
-
-        .faq-item.active .faq-toggle {
+        .mobile-dropdown.active .arrow {
             transform: rotate(45deg);
         }
 
-        /* Final CTA Section */
-        .final-cta {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-size: 42px;
-            margin-bottom: 25px;
-        }
-
-        .emotional-text {
+        .arrow {
             font-size: 18px;
-            max-width: 750px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
-            opacity: 0.95;
+            transition: transform 0.3s ease;
         }
 
-        .benefits-list {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: left;
+        :root {
+            --bg-dark-canvas: #2563eb;
+            --bg-dark-cosmic: #1d4ed8;
+            --text-light-heading: #ffffff;
+            --text-light-body: rgba(255, 255, 255, 0.9);
+            --accent-teal-gradient: linear-gradient(135deg, #ffffff 0%, #bae6fd 100%);
         }
 
-        .benefit-item {
-            background: rgba(255,255,255,0.05);
-            padding: 16px 22px;
-            border-radius: 10px;
-            margin-bottom: 12px;
-            border-left: 4px solid #10b981;
-            font-size: 15px;
+        .kinetic-hero {
+            background: #1e3e70 !important;
         }
 
-        .cta-buttons-final {
+        .radial-glow-source {
+            position: absolute;
+            width: 900px;
+            height: 900px;
+            right: -10%;
+            top: -10%;
+            background: radial-gradient(circle,
+                    rgba(255, 255, 255, 0.15) 0%,
+                    rgba(255, 255, 255, 0.05) 50%,
+                    transparent 80%);
+        }
+
+        /* Logo Strip / Slider */
+        .logo-strip {
+            background: #020617;
+            padding: 40px 0 50px;
+        }
+
+        .logo-strip-title {
+            text-align: center;
+            font-size: 16px;
+            color: #9ca3af;
+            margin-bottom: 26px
+        }
+
+        .logo-strip-title span {
+            color: #f9fafb;
+            font-weight: 600
+        }
+
+        .logo-slider {
+            overflow: hidden;
+            position: relative;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent)
+        }
+
+        .logo-track {
             display: flex;
-            gap: 18px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 40px 0;
+            align-items: center;
+            gap: 50px;
+            width: max-content;
+            animation: logo-scroll 30s linear infinite
         }
 
-        .btn-large {
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-            color: white;
-            padding: 18px 45px;
-            border-radius: 35px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: all 0.3s;
-            display: inline-block;
+        .logo-slider:hover .logo-track {
+            animation-play-state: paused
         }
 
-        .btn-large:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(8, 145, 178, 0.4);
+        .logo-item {
+            flex: 0 0 auto;
+            padding: 12px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center
         }
 
-        .btn-outline {
-            background: transparent;
-            color: white;
-            padding: 18px 45px;
-            border: 2px solid white;
-            border-radius: 35px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: all 0.3s;
+        .logo-item img {
+            height: 44px;
+            max-width: 150px;
+            width: auto;
+            object-fit: contain;
+            filter: none;
+            opacity: 1;
+            display: block
         }
 
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.1);
+
+        .logo-item {
+            background: none;
+            border: none
         }
 
-        /* Footer */
-        footer {
-            background: #0f172a;
-            color: white;
-            padding: 50px 0 25px;
+        .logo-item:nth-child(4n+1) img {
+            height: 80px
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 35px;
-            margin-bottom: 35px;
+        .logo-item:nth-child(4n+2) img {
+            height: 80px
         }
 
-        .footer-section h4 {
-            font-size: 17px;
-            margin-bottom: 18px;
-            color: #0891b2;
+        .logo-item:nth-child(4n+3) img {
+            height: 80px
         }
 
-        .footer-section ul {
-            list-style: none;
+        .logo-item:nth-child(4n) img {
+            height: 90px
         }
 
-        .footer-section li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 13px;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #94a3b8;
-            font-size: 13px;
-        }
-
-        /* Floating CTA */
-        .floating-cta {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 50px;
-            box-shadow: 0 6px 20px rgba(8, 145, 178, 0.4);
-            text-decoration: none;
-            font-weight: 700;
-            z-index: 99;
-            animation: float 3s ease-in-out infinite;
-            font-size: 15px;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        @keyframes fadeInUp {
+        @keyframes logo-scroll {
             from {
-                opacity: 0;
-                transform: translateY(25px);
+                transform: translateX(0)
             }
+
             to {
-                opacity: 1;
-                transform: translateY(0);
+                transform: translateX(-50%)
             }
         }
 
-        @media (max-width: 968px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 34px; }
-            .hero-subtitle { font-size: 17px; }
-            .section-header h2 { font-size: 30px; }
-            .program-title { font-size: 24px; }
-            .final-cta h2 { font-size: 34px; }
+        @media(max-width:640px) {
+            .logo-track {
+                gap: 32px
+            }
+
+            .logo-item {
+                padding: 10px 14px
+            }
+
+            .logo-item img {
+                height: 34px;
+                max-width: 110px
+            }
         }
-
-        @media (max-width: 640px) {
-            .cta-buttons, .cta-buttons-final { flex-direction: column; align-items: stretch; }
-            .btn-primary, .btn-secondary, .btn-large, .btn-outline { text-align: center; }
-            .floating-cta { right: 18px; bottom: 18px; padding: 14px 24px; font-size: 13px; }
-        }
-
-        /* Enhanced footer layout */
-.footer-grid-enhanced {
-  grid-template-columns: 1.3fr 1fr 1fr;
-}
-
-/* Brand block */
-.footer-brand {
-  max-width: 420px;
-}
-
-.brand-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.brand-logo {
-  width: 36px;
-  height: 36px;
-  border: 2px solid white;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 14px;
-}
-
-.brand-name {
-  font-size: 22px;
-  font-weight: 700;
-  color: white;
-}
-
-.footer-desc {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #94a3b8;
-  margin-bottom: 26px;
-}
-
-/* CTA button (Muza-inspired, Enbott-colored) */
-.footer-cta {
-  display: inline-block;
-  background: linear-gradient(135deg, #0891b2, #3b82f6);
-  color: white;
-  padding: 14px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  box-shadow: 0 8px 20px rgba(8,145,178,0.35);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .footer-grid-enhanced {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-brand {
-    margin-bottom: 25px;
-  }
-}
-
     </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo"><a href = "/"><img src="assets/logos/logo.png" alt="Enbott hero logo" width=120px height=50px align="centre"> </a></div>
+            <div class="logo"><a href="/"><img src="assets/logos/logo.png" alt="Enbott hero logo" width=120px
+                        height=50px align="centre"> </a></div>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <div class="dropdown">
-  <a href="/services">Services ▾</a>
+                    <a href="/services">Services ▾</a>
 
-  <div class="dropdown-menu">
-    <a href="/services#technical-training">Coding Competency Training</a>
-    <a href="/services#iic">Industry Integrated Certification (IIC) by EI Labs </a>
-    <a href="/services#placement-readiness">Placement Readiness</a>
-    <a href="/services#internships">Internship Programs</a>
-    <a href="/services#global-immersion">Global Immersion</a>
-    <a href="/services#faculty-development">Faculty Development</a>
-  </div>
-</div>
+                    <div class="dropdown-menu">
+                        <a href="/services#technical-training">Coding Competency Training</a>
+                        <a href="/services#iic">Industry Integrated Certification (IIC) by EI Labs </a>
+                        <a href="/services#placement-readiness">Placement Readiness</a>
+                        <a href="/services#internships">Internship Programs</a>
+                        <a href="/services#global-immersion">Global Immersion</a>
+                        <a href="/services#faculty-development">Faculty Development</a>
+                    </div>
+                </div>
                 <a href="/partners">Partnerships</a>
                 <a href="/clients">Client Stories</a>
                 <a href="/contact" class="nav-cta">Contact Us</a>
+                <a href="https://eilabs.enbott.com/login" target="_blank"><img src="assets/images/login-gradient.png"
+                        height=40px width=100% align="middle"></a>
             </div>
-                  <!-- Mobile Menu Button -->
-<div class="menu-toggle" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
 
     </nav>
 
-        <!-- Mobile Navigation -->
-<div class="mobile-nav" id="mobileNav">
-<a href="/" onclick="toggleMenu()">Home</a>
-<a href="/services">Services</a>
-<a href="/services#technical-training">— Technical Training</a>
-<a href="/services#iic">Industry Integrated Certification (IIC)</a>
-<a href="/services#placement-readiness">— Placement Readiness</a>
-<a href="/services#internships">— Internships</a>
-<a href="/services#global-immersion">— Global Immersion</a>
-<a href="/services#faculty-development">— Faculty Development</a>
-<a href="/partners" onclick="toggleMenu()">Partnerships</a>
-<a href="/clients" onclick="toggleMenu()">Client Stories</a>
-<a href="/contact" class="mobile-cta" onclick="toggleMenu()">Contact Us</a>
-</div>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Campus Learning Into Career Success</h1>
-                <p class="hero-subtitle">Industry-ready skills through global partnerships. Master competitive programming with CodeChef, enhance communication with Pearson, and access international learning opportunities—all through your university’s Industry Integrated Certification (IIC) program</p>
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="/" onclick="toggleMenu()">Home</a>
+
+        <div class="mobile-dropdown">
+            <div class="mobile-dropdown-toggle" onclick="toggleDropdown(this)">
+                Services
+                <span class="arrow">+</span>
+            </div>
+
+            <div class="mobile-dropdown-content">
+                <a href="/services">Overview</a>
+                <a href="/services#technical-training">— Technical Training</a>
+                <a href="/services#iic">Industry Integrated Certification (IIC)</a>
+                <a href="/services#placement-readiness">— Placement Readiness</a>
+                <a href="/services#internships">— Internships</a>
+                <a href="/services#global-immersion">— Global Immersion</a>
+                <a href="/services#faculty-development">— Faculty Development</a>
+            </div>
+        </div>
+
+        <a href="/partners" onclick="toggleMenu()">Partnerships</a>
+        <a href="/clients" onclick="toggleMenu()">Client Stories</a>
+        <a href="https://eilabs.enbott.com/login" target="_blank">
+            <img src="assets/images/login-gradient.png" height="60px" width="100%">
+        </a>
+
+    </div>
+
+    <script>
+        function toggleDropdown(el) {
+            el.parentElement.classList.toggle("active");
+        }
+    </script>
+
+    <section class="kinetic-hero">
+        <div class="mesh-backdrop">
+            <div class="radial-glow-source"></div>
+
+            <svg class="pipeline-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"
+                preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <linearGradient id="stream-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+                        <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
+                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+
+                <path class="track-line" d="M 50,150 L 350,150 L 450,280 L 750,280" />
+                <path class="track-line" d="M 50,450 L 350,450 L 450,320 L 750,320" />
+                <path class="track-line" d="M 200,150 L 200,450" />
+                <path class="track-line" d="M 600,280 L 600,100 L 750,100" />
+
+                <path class="pulse-stream stream-1" d="M 50,150 L 350,150 L 450,280 L 750,280" />
+                <path class="pulse-stream stream-2" d="M 50,450 L 350,450 L 450,320 L 750,320" />
+                <path class="pulse-stream stream-3" d="M 200,150 L 200,450" />
+            </svg>
+        </div>
+
+        <div class="container hero-layout-grid">
+            <div class="hero-narrative">
+                <div class="live-signal"><span class="pulse-dot"></span> POWERED BY EI LABS • ENBOTT LEARNING PLATFORM
+                </div>
+                <h1>Transform Campus Learning Into <span class="gradient-glitch">Career Success</span></h1>
+                <p>Industry-ready skill matrix integration through structural international frameworks. Develop coding,
+                    communication, and industry-ready skills
+                    through the EI Labs learning ecosystem.</p>
                 <div class="cta-buttons">
                     <a href="#programs" class="btn-primary">Explore Our Programs →</a>
-                    <a href="#cta" class="btn-secondary">Explore IIC Program</a>
-                </div>
-                <div class="trust-bar">
-                    <div class="trust-item">
-                        <strong>15,000+</strong>
-                        Live University Learners
-                    </div>
-                    <div class="trust-item">
-                        <strong>CodeChef</strong>
-                        Partnership
-                    </div>
-                    <div class="trust-item">
-                        <strong>Pearson</strong>
-                        Collaboration
-                    </div>
-                    <div class="trust-item">
-                        <strong>International</strong>
-                        Exchange Programs
-                    </div>
+                    <a href="/services#iic" class="btn-secondary">Explore IIC Program</a>
                 </div>
             </div>
+
+            <div class="hero-interactive-grid">
+                <div class="mesh-card positioning-card-1" onclick="window.location.href='/services#iic'">
+                    <div class="node-status-bar" style="background: #ffffff; width: 30px;"></div>
+                    <h3>EI Labs Learning Platform</h3>
+                    <p>A centralized LMS where students learn, practice coding,
+                        complete assessments, earn certifications,
+                        and track career readiness progress.</p>
+                </div>
+                <div class="mesh-card positioning-card-2" onclick="window.location.href='/services#technical-training'">
+                    <div class="node-status-bar" style="background: #ffffff; width: 30px;"></div>
+                    <h3>Competitive Coding</h3>
+                    <p>Global architectural array problem solving structures powered directly via CodeChef enterprise
+                        benchmarks.</p>
+                </div>
+
+                <div class="mesh-card positioning-card-3" onclick="window.location.href='/services#global-immersion'">
+                    <div class="node-status-bar" style="background: #ffffff; width: 30px;"></div>
+                    <h3>Global Communication</h3>
+                    <p>Immersive AI contextual linguistic environments mapped cleanly to high-fidelity Pearson tracking
+                        indices.</p>
+                </div>
+
+            </div>
+        </div>
         </div>
     </section>
 
-    <!-- Partnership Strip -->
     <section class="partnership-strip">
         <div class="container">
-            <p>Empowering students through global partnerships and Industry Integrated Certification (IIC) programs</p>
-            <div class="partner-logos">
-                <div class="partner-logo codechef">CodeChef</div>
-                <div class="partner-logo pearson">Pearson</div>
-                <div class="partner-logo gt">GT Technologies</div>
+            <p>Empowering students through Ei-labs, global partnerships and Industry Integrated Certification (IIC)
+                programs</p>
+            <p class="logo-strip-title">
+                Trusted by <span>25+ institutions &amp; partners</span> to power campus learning
+            </p>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Replace src with your actual logo paths -->
+                    <div class="logo-item"><img alt="Partner 1" src="assets/logos/cress-bw.png" /></div>
+                    <div class="logo-item"><img alt="Partner 2" src="assets/logos/novac.png" /></div>
+                    <div class="logo-item"><img alt="Partner 3" src="assets/logos/ciic.png" /></div>
+                    <div class="logo-item"><img alt="Partner 4" src="assets/logos/pearson-bw.svg" /></div>
+                    <div class="logo-item"><img alt="Partner 5" src="assets/logos/siraj.png" /></div>
+                    <div class="logo-item"><img alt="Partner 6" src="assets/logos/gib.png" /></div>
+                    <!-- Duplicate logos for seamless infinite scroll -->
+                    <div class="logo-item"><img alt="Crescent Institute of Technology logo"
+                            src="assets/logos/cres.png" />
+                    </div>
+                    <div class="logo-item"><img alt="Kalasingam Academy of Research and Education logo"
+                            src="assets/logos/kala.png" /></div>
+                    <div class="logo-item"><img alt="Karpagam Academy of Higher Education logo"
+                            src="assets/logos/kapa.png" /></div>
+                    <div class="logo-item"><img alt="Panimalar Engineering College logo" src="assets/logos/pani.png" />
+                    </div>
+                    <div class="logo-item"><img alt="PSNA college of Engineering and Technology logo"
+                            src="assets/logos/psna.png" /></div>
+                    <div class="logo-item"><img alt="St. Peter's Institute of Higher Education and Research logo"
+                            src="assets/logos/peter.png" /></div>
+                    <div class="logo-item"><img alt="Sathyabama Institute of Science and Technology logo"
+                            src="assets/logos/sathya.png" /></div>
+                    <div class="logo-item"><img alt="coimbatore institute of engineering and technology logo"
+                            src="assets/logos/ciet.jpg" /></div>
+                    <div class="logo-item"><img alt="Partner 1" src="assets/logos/cress-bw.png" /></div>
+                    <div class="logo-item"><img alt="Partner 2" src="assets/logos/novac.png" /></div>
+                    <div class="logo-item"><img alt="Partner 3" src="assets/logos/ciic.png" /></div>
+                    <div class="logo-item"><img alt="Partner 4" src="assets/logos/pearson-bw.svg" /></div>
+                    <div class="logo-item"><img alt="Partner 5" src="assets/logos/siraj.png" /></div>
+                    <div class="logo-item"><img alt="Partner 6" src="assets/logos/gib.png" /></div>
+                    <div class="logo-item"><img alt="Crescent Institute of Technology logo"
+                            src="assets/logos/cres.png" />
+                    </div>
+                    <div class="logo-item"><img alt="Kalasingam Academy of Research and Education logo"
+                            src="assets/logos/kala.png" /></div>
+                    <div class="logo-item"><img alt="Karpagam Academy of Higher Education logo"
+                            src="assets/logos/kapa.png" /></div>
+                    <div class="logo-item"><img alt="Panimalar Engineering College logo" src="assets/logos/pani.png" />
+                    </div>
+                    <div class="logo-item"><img alt="PSNA college of Engineering and Technology logo"
+                            src="assets/logos/psna.png" /></div>
+                    <div class="logo-item"><img alt="St. Peter's Institute of Higher Education and Research logo"
+                            src="assets/logos/peter.png" /></div>
+                    <div class="logo-item"><img alt="Sathyabama Institute of Science and Technology logo"
+                            src="assets/logos/sathya.png" /></div>
+                    <div class="logo-item"><img alt="coimbatore institute of engineering and technology logo"
+                            src="assets/logos/ciet.jpg" /></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
     <section class="reviews-section">
         <div class="container">
             <div class="section-header">
@@ -3261,7 +1806,9 @@ body.menu-open {
                         </div>
                     </div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"The CodeChef competitive programming platform gave me global ranking and helped me secure a 10 LPA package. The weekly hackathons kept me consistently improving!"</p>
+                    <p class="review-text">"The EI Labs platform helped me build strong coding and problem-solving
+                        skills through structured practice, assessments, and real-world challenges. The learning journey
+                        was engaging, and it played a major role in helping me secure a 10 LPA placement."</p>
                 </div>
                 <div class="review-card">
                     <div class="review-header">
@@ -3272,7 +1819,10 @@ body.menu-open {
                         </div>
                     </div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Pearson's communication modules with AI-enabled speaking practice transformed my confidence. The role-plays and simulations made learning practical and engaging."</p>
+                    <p class="review-text">"EI Labs transformed the way I learned communication skills. The interactive
+                        modules, speaking practice, and career-readiness activities helped me become more confident
+                        during presentations, interviews, and group discussions."
+                    </p>
                 </div>
                 <div class="review-card">
                     <div class="review-header">
@@ -3283,47 +1833,110 @@ body.menu-open {
                         </div>
                     </div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Learning through the IIC program was so convenient. Industry-backed certifications, hands-on training, and direct placement opportunities—all within our academic journey.. Industry-backed certifications, hands-on training, and direct placement opportunities—all without leaving campus."</p>
+                    <p class="review-text">"The EI Labs platform made learning easy.
+                        I could access courses, coding exercises,
+                        assessments, and certifications in one place.
+                        The structured learning journey helped me
+                        become placement-ready."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
     <section class="problem-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">THE CHALLENGE</span>
                 <h2>The Skills Gap Challenge</h2>
             </div>
-            <p class="problem-intro">Academic qualifications alone aren't enough. Employers seek specific, demonstrable skills. Here's what most students lack:</p>
+            <p class="problem-intro">Academic qualifications alone aren't enough. Employers seek specific, demonstrable
+                skills. Here's what most students lack:</p>
             <div class="problems-grid">
                 <div class="problem-card">
                     <div class="problem-icon">💻</div>
                     <h3>Theoretical Coding vs. Competitive Programming</h3>
-                    <p>You learn to code, but can you solve complex problems under time constraints? Can you compete globally? Most academic curricula don't include competitive programming.</p>
+                    <p>You learn to code, but can you solve complex problems under time constraints? Can you compete
+                        globally? Most academic curricula don't include competitive programming.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">🗣️</div>
                     <h3>Academic English vs. Professional Communication</h3>
-                    <p>Scoring well in English exams doesn't mean you can present to stakeholders or write professional emails. Industry-specific communication skills are rarely taught.</p>
+                    <p>Scoring well in English exams doesn't mean you can present to stakeholders or write professional
+                        emails. Industry-specific communication skills are rarely taught.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">🏫</div>
                     <h3>Campus Limitations vs. Industry Standards</h3>
-                    <p>Most universities lack access to industry-standard platforms, certifications, and hands-on training environments that employers expect.</p>
+                    <p>Most universities lack access to industry-standard platforms, certifications, and hands-on
+                        training environments that employers expect.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">🌍</div>
                     <h3>Local Experience vs. Global Perspective</h3>
-                    <p>Cross-cultural understanding and international exposure are invaluable in today's world. But few students get meaningful global learning experiences.</p>
+                    <p>Cross-cultural understanding and international exposure are invaluable in today's world. But few
+                        students get meaningful global learning experiences.</p>
                 </div>
             </div>
             <p class="transition-text">What if your campus could bridge all these gaps?</p>
         </div>
     </section>
 
-    <!-- Programs Section - Four Pillars -->
+    <section class="eilabs-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-badge">EI LABS PLATFORM</span>
+                <h2>The Digital Learning Ecosystem Behind Every Program</h2>
+
+                <p>
+                    EI Labs is Enbott's dedicated learning and career readiness platform,
+                    built specifically for higher education institutions.
+                </p>
+            </div>
+
+            <div class="problems-grid">
+
+                <div class="problem-card">
+                    <div class="problem-icon">📚</div>
+                    <h3>Structured Learning</h3>
+                    <p>
+                        Access industry-aligned courses across emerging technologies,
+                        communication skills, and career readiness domains.
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">💻</div>
+                    <h3>Integrated Coding Environment</h3>
+                    <p>
+                        Practice coding challenges, participate in contests,
+                        and strengthen problem-solving skills directly within EI Labs.
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3>Progress Tracking</h3>
+                    <p>
+                        Monitor learning progress, assessments,
+                        certifications, and skill development milestones.
+                    </p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">🏆</div>
+                    <h3>Certifications & Career Readiness</h3>
+                    <p>
+                        Earn industry-recognized certifications and build
+                        a portfolio that strengthens employability.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <section class="programs-section" id="programs">
         <div class="container">
             <div class="section-header">
@@ -3332,26 +1945,29 @@ body.menu-open {
                 <p>Comprehensive programs designed to make you industry-ready</p>
             </div>
             <div class="programs-grid">
-                <!-- Program 1: CodeChef -->
                 <div class="program-card">
                     <div class="program-header codechef">
                         <div class="program-icon">💻</div>
                         <div class="program-title">Competitive Programming</div>
-                        <div class="program-subtitle">Partnership with CodeChef</div>
+                        <div class="program-subtitle">Delivered through EI Labs with CodeChef-powered</div>
                     </div>
                     <div class="program-content">
-                        <p>Master competitive programming with global recognition and ranking through CodeChef's industry-standard platform.</p>
-                        
+                        <p>Master competitive programming with global recognition and ranking through CodeChef's
+                            industry-standard platform.</p>
+
                         <div class="stats-highlight">
-                            <strong>600,000+</strong> new users yearly | <strong>15,000+</strong> live university learners | <strong>35+</strong> languages supported
+                            <strong>600,000+</strong> new users yearly | <strong>15,000+</strong> live university
+                            learners | <strong>35+</strong> languages supported
                         </div>
 
                         <h4>Platform Features:</h4>
                         <ul class="feature-list">
                             <li><strong>Online IDE:</strong> No extra software installation needed</li>
-                            <li><strong>Plagiarism Prevention:</strong> Tab control, code similarity check, copy-paste blocker</li>
+                            <li><strong>Plagiarism Prevention:</strong> Tab control, code similarity check, copy-paste
+                                blocker</li>
                             <li><strong>Global Accessibility:</strong> Programming content in 35+ languages</li>
-                            <li><strong>Unified Dashboards:</strong> Efficient learning management and progress tracking</li>
+                            <li><strong>Unified Dashboards:</strong> Efficient learning management and progress tracking
+                            </li>
                         </ul>
 
                         <h4>Competitive Opportunities:</h4>
@@ -3364,23 +1980,25 @@ body.menu-open {
 
                         <div class="program-outcome">
                             <strong>Career Impact:</strong>
-                            Improved placement outcomes with 6-12 LPA job opportunities. Global rankings that validate your problem-solving abilities to top tech companies.
+                            Improved placement outcomes with 6-12 LPA job opportunities. Global rankings that validate
+                            your problem-solving abilities to top tech companies.
                         </div>
                     </div>
                 </div>
 
-                <!-- Program 2: Pearson -->
                 <div class="program-card">
                     <div class="program-header pearson">
                         <div class="program-icon">🗣️</div>
                         <div class="program-title">Communicative English</div>
-                        <div class="program-subtitle">Partnership with Pearson</div>
+                        <div class="program-subtitle">EI Labs communication learning pathways enhanced by Pearson</div>
                     </div>
                     <div class="program-content">
-                        <p>Enhance your professional communication with globally recognized Pearson training aligned to international standards.</p>
-                        
+                        <p>Enhance your professional communication with globally recognized Pearson training aligned to
+                            international standards.</p>
+
                         <div class="stats-highlight">
-                            <strong>10 Levels</strong> | <strong>100</strong> theme-based modules | <strong>300+</strong> hours | <strong>800+</strong> skill tasks
+                            <strong>10 Levels</strong> | <strong>100</strong> theme-based modules |
+                            <strong>300+</strong> hours | <strong>800+</strong> skill tasks
                         </div>
 
                         <h4>Comprehensive Learning:</h4>
@@ -3410,51 +2028,64 @@ body.menu-open {
                     </div>
                 </div>
 
-                <!-- Program 3: CoE -->
                 <div class="program-card">
                     <div class="program-header iic">
                         <div class="program-icon">🏫</div>
-                        <div class="program-title">Industry Integrated Certification (IIC)</div>
-                        <div class="program-subtitle">Career-Focused Industry-Integrated Program</div>
+                        <div class="program-title">Ei-Labs Industry Integrated Certification (IIC)</div>
+                        <div class="program-subtitle">Delivered Through the EI Labs Platform</div>
                     </div>
                     <div class="program-content">
-                        <p>Industry Integrated Certification (IIC) is a career-focused academic enhancement program designed to bridge the gap between classroom learning and real-world industry expectations.</p>
+                        <p>Industry Integrated Certification (IIC) is a career-focused academic enhancement program
+                            designed to bridge the gap between classroom learning and real-world industry expectations.
+                        </p>
 
-<h4>Program Highlights:</h4>
-<ul class="feature-list">
-  <li><strong>Industry-designed curriculum:</strong> Built with leading technology partners</li>
-  <li><strong>Hands-on practical learning:</strong> Real-world application of skills</li>
-  <li><strong>Live projects & case studies:</strong> Industry-relevant experience</li>
-  <li><strong>Industry mentorship:</strong> Guidance from professionals</li>
-  <li><strong>Continuous assessment:</strong> Ongoing feedback and skill tracking</li>
-</ul>
+                        <h4>Program Highlights:</h4>
+                        <ul class="feature-list">
+                            <li>
+                                <strong>EI Labs LMS Access:</strong>
+                                Learn through a centralized platform with course content,
+                                assessments, coding labs, and progress tracking.
+                            </li>
 
-<h4>Career Enablement:</h4>
-<ul class="feature-list">
-  <li><strong>Internship & career guidance support</strong></li>
-  <li><strong>Co-branded certifications</strong> with industry partners</li>
-  <li><strong>Alignment with market demand</strong></li>
-  <li><strong>Future-ready skill development</strong></li>
-</ul>
+                            <li>
+                                <strong>Practice Environment:</strong>
+                                Access coding exercises, quizzes,
+                                assignments, and certification preparation.
+                            </li>
+                            <li><strong>Industry-designed curriculum:</strong> Built with leading technology partners
+                            </li>
+                            <li><strong>Hands-on practical learning:</strong> Real-world application of skills</li>
+                            <li><strong>Live projects & case studies:</strong> Industry-relevant experience</li>
+                            <li><strong>Industry mentorship:</strong> Guidance from professionals</li>
+                            <li><strong>Continuous assessment:</strong> Ongoing feedback and skill tracking</li>
+                        </ul>
 
-<h4>Course Domains:</h4>
-<ul class="feature-list">
-  <li>AI/ML, Data Science, Data Analytics</li>
-  <li>Cloud Computing & DevOps</li>
-  <li>Cybersecurity</li>
-  <li>Full Stack Development</li>
-  <li>UI/UX, AR/VR</li>
-  <li>Digital Marketing & FinTech</li>
-</ul>
+                        <h4>Career Enablement:</h4>
+                        <ul class="feature-list">
+                            <li><strong>Internship & career guidance support</strong></li>
+                            <li><strong>Co-branded certifications</strong> with industry partners</li>
+                            <li><strong>Alignment with market demand</strong></li>
+                            <li><strong>Future-ready skill development</strong></li>
+                        </ul>
 
-<div class="program-outcome">
-  <strong>Program Impact:</strong>
-  Empowers students with practical skills, industry exposure, and certifications that directly enhance employability and career readiness.
-</div>
+                        <h4>Course Domains:</h4>
+                        <ul class="feature-list">
+                            <li>AI/ML, Data Science, Data Analytics</li>
+                            <li>Cloud Computing & DevOps</li>
+                            <li>Cybersecurity</li>
+                            <li>Full Stack Development</li>
+                            <li>UI/UX, AR/VR</li>
+                            <li>Digital Marketing & FinTech</li>
+                        </ul>
+
+                        <div class="program-outcome">
+                            <strong>Program Impact:</strong>
+                            Empowers students with practical skills, industry exposure, and certifications that directly
+                            enhance employability and career readiness.
+                        </div>
                     </div>
                 </div>
 
-                <!-- Program 4: International -->
                 <div class="program-card">
                     <div class="program-header international">
                         <div class="program-icon">✈️</div>
@@ -3462,11 +2093,13 @@ body.menu-open {
                         <div class="program-subtitle">Collaboration & Exchange Network</div>
                     </div>
                     <div class="program-content">
-                        <p>Comprehensive learning experiences blending academic innovation, cross-cultural understanding, and real-world industry insights.</p>
+                        <p>Comprehensive learning experiences blending academic innovation, cross-cultural
+                            understanding, and real-world industry insights.</p>
 
                         <h4>What This Offers:</h4>
                         <ul class="feature-list">
-                            <li><strong>Comprehensive Experience:</strong> Academic innovation + practical application</li>
+                            <li><strong>Comprehensive Experience:</strong> Academic innovation + practical application
+                            </li>
                             <li><strong>Cross-Cultural Understanding:</strong> Immersive global exposure</li>
                             <li><strong>Real-World Industry Insights:</strong> From international markets</li>
                             <li><strong>Holistic Development:</strong> Beyond just technical skills</li>
@@ -3491,7 +2124,8 @@ body.menu-open {
 
                         <div class="program-outcome">
                             <strong>Selection:</strong>
-                            Performance-based for high-achieving students from participating CoEs. Merit-driven opportunities with faculty recommendations.
+                            Performance-based for high-achieving students from participating CoEs. Merit-driven
+                            opportunities with faculty recommendations.
                         </div>
                     </div>
                 </div>
@@ -3499,73 +2133,55 @@ body.menu-open {
         </div>
     </section>
 
-            <!-- Elfsight Photo Gallery | Untitled Photo Gallery
-        <section class="reviews-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">ENBOTT IN ACTION</span>
-            <script src="https://elfsightcdn.com/platform.js" async></script>
-            <div class="elfsight-app-2ae40dcb-1658-4764-859a-c792fe60cc09" data-elfsight-app-lazy></div> 
+    <section class="gallery-selection">
+        <div class="gallery-container">
+            <div class="gallery-main">
+                <button class="nav-btn left" onclick="prevImage()">&#10094;</button>
+                <img id="mainImage" src="assets/images/gallery/i1 (10).jpeg" alt="Gallery Image">
+                <button class="nav-btn right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <div class="gallery-thumbs" id="thumbnails">
+                <img src="assets/images/gallery/i1 (10).jpeg" onclick="setImage(0)" class="active">
+                <img src="assets/images/gallery/i1 (25).jpeg" onclick="setImage(1)">
+                <img src="assets/images/gallery/i1 (26).jpg" onclick="setImage(2)">
+                <img src="assets/images/gallery/i1 (27).jpeg" onclick="setImage(3)">
+                <img src="assets/images/gallery/i1 (28).jpeg" onclick="setImage(4)">
+                <img src="assets/images/gallery/i1 (29).jpeg" onclick="setImage(5)">
+                <img src="assets/images/gallery/i1 (30).jpeg" onclick="setImage(6)">
+                <img src="assets/images/gallery/i1 (31).jpeg" onclick="setImage(7)">
+                <img src="assets/images/gallery/i1 (32).jpeg" onclick="setImage(8)">
+                <img src="assets/images/gallery/i1 (33).jpeg" onclick="setImage(9)">
+                <img src="assets/images/gallery/i1 (34).jpeg" onclick="setImage(10)">
+                <img src="assets/images/gallery/i1 (35).png" onclick="setImage(11)">
+                <img src="assets/images/gallery/i1 (36).png" onclick="setImage(12)">
+                <img src="assets/images/gallery/i1 (37).png" onclick="setImage(13)">
+                <img src="assets/images/gallery/i1 (3).jpeg" onclick="setImage(14)">
+                <img src="assets/images/gallery/i1 (2).jpeg" onclick="setImage(15)">
+                <img src="assets/images/gallery/i1 (4).jpeg" onclick="setImage(16)">
+                <img src="assets/images/gallery/i1 (5).jpeg" onclick="setImage(17)">
+                <img src="assets/images/gallery/i1 (6).jpeg" onclick="setImage(18)">
+                <img src="assets/images/gallery/i1 (7).jpeg" onclick="setImage(19)">
+                <img src="assets/images/gallery/i1 (8).jpeg" onclick="setImage(20)">
+                <img src="assets/images/gallery/i1 (9).jpeg" onclick="setImage(21)">
+                <img src="assets/images/gallery/i1 (1).jpeg" onclick="setImage(22)">
+                <img src="assets/images/gallery/i1 (11).jpeg" onclick="setImage(23)">
+                <img src="assets/images/gallery/i1 (12).jpeg" onclick="setImage(24)">
+                <img src="assets/images/gallery/i1 (13).jpeg" onclick="setImage(25)">
+                <img src="assets/images/gallery/i1 (14).jpeg" onclick="setImage(26)">
+                <img src="assets/images/gallery/i1 (15).jpeg" onclick="setImage(27)">
+                <img src="assets/images/gallery/i1 (16).jpeg" onclick="setImage(28)">
+                <img src="assets/images/gallery/i1 (17).jpeg" onclick="setImage(29)">
+                <img src="assets/images/gallery/i1 (18).jpeg" onclick="setImage(30)">
+                <img src="assets/images/gallery/i1 (19).jpeg" onclick="setImage(31)">
+                <img src="assets/images/gallery/i1 (20).jpeg" onclick="setImage(32)">
+                <img src="assets/images/gallery/i1 (21).jpeg" onclick="setImage(33)">
+                <img src="assets/images/gallery/i1 (22).jpeg" onclick="setImage(34)">
+                <img src="assets/images/gallery/i1 (23).jpeg" onclick="setImage(35)">
+                <img src="assets/images/gallery/i1 (24).jpeg" onclick="setImage(36)">
             </div>
         </div>
-    </section> -->
+    </section>
 
-   <section class = "gallery-selection">
-    <div class="gallery-container">
-  <!-- Main Image -->
-  <div class="gallery-main">
-    <button class="nav-btn left" onclick="prevImage()">&#10094;</button>
-    <img id="mainImage" src="assets/images/gallery/i1 (10).jpeg" alt="Gallery Image">
-    <button class="nav-btn right" onclick="nextImage()">&#10095;</button>
-  </div>
-  <!-- Thumbnails -->
-  <div class="gallery-thumbs" id="thumbnails">
-    <img src="assets/images/gallery/i1 (10).jpeg" onclick="setImage(0)" class="active">
-    <img src="assets/images/gallery/i1 (25).jpeg" onclick="setImage(1)">
-    <img src="assets/images/gallery/i1 (26).jpg" onclick="setImage(2)">
-    <img src="assets/images/gallery/i1 (27).jpeg" onclick="setImage(3)">
-    <img src="assets/images/gallery/i1 (28).jpeg" onclick="setImage(4)">
-    <img src="assets/images/gallery/i1 (29).jpeg" onclick="setImage(5)">
-    <img src="assets/images/gallery/i1 (30).jpeg" onclick="setImage(6)">
-    <img src="assets/images/gallery/i1 (31).jpeg" onclick="setImage(7)">
-    <img src="assets/images/gallery/i1 (32).jpeg" onclick="setImage(8)">
-    <img src="assets/images/gallery/i1 (33).jpeg" onclick="setImage(9)">
-    <img src="assets/images/gallery/i1 (34).jpeg" onclick="setImage(10)">
-    <img src="assets/images/gallery/i1 (35).png" onclick="setImage(11)">
-    <img src="assets/images/gallery/i1 (36).png" onclick="setImage(12)">
-    <img src="assets/images/gallery/i1 (37).png" onclick="setImage(13)">
-    <img src="assets/images/gallery/i1 (3).jpeg" onclick="setImage(14)">
-    <img src="assets/images/gallery/i1 (2).jpeg" onclick="setImage(15)">
-    <img src="assets/images/gallery/i1 (4).jpeg" onclick="setImage(16)">
-    <img src="assets/images/gallery/i1 (5).jpeg" onclick="setImage(17)">
-    <img src="assets/images/gallery/i1 (6).jpeg" onclick="setImage(18)">
-    <img src="assets/images/gallery/i1 (7).jpeg" onclick="setImage(19)">
-    <img src="assets/images/gallery/i1 (8).jpeg" onclick="setImage(20)">
-    <img src="assets/images/gallery/i1 (9).jpeg" onclick="setImage(21)">
-    <img src="assets/images/gallery/i1 (1).jpeg" onclick="setImage(22)">
-    <img src="assets/images/gallery/i1 (11).jpeg" onclick="setImage(23)">
-    <img src="assets/images/gallery/i1 (12).jpeg" onclick="setImage(24)">
-    <img src="assets/images/gallery/i1 (13).jpeg" onclick="setImage(25)">
-    <img src="assets/images/gallery/i1 (14).jpeg" onclick="setImage(26)">
-    <img src="assets/images/gallery/i1 (15).jpeg" onclick="setImage(27)">
-    <img src="assets/images/gallery/i1 (16).jpeg" onclick="setImage(28)">
-    <img src="assets/images/gallery/i1 (17).jpeg" onclick="setImage(29)">
-    <img src="assets/images/gallery/i1 (18).jpeg" onclick="setImage(30)">
-    <img src="assets/images/gallery/i1 (19).jpeg" onclick="setImage(31)">
-    <img src="assets/images/gallery/i1 (20).jpeg" onclick="setImage(32)">
-    <img src="assets/images/gallery/i1 (21).jpeg" onclick="setImage(33)">
-    <img src="assets/images/gallery/i1 (22).jpeg" onclick="setImage(34)">
-    <img src="assets/images/gallery/i1 (23).jpeg" onclick="setImage(35)">
-    <img src="assets/images/gallery/i1 (24).jpeg" onclick="setImage(36)">
-  </div>
-</div>
-  </section>
-
-    <!-- Elfsight LinkedIn Feed | Untitled LinkedIn Feed
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-ac488602-6348-4ecd-8d0e-c519f21d14c2" data-elfsight-app-lazy></div> -->
-
-    <!-- Metrics Section -->
     <section class="metrics-section" id="metrics">
         <div class="container">
             <div class="section-header">
@@ -3618,7 +2234,6 @@ body.menu-open {
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
             <div class="section-header">
@@ -3628,11 +2243,26 @@ body.menu-open {
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What is EI Labs?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+
+                    <div class="faq-answer">
+                        EI Labs is Enbott's dedicated Learning Management System (LMS) built for higher education
+                        institutions. Students can access industry-aligned courses, practice coding, take assessments,
+                        earn certifications, track learning progress, and prepare for placements through a single
+                        integrated platform.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
                         <span>How do I access these programs?</span>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        If your university has an Enbott Industry Integrated Certification (IIC) program, you can enroll directly through your campus coordinator. If not, you can express interest and we'll help facilitate discussions with your administration.
+                        If your university has an Enbott Industry Integrated Certification (IIC) program, you can enroll
+                        directly through your campus coordinator. If not, you can express interest and we'll help
+                        facilitate discussions with your administration.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -3641,7 +2271,9 @@ body.menu-open {
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        CodeChef is a global competitive programming platform with 600,000+ new users yearly. It helps you build problem-solving skills that tech companies value. Our students have secured placements in the 6-12 LPA range by showcasing their CodeChef rankings and certifications.
+                        CodeChef is a global competitive programming platform with 600,000+ new users yearly. It helps
+                        you build problem-solving skills that tech companies value. Our students have secured placements
+                        in the 6-12 LPA range by showcasing their CodeChef rankings and certifications.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -3650,7 +2282,9 @@ body.menu-open {
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        Yes! Pearson certificates are aligned with Global Scale of English (GSE) and CEFR levels, making them internationally recognized. Employers value these as proof of professional communication ability.
+                        Yes! Pearson certificates are aligned with Global Scale of English (GSE) and CEFR levels, making
+                        them internationally recognized. Employers value these as proof of professional communication
+                        ability.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -3659,7 +2293,9 @@ body.menu-open {
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        Our Pearson program offers 300+ hours across 10 levels with 800+ skill-based tasks. It includes AI-enabled speaking practice with instant feedback, industry-specific scenarios, role-plays, and simulations—not just grammar lessons.
+                        Our Pearson program offers 300+ hours across 10 levels with 800+ skill-based tasks. It includes
+                        AI-enabled speaking practice with instant feedback, industry-specific scenarios, role-plays, and
+                        simulations—not just grammar lessons.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -3668,7 +2304,8 @@ body.menu-open {
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        The CodeChef platform has built-in plagiarism prevention with tab control, code similarity checking, and copy-paste blockers, ensuring authentic learning and genuine skill development.
+                        The CodeChef platform has built-in plagiarism prevention with tab control, code similarity
+                        checking, and copy-paste blockers, ensuring authentic learning and genuine skill development.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -3677,22 +2314,27 @@ body.menu-open {
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        Absolutely! We encourage students to develop both technical problem-solving (CodeChef) and professional communication (Pearson) skills. This combination makes you significantly more competitive.
+                        Absolutely! We encourage students to develop both technical problem-solving (CodeChef) and
+                        professional communication (Pearson) skills. This combination makes you significantly more
+                        competitive.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-      <!-- Final CTA Section -->
     <section class="final-cta" id="cta">
         <div class="container">
             <h2>Ready to Build Industry-Ready Skills?</h2>
-            <p class="emotional-text">Your degree opens doors. But industry-recognized skills, global certifications, and competitive programming rankings are what get you through them. Thousands of students are already learning through our IIC programs. Join them.</p>
-            
+            <p class="emotional-text">Your degree opens doors. But industry-recognized skills, global certifications,
+                and competitive programming rankings are what get you through them. Thousands of students are already
+                learning through EI Labs,
+                Enbott's career-focused learning ecosystem. Join them.</p>
+
             <div class="benefits-list">
                 <div class="benefit-item">✅ Global competitive programming through CodeChef (600K+ users yearly)</div>
-                <div class="benefit-item">✅ Professional communication mastery with Pearson (300+ hours, AI-enabled)</div>
+                <div class="benefit-item">✅ Professional communication mastery with Pearson (300+ hours, AI-enabled)
+                </div>
                 <div class="benefit-item">✅ Industry-integrated certification programs with real-world learning</div>
                 <div class="benefit-item">✅ International learning opportunities for cross-cultural expertise</div>
                 <div class="benefit-item">✅ Recognized certifications that validate your skills to employers</div>
@@ -3701,324 +2343,138 @@ body.menu-open {
 
             <div class="cta-buttons-final">
                 <a href="/contact" target="_blank" class="btn-large">🎓 Explore IIC Programs</a>
-                <a href="https://cdn.prod.website-files.com/68784b0e995e11015d1d8c5d/694190c1460f0466388b10d8_Enbott%20Learning%20Division%20Services%20%20%20.pdf" target="_blank" class="btn-outline">📧 Download Program Details</a>
+                <a href="https://cdn.prod.website-files.com/68784b0e995e11015d1d8c5d/694190c1460f0466388b10d8_Enbott%20Learning%20Division%20Services%20%20%20.pdf"
+                    target="_blank" class="btn-outline">📧 Download Program Details</a>
             </div>
 
             <p style="margin-top: 40px; opacity: 0.9;">Join 15,000+ students learning through Enbott IIC Programs</p>
         </div>
     </section>
 
-   <!-- footer -->
-<footer>
-  <div class="container">
-    <div class="footer-content footer-grid-enhanced">
+    <footer>
+        <div class="container">
+            <div class="footer-content footer-grid-enhanced">
 
-      <!-- Brand / CTA section (NEW) -->
-      <div class="footer-section footer-brand">
-        <div class="brand-row">
-          <div><a href="/home"> <img src="assets/logos/enbott-bw.png" alt="Enbott footer logo" width=120px height=50px align="centre"></a></div>
+                <div class="footer-section footer-brand">
+                    <div class="brand-row">
+                        <div><a href="/home"> <img src="assets/logos/enbott-bw.png" alt="Enbott footer logo" width=120px
+                                    height=50px align="centre"></a></div>
+                    </div>
+
+                    <p class="footer-desc">
+                        Campus-integrated, industry-aligned learning solutions built with
+                        <strong>25+ years</strong> of enterprise expertise.
+                    </p>
+
+                    <a href="/contact" class="footer-cta" target="_blank">
+                        Partner with Enbott
+                    </a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>For Universities</h4>
+                    <ul>
+                        <li><a href="/partners">Partner With Us</a></li>
+                        <li><a href="/contact">Launch IIC Program</a></li>
+                        <li><a href="/services">Faculty Development</a></li>
+                        <li><a href="/clients">Success Stories</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/partners">About Enbott</a></li>
+                        <li><a href="/leadership">Leadership</a></li>
+                        <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
+                <p style="margin-top: 10px;">
+                    🏫 Campus-Integrated Learning | 🌍 Global Partnerships |
+                    📜 Recognized Certifications | 🏢 25 Years Industry Legacy
+                </p>
+            </div>
         </div>
+    </footer>
 
-        <p class="footer-desc">
-          Campus-integrated, industry-aligned learning solutions built with
-          <strong>25+ years</strong> of enterprise expertise.
-        </p>
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileNav").classList.toggle("active");
+            document.body.classList.toggle("menu-open");
+        }
+    </script>
 
-        <a href="/contact" class="footer-cta" target="_blank">
-          Partner with Enbott
-        </a>
-    </div>
+    <script>
+        const images = [
+            "assets/images/gallery/i1 (10).jpeg",
+            "assets/images/gallery/i1 (25).jpeg",
+            "assets/images/gallery/i1 (26).jpg",
+            "assets/images/gallery/i1 (27).jpeg",
+            "assets/images/gallery/i1 (28).jpeg",
+            "assets/images/gallery/i1 (29).jpeg",
+            "assets/images/gallery/i1 (30).jpeg",
+            "assets/images/gallery/i1 (31).jpeg",
+            "assets/images/gallery/i1 (32).jpeg",
+            "assets/images/gallery/i1 (33).jpeg",
+            "assets/images/gallery/i1 (34).jpeg",
+            "assets/images/gallery/i1 (35).png",
+            "assets/images/gallery/i1 (36).png",
+            "assets/images/gallery/i1 (37).png",
+            "assets/images/gallery/i1 (3).jpeg",
+            "assets/images/gallery/i1 (2).jpeg",
+            "assets/images/gallery/i1 (4).jpeg",
+            "assets/images/gallery/i1 (5).jpeg",
+            "assets/images/gallery/i1 (6).jpeg",
+            "assets/images/gallery/i1 (7).jpeg",
+            "assets/images/gallery/i1 (8).jpeg",
+            "assets/images/gallery/i1 (9).jpeg",
+            "assets/images/gallery/i1 (1).jpeg",
+            "assets/images/gallery/i1 (11).jpeg",
+            "assets/images/gallery/i1 (12).jpeg",
+            "assets/images/gallery/i1 (13).jpeg",
+            "assets/images/gallery/i1 (14).jpeg",
+            "assets/images/gallery/i1 (15).jpeg",
+            "assets/images/gallery/i1 (16).jpeg",
+            "assets/images/gallery/i1 (17).jpeg",
+            "assets/images/gallery/i1 (18).jpeg",
+            "assets/images/gallery/i1 (19).jpeg",
+            "assets/images/gallery/i1 (20).jpeg",
+            "assets/images/gallery/i1 (21).jpeg",
+            "assets/images/gallery/i1 (22).jpeg",
+            "assets/images/gallery/i1 (23).jpeg",
+            "assets/images/gallery/i1 (24).jpeg"
+        ];
 
-      <!-- Existing sections -->
-      <div class="footer-section">
-        <h4>For Universities</h4>
-        <ul>
-          <li><a href="/partners">Partner With Us</a></li>
-          <li><a href="/contact">Launch IIC Program</a></li>
-          <li><a href="/services">Faculty Development</a></li>
-          <li><a href="/clients">Success Stories</a></li>
-        </ul>
-      </div>
+        let currentIndex = 0;
 
-      <div class="footer-section">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/partners">About Enbott</a></li>
-          <li><a href="/leadership">Leadership</a></li>
-          <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
-          <li><a href="/contact">Contact Us</a></li>
-          
-        </ul>
-      </div>
+        const mainImage = document.getElementById("mainImage");
+        const thumbnails = document.querySelectorAll("#thumbnails img");
 
-    </div>
+        function setImage(index) {
+            currentIndex = index;
+            mainImage.src = images[index];
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
-      <p style="margin-top: 10px;">
-        🏫 Campus-Integrated Learning | 🌍 Global Partnerships |
-        📜 Recognized Certifications | 🏢 25 Years Industry Legacy
-      </p>
-    </div>
-  </div>
-</footer>
+            thumbnails.forEach(img => img.classList.remove("active"));
+            thumbnails[index].classList.add("active");
+        }
 
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            setImage(currentIndex);
+        }
 
-    <!-- Floating CTA
-    <a href="#cta" class="floating-cta">💬 Find Your CoE</a> -->
-
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileNav").classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-  }
-</script>
-
-  <script>
-  const images = [
-    "assets/images/gallery/i1 (10).jpeg",
-    "assets/images/gallery/i1 (25).jpeg",
-    "assets/images/gallery/i1 (26).jpg",
-    "assets/images/gallery/i1 (27).jpeg",
-    "assets/images/gallery/i1 (28).jpeg",
-    "assets/images/gallery/i1 (29).jpeg",
-    "assets/images/gallery/i1 (30).jpeg",
-    "assets/images/gallery/i1 (31).jpeg",
-    "assets/images/gallery/i1 (32).jpeg",
-    "assets/images/gallery/i1 (33).jpeg",
-    "assets/images/gallery/i1 (34).jpeg",
-    "assets/images/gallery/i1 (35).png",
-    "assets/images/gallery/i1 (36).png",
-    "assets/images/gallery/i1 (37).png",
-    "assets/images/gallery/i1 (3).jpeg",
-    "assets/images/gallery/i1 (2).jpeg",
-    "assets/images/gallery/i1 (4).jpeg",
-    "assets/images/gallery/i1 (5).jpeg",
-    "assets/images/gallery/i1 (6).jpeg",
-    "assets/images/gallery/i1 (7).jpeg",
-    "assets/images/gallery/i1 (8).jpeg",
-    "assets/images/gallery/i1 (9).jpeg",
-    "assets/images/gallery/i1 (1).jpeg",
-    "assets/images/gallery/i1 (11).jpeg",
-    "assets/images/gallery/i1 (12).jpeg",
-    "assets/images/gallery/i1 (13).jpeg",
-    "assets/images/gallery/i1 (14).jpeg",
-    "assets/images/gallery/i1 (15).jpeg",
-    "assets/images/gallery/i1 (16).jpeg",
-    "assets/images/gallery/i1 (17).jpeg",
-    "assets/images/gallery/i1 (18).jpeg",
-    "assets/images/gallery/i1 (19).jpeg",
-    "assets/images/gallery/i1 (20).jpeg",
-    "assets/images/gallery/i1 (21).jpeg",
-    "assets/images/gallery/i1 (22).jpeg",
-    "assets/images/gallery/i1 (23).jpeg",
-    "assets/images/gallery/i1 (24).jpeg"
-  ];
-
-  let currentIndex = 0;
-
-  const mainImage = document.getElementById("mainImage");
-  const thumbnails = document.querySelectorAll("#thumbnails img");
-
-  function setImage(index) {
-    currentIndex = index;
-    mainImage.src = images[index];
-
-    thumbnails.forEach(img => img.classList.remove("active"));
-    thumbnails[index].classList.add("active");
-  }
-
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    setImage(currentIndex);
-  }
-
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    setImage(currentIndex);
-  }
-  
-  @media(max-width: 768px){
-  .popup-container {
-    flex-direction: column;
-    width: 95%;
-  }
-
-  .popup-left {
-    height: 180px;
-    width: 100%;
-  }
-
-  .popup-right iframe {
-    height: 400px;
-  }
-}
-</script>
-
-<!-- ===== POPUP OVERLAY ===== -->
-<div id="popupOverlay" class="popup-overlay">
-  <div class="popup-container">
-
-    <!-- CLOSE BUTTON -->
-    <button class="popup-close" onclick="closePopup()">×</button>
-
-    <!-- LEFT IMAGE -->
-    <div class="popup-left">
-      <img src="assets/images/gallery/takpopv4.jpg" alt="promo">
-    </div>
-
-    <!-- RIGHT FORM -->
-    <div class="popup-right">
-
-      <iframe data-tally-src="https://tally.so/embed/44oPKA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="448" frameborder="0" marginheight="0" marginwidth="0" title="Launch your career in AR/VR with Enbott"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-      <!-- <iframe 
-        aria-label="Launch your career in AR/VR with Enbott"
-        frameborder="0"
-        style="height:600px;width:100%;border:none;"
-        src="https://form.jotform.com/260913275706459">
-      </iframe>
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-260913275706459']", "https://form.jotform.com/")</script> -->
-    
-      <!-- <script type="text/javascript" src="https://form.jotform.com/jsform/260913275706459"></script> -->
-    </div>
-
-  </div>
-</div>
-
-<!-- ===== FLOATING GIFT BUTTON ===== -->
-<div id="giftButton" class="gift-button" onclick="openPopup()">
-  🎁
-</div>
-
-<style>
-/* ===== OVERLAY ===== */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-/* ===== POPUP BOX ===== */
-.popup-container {
-  width: 900px;
-  max-width: 100%;
-  background: #fff;
-  display: flex;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  animation: fadeIn 0.3s ease;
-}
-
-/* ===== LEFT IMAGE ===== */
-.popup-left {
-  width: 80%;
-  background: #f5f5f5
-}
-
-.popup-left img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* ===== RIGHT FORM ===== */
-.popup-right {
-  width: 100%;
-  padding: 10px;
-  background: #fff;
-  overflow: hidden;
-}
-
-/* ===== CLOSE BUTTON ===== */
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 36px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-/* ===== GIFT BUTTON ===== */
-.gift-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: #ff4d4d;
-  color: #fff;
-  font-size: 22px;
-  padding: 12px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: none;
-  z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* ===== ANIMATION ===== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95);}
-  to { opacity: 1; transform: scale(1);}
-}
-
-/* ===== MOBILE ===== */
-@media(max-width: 600px){
-  .popup-container {
-    flex-direction: column;
-  }
-  .popup-left {
-    width: 100%;
-    height: 200px;
-  }
-  .popup-right {
-    width: 100%;
-    height: 550px;
-  }
-}
-</style>
-
-<script>
-let popupShown = false;
-
-/* ===== OPEN POPUP ===== */
-function openPopup() {
-  document.getElementById("popupOverlay").style.display = "flex";
-  document.getElementById("giftButton").style.display = "none";
-}
-
-/* ===== CLOSE POPUP ===== */
-function closePopup() {
-  document.getElementById("popupOverlay").style.display = "none";
-  document.getElementById("giftButton").style.display = "block";
-}
-
-/* ===== SHOW ON LOAD (DELAY) ===== */
-window.onload = function () {
-  setTimeout(() => {
-    openPopup();
-    popupShown = true;
-  }, 3000); // 3 sec delay
-};
-
-/* ===== EXIT INTENT ===== */
-document.addEventListener("mouseout", function(e) {
-  if (!popupShown && e.clientY < 10) {
-    openPopup();
-    popupShown = true;
-  }
-});
-</script>
-
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            setImage(currentIndex);
+        }
+    </script>
 </body>
+
 </html>
