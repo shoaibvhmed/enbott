@@ -332,6 +332,13 @@
             transition: all 0.3s;
         }
 
+        /* Mobile Nav Controls Wrapper */
+        .mobile-controls {
+            display: none;
+            align-items: center;
+            gap: 15px;
+        }
+
         /* Mobile Nav Panel */
         .mobile-nav {
             position: fixed;
@@ -377,45 +384,33 @@
             display: flex;
         }
 
-        /* Responsive */
+        /* Responsive Navbar Fixes */
         @media (max-width: 968px) {
             nav .container {
-                display: grid;
-                grid-template-columns: 1fr auto 1fr;
+                display: flex;
+                justify-content: space-between;
                 align-items: center;
                 padding: 12px 20px;
             }
 
             .logo {
-                margin-right: 0;
-                justify-self: start;
                 display: flex;
                 align-items: center;
             }
 
-            .mobile-header-contact {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                justify-self: center;
-                background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-                color: white !important;
-                padding: 10px 25px;
-                border-radius: 25px;
-                font-weight: 600;
-                font-size: 14px;
-                text-decoration: none;
-                white-space: nowrap;
-                transition: transform 0.3s;
+            .mobile-controls {
+                display: flex;
             }
 
-            .mobile-header-contact:hover {
-                transform: translateY(-2px);
+            .mobile-header-login {
+                display: inline-flex !important;
+                width: 100px;
+                height: 40px;
+                flex-shrink: 0;
             }
 
             .menu-toggle {
                 display: flex;
-                justify-self: end;
                 flex-shrink: 0;
             }
         }
@@ -1108,10 +1103,16 @@
 
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            max-width: 1200px;
             margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .metrics-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
         }
 
         .metric-card {
@@ -1153,7 +1154,7 @@
             margin: 0 auto;
         }
 
-        .faq-item {
+        .faq-container .faq-item {
             background: white;
             margin-bottom: 12px;
             border-radius: 12px;
@@ -1354,46 +1355,6 @@
         }
 
         @media (max-width: 968px) {
-            nav .container {
-                display: grid;
-                grid-template-columns: 1fr auto 1fr;
-                align-items: center;
-                padding: 12px 20px;
-            }
-
-            .logo {
-                margin-right: 0;
-                justify-self: start;
-                display: flex;
-                align-items: center;
-            }
-
-            .mobile-header-contact {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                justify-self: center;
-                background: linear-gradient(135deg, #0891b2 0%, #3b82f6 100%);
-                color: white !important;
-                padding: 10px 25px;
-                border-radius: 25px;
-                font-weight: 600;
-                font-size: 14px;
-                text-decoration: none;
-                white-space: nowrap;
-                transition: transform 0.3s;
-            }
-
-            .mobile-header-contact:hover {
-                transform: translateY(-2px);
-            }
-
-            .menu-toggle {
-                display: flex;
-                justify-self: end;
-                flex-shrink: 0;
-            }
-
             .nav-links {
                 display: none;
             }
@@ -1475,7 +1436,7 @@
             margin-bottom: 26px;
         }
 
-        /* CTA button (Muza-inspired, Enbott-colored) */
+        /* CTA button */
         .footer-cta {
             display: inline-block;
             background: linear-gradient(135deg, #0891b2, #3b82f6);
@@ -1650,6 +1611,16 @@
             }
         }
 
+        @keyframes logo-scroll {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
         @media(max-width:640px) {
             .logo-track {
                 gap: 32px
@@ -1699,30 +1670,13 @@
             overflow-y: auto;
         }
 
-        .mobile-header-contact {
-            display: none;
-            text-decoration: none;
-            background: linear-gradient(135deg, #0891b2, #3b82f6);
-            color: #fff;
-            padding: 10px 18px;
-            border-radius: 999px;
-            font-weight: 600;
-            font-size: 14px;
-            white-space: nowrap;
-            transition: .25s
-        }
-
-        .mobile-header-contact:hover {
-            transform: translateY(-2px)
-        }
-
         /* Desktop-only navbar contact */
         .desktop-contact-btn {
             display: inline-flex;
         }
 
-        .mobile-header-contact {
-            display: none !important;
+        .mobile-header-login {
+            display: none;
         }
 
         @media (max-width:968px) {
@@ -1730,10 +1684,200 @@
                 display: none !important;
             }
 
-            .mobile-header-contact {
+            .mobile-header-login {
                 display: inline-flex !important;
-                transform: translateX(75px);
             }
+        }
+
+        /* PREMIUM AI CORE IMPLEMENTATION */
+        .desktop-login-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 4px;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+        }
+
+        .desktop-login-wrapper:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+        }
+
+        .mobile-login-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+        }
+
+        .mobile-login-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .ai-core-orb {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ffffff;
+            border-radius: 50%;
+            pointer-events: none;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: aiCoreBreathing 6s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .desktop-login-wrapper .ai-core-orb {
+            left: 11px;
+        }
+
+        .mobile-login-btn .ai-core-orb {
+            left: 20px;
+        }
+
+        /* AI Core Wakes Up / Brightens Smoothly */
+        .desktop-login-wrapper:hover .ai-core-orb,
+        .mobile-login-btn:hover .ai-core-orb {
+            transform: translateY(-50%) scale(1.3);
+            background: #ffffff;
+            box-shadow: 0 0 12px #ffffff, 0 0 22px #60a5fa, 0 0 32px #3b82f6;
+        }
+
+        @keyframes aiCoreBreathing {
+
+            0%,
+            100% {
+                box-shadow: 0 0 5px #3b82f6, 0 0 10px #ffffff, 0 0 14px rgba(59, 130, 246, 0.5);
+                opacity: 0.6;
+            }
+
+            50% {
+                box-shadow: 0 0 12px #3b82f6, 0 0 20px #ffffff, 0 0 30px #93c5fd;
+                opacity: 1;
+            }
+        }
+
+        /* Elegant moving reflections across the button surfaces */
+        .desktop-login-wrapper::after,
+        .mobile-login-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.35) 50%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-20deg);
+            pointer-events: none;
+        }
+
+        .desktop-login-wrapper:hover::after,
+        .mobile-login-btn:hover::after {
+            left: 150%;
+            transition: left 0.8s ease-in-out;
+        }
+
+        /* Tiny Orbiting Particles Architecture */
+        .particle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .desktop-login-wrapper:hover .particle,
+        .mobile-login-btn:hover .particle {
+            opacity: 1;
+        }
+
+        .desktop-login-wrapper:hover .particle.p1,
+        .mobile-login-btn:hover .particle.p1 {
+            animation: orbParticle1 2.2s linear infinite;
+        }
+
+        .desktop-login-wrapper:hover .particle.p2,
+        .mobile-login-btn:hover .particle.p2 {
+            animation: orbParticle2 3s linear infinite;
+        }
+
+        .desktop-login-wrapper:hover .particle.p3,
+        .mobile-login-btn:hover .particle.p3 {
+            animation: orbParticle3 1.8s linear infinite;
+        }
+
+        @keyframes orbParticle1 {
+            0% {
+                transform: rotate(0deg) translateX(11px) rotate(0deg) scale(1);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(11px) rotate(-360deg) scale(1);
+            }
+        }
+
+        @keyframes orbParticle2 {
+            0% {
+                transform: rotate(120deg) translateX(15px) rotate(-120deg) scale(0.7);
+            }
+
+            100% {
+                transform: rotate(480deg) translateX(15px) rotate(-480deg) scale(0.7);
+            }
+        }
+
+        @keyframes orbParticle3 {
+            0% {
+                transform: rotate(240deg) translateX(8px) rotate(-240deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(-120deg) translateX(8px) rotate(120deg) scale(1.2);
+            }
+        }
+
+        @media (max-width:768px) {
+            .mobile-header-login {
+                width: 130px !important;
+                height: 44px !important
+            }
+
+            .mobile-header-login img {
+                width: 100% !important;
+                height: 44px !important;
+                object-fit: contain;
+                padding-left: 16px
+            }
+
+            .mobile-header-login .ai-core-orb {
+                left: 10px !important;
+                width: 6px;
+                height: 6px
+            }
+
+            .hero-layout-grid {
+                gap: 24px
+            }
+
+            .hero-narrative h1 {
+                font-size: 36px !important
+            }
+
+            .hero-interactive-grid {
+                margin-top: 24px
+            }
+        }
     </style>
 </head>
 
@@ -1741,16 +1885,20 @@
 
     <nav>
         <div class="container">
-            <div class="logo"><a href="/"><img src="assets/logos/logo.png" alt="Enbott hero logo" width=120px
-                        height=50px align="centre"> </a></div>
+            <!-- 1. Logo stays locked to the far left -->
+            <div class="logo">
+                <a href="/">
+                    <img src="assets/logos/logo.png" alt="Enbott hero logo" width="120px" height="50px" align="centre">
+                </a>
+            </div>
+
             <div class="nav-links">
                 <a href="/">Home</a>
                 <div class="dropdown">
                     <a href="/services">Services ▾</a>
-
                     <div class="dropdown-menu">
+                        <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
                         <a href="/services#technical-training">Coding Competency Training</a>
-                        <a href="/services#iic">Industry Integrated Certification (IIC) by EI Labs </a>
                         <a href="/services#placement-readiness">Placement Readiness</a>
                         <a href="/services#internships">Internship Programs</a>
                         <a href="/services#global-immersion">Global Immersion</a>
@@ -1760,30 +1908,44 @@
                 <a href="/partners">Partnerships</a>
                 <a href="/clients">Client Stories</a>
                 <a href="/contact" class="nav-cta desktop-contact-btn">Contact Us</a>
-                <a href="https://eilabs.enbott.com/login" target="_blank"><img src="assets/images/login-gradient.png"
-                        height=40px width=100% align="middle"></a>
+                <a href="https://eilabs.enbott.com/login" target="_blank" class="desktop-login-wrapper">
+                    <img src="assets/images/login-gradient.png" height="40px" width="100%" align="middle">
+                    <span class="ai-core-orb">
+                        <span class="particle p1"></span>
+                        <span class="particle p2"></span>
+                        <span class="particle p3"></span>
+                    </span>
+                </a>
             </div>
-            <a href="/contact" class="mobile-header-contact">Contact Us</a>
 
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- 2. Mobile wrapper holding Login and Hamburger menu icon locked side-by-side to the right -->
+            <div class="mobile-controls">
+                <a href="https://eilabs.enbott.com/login" target="_blank"
+                    class="desktop-login-wrapper mobile-header-login">
+                    <img src="assets/images/login-gradient.png" height="40px" width="100%" align="middle">
+                    <span class="ai-core-orb">
+                        <span class="particle p1"></span>
+                        <span class="particle p2"></span>
+                        <span class="particle p3"></span>
+                    </span>
+                </a>
+
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-
     </nav>
 
     <div class="mobile-nav" id="mobileNav">
-
         <a href="/" onclick="toggleMenu()">Home</a>
-
         <div class="mobile-dropdown">
             <div class="mobile-dropdown-toggle" onclick="toggleDropdown(this)">
                 Services
                 <span class="arrow">+</span>
             </div>
-
             <div class="mobile-dropdown-content">
                 <a href="/services">Overview</a>
                 <a href="/services#technical-training">— Technical Training</a>
@@ -1794,15 +1956,19 @@
                 <a href="/services#faculty-development">— Faculty Development</a>
             </div>
         </div>
-
         <a href="/partners" onclick="toggleMenu()">Partnerships</a>
         <a href="/clients" onclick="toggleMenu()">Client Stories</a>
-
         <div class="mobile-nav-buttons">
             <a href="/contact" class="mobile-contact-btn" onclick="toggleMenu()">Contact Us</a>
-            <a href="https://eilabs.enbott.com/login" target="_blank" class="mobile-login-btn">Login to EI Labs</a>
+            <a href="https://eilabs.enbott.com/login" target="_blank" class="mobile-login-btn">
+                Login to ei-labs
+                <span class="ai-core-orb">
+                    <span class="particle p1"></span>
+                    <span class="particle p2"></span>
+                    <span class="particle p3"></span>
+                </span>
+            </a>
         </div>
-
     </div>
 
     <script>
@@ -1838,12 +2004,12 @@
 
         <div class="container hero-layout-grid">
             <div class="hero-narrative">
-                <div class="live-signal"><span class="pulse-dot"></span> POWERED BY EI LABS • ENBOTT LEARNING PLATFORM
+                <div class="live-signal"><span class="pulse-dot"></span> POWERED BY ei-labs • ENBOTT LEARNING PLATFORM
                 </div>
                 <h1>Transform Campus Learning Into <span class="gradient-glitch">Career Success</span></h1>
                 <p>Industry-ready skill matrix integration through structural international frameworks. Develop coding,
                     communication, and industry-ready skills
-                    through the EI Labs learning ecosystem.</p>
+                    through the ei-labs learning ecosystem.</p>
                 <div class="cta-buttons">
                     <a href="#programs" class="btn-primary">Explore Our Programs →</a>
                     <a href="/services#iic" class="btn-secondary">Explore IIC Program</a>
@@ -1853,7 +2019,7 @@
             <div class="hero-interactive-grid">
                 <div class="mesh-card positioning-card-1" onclick="window.location.href='/services#iic'">
                     <div class="node-status-bar" style="background: #ffffff; width: 30px;"></div>
-                    <h3>EI Labs Learning Platform</h3>
+                    <h3>ei-labs Learning Platform</h3>
                     <p>A centralized LMS where students learn, practice coding,
                         complete assessments, earn certifications,
                         and track career readiness progress.</p>
@@ -1861,39 +2027,35 @@
                 <div class="mesh-card positioning-card-2" onclick="window.location.href='/services#technical-training'">
                     <div class="node-status-bar" style="background: #ffffff; width: 30px;"></div>
                     <h3>Competitive Coding</h3>
-                    <p>Global architectural array problem solving structures powered directly via CodeChef enterprise
-                        benchmarks.</p>
+                    <p>Global architectural array problem solving structures powered directly via ei-labs platform.</p>
                 </div>
 
                 <div class="mesh-card positioning-card-3" onclick="window.location.href='/services#global-immersion'">
                     <div class="node-status-bar" style="background: #ffffff; width: 30px;"></div>
-                    <h3>Global Communication</h3>
-                    <p>Immersive AI contextual linguistic environments mapped cleanly to high-fidelity Pearson tracking
+                    <h3>Global Communication + Linguistic skills</h3>
+                    <p>Immersive AI contextual linguistic environments mapped cleanly to high-fidelity tracking
                         indices.</p>
                 </div>
 
             </div>
         </div>
-        </div>
     </section>
 
     <section class="partnership-strip">
         <div class="container">
-            <p>Empowering students through Ei-labs, global partnerships and Industry Integrated Certification (IIC)
+            <p>Empowering students through ei-labs, global partnerships and Industry Integrated Certification (IIC)
                 programs</p>
             <p class="logo-strip-title">
                 Trusted by <span>25+ institutions &amp; partners</span> to power campus learning
             </p>
             <div class="logo-slider">
                 <div class="logo-track">
-                    <!-- Replace src with your actual logo paths -->
                     <div class="logo-item"><img alt="Partner 1" src="assets/logos/cress-bw.png" /></div>
                     <div class="logo-item"><img alt="Partner 2" src="assets/logos/novac.png" /></div>
                     <div class="logo-item"><img alt="Partner 3" src="assets/logos/ciic.png" /></div>
                     <div class="logo-item"><img alt="Partner 4" src="assets/logos/pearson-bw.svg" /></div>
                     <div class="logo-item"><img alt="Partner 5" src="assets/logos/siraj.png" /></div>
                     <div class="logo-item"><img alt="Partner 6" src="assets/logos/gib.png" /></div>
-                    <!-- Duplicate logos for seamless infinite scroll -->
                     <div class="logo-item"><img alt="Crescent Institute of Technology logo"
                             src="assets/logos/cres.png" />
                     </div>
@@ -1956,7 +2118,7 @@
                         </div>
                     </div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"The EI Labs platform helped me build strong coding and problem-solving
+                    <p class="review-text">"The ei-labs platform helped me build strong coding and problem-solving
                         skills through structured practice, assessments, and real-world challenges. The learning journey
                         was engaging, and it played a major role in helping me secure a 10 LPA placement."</p>
                 </div>
@@ -1969,7 +2131,7 @@
                         </div>
                     </div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"EI Labs transformed the way I learned communication skills. The interactive
+                    <p class="review-text">"ei-labs transformed the way I learned communication skills. The interactive
                         modules, speaking practice, and career-readiness activities helped me become more confident
                         during presentations, interviews, and group discussions."
                     </p>
@@ -1983,7 +2145,7 @@
                         </div>
                     </div>
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"The EI Labs platform made learning easy.
+                    <p class="review-text">"The ei-labs platform made learning easy.
                         I could access courses, coding exercises,
                         assessments, and certifications in one place.
                         The structured learning journey helped me
@@ -2035,11 +2197,19 @@
         <div class="container">
 
             <div class="section-header">
-                <span class="section-badge">EI LABS PLATFORM</span>
+                <div class="brand-showcase"
+                    style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 8px; margin-bottom: 24px;">
+                    <img src="assets/logos/ei-clr.png" alt="ei logo"
+                        style="height: 125px; width: auto; display: block; flex-shrink: 0;">
+                    <span class="section-badge"
+                        style="margin-bottom: 0; padding: 10px 24px; border-radius: 9999px; font-size: 14px; letter-spacing: 0.5px; white-space: nowrap;">ei-labs
+                        PLATFORM</span>
+                </div>
+
                 <h2>The Digital Learning Ecosystem Behind Every Program</h2>
 
-                <p>
-                    EI Labs is Enbott's dedicated learning and career readiness platform,
+                <p style="margin-top: 10px;">
+                    ei-labs is Enbott's dedicated learning and career readiness platform,
                     built specifically for higher education institutions.
                 </p>
             </div>
@@ -2060,7 +2230,7 @@
                     <h3>Integrated Coding Environment</h3>
                     <p>
                         Practice coding challenges, participate in contests,
-                        and strengthen problem-solving skills directly within EI Labs.
+                        and strengthen problem-solving skills directly within ei-labs.
                     </p>
                 </div>
 
@@ -2091,7 +2261,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">OUR PROGRAMS</span>
-                <h2>Four Pathways to Career Excellence</h2>
+                <h2>Pathways to Career Excellence</h2>
                 <p>Comprehensive programs designed to make you industry-ready</p>
             </div>
             <div class="programs-grid">
@@ -2099,7 +2269,7 @@
                     <div class="program-header codechef">
                         <div class="program-icon">💻</div>
                         <div class="program-title">Competitive Programming</div>
-                        <div class="program-subtitle">Delivered through EI Labs with CodeChef-powered</div>
+                        <div class="program-subtitle">Delivered through ei-labs with CodeChef-powered</div>
                     </div>
                     <div class="program-content">
                         <p>Master competitive programming with global recognition and ranking through CodeChef's
@@ -2140,7 +2310,7 @@
                     <div class="program-header pearson">
                         <div class="program-icon">🗣️</div>
                         <div class="program-title">Communicative English</div>
-                        <div class="program-subtitle">EI Labs communication learning pathways enhanced by Pearson</div>
+                        <div class="program-subtitle">ei-labs communication learning pathways enhanced by Pearson</div>
                     </div>
                     <div class="program-content">
                         <p>Enhance your professional communication with globally recognized Pearson training aligned to
@@ -2181,8 +2351,8 @@
                 <div class="program-card">
                     <div class="program-header iic">
                         <div class="program-icon">🏫</div>
-                        <div class="program-title">Ei-Labs Industry Integrated Certification (IIC)</div>
-                        <div class="program-subtitle">Delivered Through the EI Labs Platform</div>
+                        <div class="program-title">ei-labs Industry Integrated Certification (IIC)</div>
+                        <div class="program-subtitle">Delivered Through the ei-labs Platform</div>
                     </div>
                     <div class="program-content">
                         <p>Industry Integrated Certification (IIC) is a career-focused academic enhancement program
@@ -2192,7 +2362,7 @@
                         <h4>Program Highlights:</h4>
                         <ul class="feature-list">
                             <li>
-                                <strong>EI Labs LMS Access:</strong>
+                                <strong>ei-labs LMS Access:</strong>
                                 Learn through a centralized platform with course content,
                                 assessments, coding labs, and progress tracking.
                             </li>
@@ -2345,31 +2515,19 @@
                     <span class="metric-label">Live University Learners</span>
                     <span class="metric-sublabel">Currently active on platforms</span>
                 </div>
+
                 <div class="metric-card">
-                    <span class="metric-number">6 Lakh+</span>
-                    <span class="metric-label">New Users Yearly</span>
-                    <span class="metric-sublabel">On CodeChef platform</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">35+</span>
+                    <span class="metric-number">15+</span>
                     <span class="metric-label">Languages</span>
                     <span class="metric-sublabel">Programming content accessibility</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">300+</span>
+                    <span class="metric-number">3000+</span>
                     <span class="metric-label">Learning Hours</span>
-                    <span class="metric-sublabel">Pearson communication content</span>
+                    <span class="metric-sublabel"> communication content</span>
                 </div>
-                <div class="metric-card">
-                    <span class="metric-number">800+</span>
-                    <span class="metric-label">Skill Tasks</span>
-                    <span class="metric-sublabel">Hands-on learning activities</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">10</span>
-                    <span class="metric-label">Proficiency Levels</span>
-                    <span class="metric-sublabel">Beginner to advanced progression</span>
-                </div>
+
+
                 <div class="metric-card">
                     <span class="metric-number">6-12 LPA</span>
                     <span class="metric-label">Placement Range</span>
@@ -2393,12 +2551,12 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-                        <span>What is EI Labs?</span>
+                        <span>What is ei-labs?</span>
                         <span class="faq-toggle">+</span>
                     </div>
 
                     <div class="faq-answer">
-                        EI Labs is Enbott's dedicated Learning Management System (LMS) built for higher education
+                        ei-labs is Enbott's dedicated Learning Management System (LMS) built for higher education
                         institutions. Students can access industry-aligned courses, practice coding, take assessments,
                         earn certifications, track learning progress, and prepare for placements through a single
                         integrated platform.
@@ -2478,12 +2636,12 @@
             <h2>Ready to Build Industry-Ready Skills?</h2>
             <p class="emotional-text">Your degree opens doors. But industry-recognized skills, global certifications,
                 and competitive programming rankings are what get you through them. Thousands of students are already
-                learning through EI Labs,
+                learning through ei-labs,
                 Enbott's career-focused learning ecosystem. Join them.</p>
 
             <div class="benefits-list">
-                <div class="benefit-item">✅ Global competitive programming through CodeChef (600K+ users yearly)</div>
-                <div class="benefit-item">✅ Professional communication mastery with Pearson (300+ hours, AI-enabled)
+                <div class="benefit-item">✅ Global competitive programming (600K+ users yearly)</div>
+                <div class="benefit-item">✅ Professional communication mastery (3000+ hours, AI-enabled)
                 </div>
                 <div class="benefit-item">✅ Industry-integrated certification programs with real-world learning</div>
                 <div class="benefit-item">✅ International learning opportunities for cross-cultural expertise</div>
@@ -2493,8 +2651,7 @@
 
             <div class="cta-buttons-final">
                 <a href="/contact" target="_blank" class="btn-large">🎓 Explore IIC Programs</a>
-                <a href="https://cdn.prod.website-files.com/68784b0e995e11015d1d8c5d/694190c1460f0466388b10d8_Enbott%20Learning%20Division%20Services%20%20%20.pdf"
-                    target="_blank" class="btn-outline">📧 Download Program Details</a>
+                <a href="assets/docs/enbott-iic.pdf" target="_blank" class="btn-outline">📧 Download Program Details</a>
             </div>
 
             <p style="margin-top: 40px; opacity: 0.9;">Join 15,000+ students learning through Enbott IIC Programs</p>
