@@ -1,122 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Enbott - Campus-Integrated Career Readiness</title>
     <style>
         /* Dropdown */
-.dropdown {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  border-radius: 10px;
-  padding: 10px 0;
-  display: none;
-  min-width: 240px;
-  z-index: 1000;
-}
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+            padding: 10px 0;
+            display: none;
+            min-width: 240px;
+            z-index: 1000;
+        }
 
-.dropdown-menu a {
-  display: block;
-  padding: 12px 20px;
-  color: #334155;
-  text-decoration: none;
-  font-size: 14px;
-}
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #334155;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-.dropdown-menu a:hover {
-  background: #f1f5f9;
-  color: #0891b2;
-}
+        .dropdown-menu a:hover {
+            background: #f1f5f9;
+            color: #0891b2;
+        }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         /* Slider animation */
         /* Logo Strip / Slider */
-.logo-strip {
-    background: #020617; /* deep dark, matches your final CTA/footer vibe */
-    padding: 40px 0 50px;
-}
+        .logo-strip {
+            background: #020617;
+            /* deep dark, matches your final CTA/footer vibe */
+            padding: 40px 0 50px;
+        }
 
-.logo-strip-title {
-    text-align: center;
-    font-size: 16px;
-    color: #9ca3af;
-    margin-bottom: 26px;
-}
+        .logo-strip-title {
+            text-align: center;
+            font-size: 16px;
+            color: #9ca3af;
+            margin-bottom: 26px;
+        }
 
-.logo-strip-title span {
-    color: #f9fafb;
-    font-weight: 600;
-}
+        .logo-strip-title span {
+            color: #f9fafb;
+            font-weight: 600;
+        }
 
-.logo-slider {
-    position: relative;
-    overflow: hidden;
-}
+        .logo-slider {
+            position: relative;
+            overflow: hidden;
+        }
 
-.logo-track {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    animation: logo-scroll 25s linear infinite;
-    /* small padding so logos don't touch container edges */
-    padding: 0 10px;
-}
+        .logo-track {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            animation: logo-scroll 25s linear infinite;
+            /* small padding so logos don't touch container edges */
+            padding: 0 10px;
+        }
 
-.logo-item {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .logo-item {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.logo-item img {
-    height: 40px;             /* adjust based on your logo files */
-    max-width: 140px;
-    opacity: 0.5;
-    filter: grayscale(1);
-    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
-}
+        .logo-item img {
+            height: 40px;
+            /* adjust based on your logo files */
+            max-width: 140px;
+            opacity: 0.5;
+            filter: grayscale(1);
+            transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+        }
 
-.logo-item img:hover {
-    opacity: 1;
-    filter: grayscale(0);
-    transform: translateY(-2px);
-}
+        .logo-item img:hover {
+            opacity: 1;
+            filter: grayscale(0);
+            transform: translateY(-2px);
+        }
 
-/* Continuous scroll animation */
-@keyframes logo-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%); /* because we duplicated the logos */
-    }
-}
+        /* Continuous scroll animation */
+        @keyframes logo-scroll {
+            0% {
+                transform: translateX(0);
+            }
 
-@media (max-width: 640px) {
-    .logo-strip {
-        padding: 30px 0 40px;
-    }
-    .logo-track {
-        gap: 30px;
-    }
-    .logo-item img {
-        height: 32px;
-        max-width: 110px;
-    }
-}
+            100% {
+                transform: translateX(-50%);
+                /* because we duplicated the logos */
+            }
+        }
+
+        @media (max-width: 640px) {
+            .logo-strip {
+                padding: 30px 0 40px;
+            }
+
+            .logo-track {
+                gap: 30px;
+            }
+
+            .logo-item img {
+                height: 32px;
+                max-width: 110px;
+            }
+        }
 
         * {
             margin: 0;
@@ -139,7 +147,7 @@
         /* Navigation */
         nav {
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -206,7 +214,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
         }
@@ -268,7 +276,7 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .btn-secondary {
@@ -284,7 +292,7 @@
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .hero-highlights {
@@ -716,7 +724,7 @@
         }
 
         .btn-outline:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* Footer (same as main site) */
@@ -761,7 +769,7 @@
         .footer-bottom {
             text-align: center;
             padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #94a3b8;
             font-size: 13px;
         }
@@ -784,8 +792,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
 
         @keyframes fadeInUp {
@@ -793,6 +808,7 @@
                 opacity: 0;
                 transform: translateY(25px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -800,10 +816,22 @@
         }
 
         @media (max-width: 968px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 34px; }
-            .hero-subtitle { font-size: 16px; }
-            .section-header h2 { font-size: 28px; }
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
             .two-column,
             .why-grid {
                 grid-template-columns: minmax(0, 1fr);
@@ -811,47 +839,500 @@
         }
 
         @media (max-width: 640px) {
-            .cta-buttons, .cta-buttons-final { 
-                flex-direction: column; 
-                align-items: stretch; 
+
+            .cta-buttons,
+            .cta-buttons-final {
+                flex-direction: column;
+                align-items: stretch;
             }
-            .btn-primary, .btn-secondary, .btn-large, .btn-outline { 
-                text-align: center; 
+
+            .btn-primary,
+            .btn-secondary,
+            .btn-large,
+            .btn-outline {
+                text-align: center;
             }
-            .floating-cta { 
-                right: 18px; 
-                bottom: 18px; 
-                padding: 14px 24px; 
-                font-size: 13px; 
+
+            .floating-cta {
+                right: 18px;
+                bottom: 18px;
+                padding: 14px 24px;
+                font-size: 13px;
             }
+        }
+
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            position: relative;
+            z-index: 10001;
+        }
+
+        .menu-toggle span {
+            width: 26px;
+            height: 3px;
+            background: #1e293b;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Nav Controls Wrapper */
+        .mobile-controls {
+            display: none;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Mobile Nav Panel */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            display: none;
+            flex-direction: column;
+            padding: 90px 20px 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            overflow-y: auto;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        .mobile-nav a {
+            padding: 14px 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #1e293b;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        /* Show mobile nav */
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        /* Desktop-only navbar contact */
+        .desktop-contact-btn {
+            display: inline-flex;
+        }
+
+        .mobile-header-login {
+            display: none;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+            border-radius: 999px !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @media (max-width:968px) {
+            nav .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 12px 20px;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+
+            .desktop-contact-btn {
+                display: none !important;
+            }
+
+            .mobile-header-login {
+                display: inline-flex !important;
+            }
+
+            .mobile-controls {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-shrink: 0;
+            }
+        }
+
+        /* PREMIUM AI CORE IMPLEMENTATION */
+        .desktop-login-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 999px;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            padding: 0 !important;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .desktop-login-wrapper:hover {
+            transform: scale(1.05);
+            box-shadow: none !important;
+        }
+
+        .desktop-login-wrapper:focus,
+        .desktop-login-wrapper:active,
+        .desktop-login-wrapper:focus-visible {
+            background: transparent !important;
+            box-shadow: none !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobile-login-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+            background: #111;
+            color: #fff !important;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            padding: 14px 10px;
+        }
+
+        .mobile-login-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .ai-core-orb {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ffffff;
+            border-radius: 50%;
+            pointer-events: none;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: aiCoreBreathing 6s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .desktop-login-wrapper .ai-core-orb {
+            left: 11px;
+        }
+
+        .mobile-login-btn .ai-core-orb {
+            left: 20px;
+        }
+
+        /* AI Core Wakes Up / Brightens Smoothly */
+        .desktop-login-wrapper:hover .ai-core-orb,
+        .mobile-login-btn:hover .ai-core-orb {
+            transform: translateY(-50%) scale(1.3);
+            background: #ffffff;
+            box-shadow: 0 0 12px #ffffff, 0 0 22px #60a5fa, 0 0 32px #3b82f6;
+        }
+
+        @keyframes aiCoreBreathing {
+
+            0%,
+            100% {
+                box-shadow: 0 0 5px #3b82f6, 0 0 10px #ffffff, 0 0 14px rgba(59, 130, 246, 0.5);
+                opacity: 0.6;
+            }
+
+            50% {
+                box-shadow: 0 0 12px #3b82f6, 0 0 20px #ffffff, 0 0 30px #93c5fd;
+                opacity: 1;
+            }
+        }
+
+        /* Elegant moving reflections across the button surfaces */
+        .desktop-login-wrapper::after,
+        .mobile-login-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.35) 50%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-20deg);
+            pointer-events: none;
+        }
+
+        .desktop-login-wrapper:hover::after,
+        .mobile-login-btn:hover::after {
+            left: 150%;
+            transition: left 0.8s ease-in-out;
+        }
+
+        /* Tiny Orbiting Particles Architecture */
+        .particle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .desktop-login-wrapper:hover .particle,
+        .mobile-login-btn:hover .particle {
+            opacity: 1;
+        }
+
+        .desktop-login-wrapper:hover .particle.p1,
+        .mobile-login-btn:hover .particle.p1 {
+            animation: orbParticle1 2.2s linear infinite;
+        }
+
+        .desktop-login-wrapper:hover .particle.p2,
+        .mobile-login-btn:hover .particle.p2 {
+            animation: orbParticle2 3s linear infinite;
+        }
+
+        .desktop-login-wrapper:hover .particle.p3,
+        .mobile-login-btn:hover .particle.p3 {
+            animation: orbParticle3 1.8s linear infinite;
+        }
+
+        @keyframes orbParticle1 {
+            0% {
+                transform: rotate(0deg) translateX(11px) rotate(0deg) scale(1);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(11px) rotate(-360deg) scale(1);
+            }
+        }
+
+        @keyframes orbParticle2 {
+            0% {
+                transform: rotate(120deg) translateX(15px) rotate(-120deg) scale(0.7);
+            }
+
+            100% {
+                transform: rotate(480deg) translateX(15px) rotate(-480deg) scale(0.7);
+            }
+        }
+
+        @keyframes orbParticle3 {
+            0% {
+                transform: rotate(240deg) translateX(8px) rotate(-240deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(-120deg) translateX(8px) rotate(120deg) scale(1.2);
+            }
+        }
+
+        @media (max-width:768px) {
+            .mobile-header-login {
+                width: auto !important;
+                height: 40px !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                border-radius: 999px !important;
+                outline: none !important;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .mobile-header-login img {
+                width: auto !important;
+                height: 40px !important;
+                object-fit: contain;
+                padding-left: 0 !important;
+            }
+
+            .mobile-header-login .ai-core-orb {
+                left: 11px !important;
+                width: 6px;
+                height: 6px;
+            }
+        }
+
+        .mobile-nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+            padding: 0 10px;
+        }
+
+        .mobile-contact-btn {
+            background: linear-gradient(135deg, #0891b2, #3b82f6);
+            color: #fff !important;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 14px 10px;
+        }
+
+        /* mobile dropdown styles */
+        .mobile-dropdown {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .mobile-dropdown-toggle {
+            padding: 14px 10px;
+            font-weight: 600;
+            color: #1e293b;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-dropdown-content {
+            display: none;
+            flex-direction: column;
+            padding-left: 10px;
+            background: #f9fafb;
+        }
+
+        .mobile-dropdown-content a {
+            padding: 12px 10px;
+            font-size: 14px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .mobile-dropdown.active .mobile-dropdown-content {
+            display: flex;
+        }
+
+        .mobile-dropdown.active .arrow {
+            transform: rotate(45deg);
+        }
+
+        .arrow {
+            font-size: 18px;
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">Enbott</div>
+            <div class="logo">
+                <a href="/">
+                    <img src="assets/logos/logo.png" alt="Enbott hero logo" width="120px" height="50px" align="centre">
+                </a>
+            </div>
             <div class="nav-links">
-                <a href="https://shoaibvhmed.github.io/enbott/home.html">Home</a>
-                    <div class="dropdown">
-                      <a href="/services">Services ▾</a>
-                      <div class="dropdown-menu">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <a href="/services">Services ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
                         <a href="/services#technical-training">Coding Competency Training</a>
-                        <a href="/services#iic">Industry Integrated Certification (IIC) by EI Labs </a>
                         <a href="/services#placement-readiness">Placement Readiness</a>
                         <a href="/services#internships">Internship Programs</a>
                         <a href="/services#global-immersion">Global Immersion</a>
                         <a href="/services#faculty-development">Faculty Development</a>
-                      </div>
                     </div>
-                <a href="https://shoaibvhmed.github.io/enbott/partners.html">Partnerships</a>
-                <a href="https://shoaibvhmed.github.io/enbott/client.html">Client Stories</a>
-                <a href="https://shoaibvhmed.github.io/enbott/contact.html" class="nav-cta">Contact Us</a>
+                </div>
+                <a href="/partners">Partnerships</a>
+                <a href="/clients">Client Stories</a>
+                <a href="/contact" class="nav-cta desktop-contact-btn">Contact Us</a>
+                <a href="https://eilabs.enbott.com/login" target="_blank" class="desktop-login-wrapper">
+                    <img src="assets/images/login-gradient.png" height="40px" width="100%" align="middle">
+                    <span class="ai-core-orb">
+                        <span class="particle p1"></span>
+                        <span class="particle p2"></span>
+                        <span class="particle p3"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="mobile-controls">
+                <a href="https://eilabs.enbott.com/login" target="_blank"
+                    class="desktop-login-wrapper mobile-header-login">
+                    <img src="assets/images/login-gradient.png" height="40px" width="100%" align="middle">
+                    <span class="ai-core-orb">
+                        <span class="particle p1"></span>
+                        <span class="particle p2"></span>
+                        <span class="particle p3"></span>
+                    </span>
+                </a>
+
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="/" onclick="toggleMenu()">Home</a>
+        <div class="mobile-dropdown">
+            <div class="mobile-dropdown-toggle" onclick="toggleDropdown(this)">
+                Services
+                <span class="arrow">+</span>
+            </div>
+            <div class="mobile-dropdown-content">
+                <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
+                <a href="/services#technical-training">Coding Competency Training</a>
+                <a href="/services#placement-readiness">Placement Readiness</a>
+                <a href="/services#internships">Internship Programs</a>
+                <a href="/services#global-immersion">Global Immersion</a>
+                <a href="/services#faculty-development">Faculty Development</a>
+            </div>
+        </div>
+        <a href="/partners" onclick="toggleMenu()">Partnerships</a>
+        <a href="/clients" onclick="toggleMenu()">Client Stories</a>
+        <div class="mobile-nav-buttons">
+            <a href="/contact" class="mobile-contact-btn" onclick="toggleMenu()">Contact Us</a>
+            <a href="https://eilabs.enbott.com/login" target="_blank" class="mobile-login-btn">
+                Login to ei-labs
+                <span class="ai-core-orb">
+                    <span class="particle p1"></span>
+                    <span class="particle p2"></span>
+                    <span class="particle p3"></span>
+                </span>
+            </a>
+        </div>
+    </div>
 
     <!-- Hero / Intro -->
     <section class="hero">
@@ -860,8 +1341,8 @@
                 <div class="hero-tagline">ABOUT ENBOTT</div>
                 <h1>We Turn Campuses Into Industry-Ready Ecosystems</h1>
                 <p class="hero-subtitle">
-                    Enbott is the education arm of GT Technologies, focused on helping universities 
-                    bridge the gap between academics and employability through global partnerships, 
+                    Enbott is the education arm of GT Technologies, focused on helping universities
+                    bridge the gap between academics and employability through global partnerships,
                     Centers of Excellence, and industry-aligned learning experiences.
                 </p>
                 <div class="cta-buttons">
@@ -873,21 +1354,21 @@
                     <div class="hero-highlight-card">
                         <div class="hero-highlight-title">Campus-Integrated Model</div>
                         <div class="hero-highlight-text">
-                            We build skills where students already are – on campus – with 
+                            We build skills where students already are – on campus – with
                             plug-and-play CoEs, labs, and digital learning platforms.
                         </div>
                     </div>
                     <div class="hero-highlight-card">
                         <div class="hero-highlight-title">Global Partnerships</div>
                         <div class="hero-highlight-text">
-                            Powered by brands like CodeChef and Pearson to deliver globally benchmarked 
+                            Powered by brands like CodeChef and Pearson to deliver globally benchmarked
                             technical and communication skills.
                         </div>
                     </div>
                     <div class="hero-highlight-card">
                         <div class="hero-highlight-title">Industry Legacy</div>
                         <div class="hero-highlight-text">
-                            Backed by GT Technologies (formerly HCL Infosystems LLC) with 
+                            Backed by GT Technologies (formerly HCL Infosystems LLC) with
                             decades of experience in technology and enterprise relationships.
                         </div>
                     </div>
@@ -897,33 +1378,64 @@
     </section>
 
     <!-- Logo Slider / Trust Strip -->
-<section class="logo-strip">
-  <div class="container">
-    <p class="logo-strip-title">
-      Trusted by <span>25+ institutions & partners</span> to power campus learning
-    </p>
+    <section class="logo-strip">
+        <div class="container">
+            <p class="logo-strip-title">
+                Trusted by <span>25+ institutions & partners</span> to power campus learning
+            </p>
 
-    <div class="logo-slider">
-      <div class="logo-track">
-        <!-- Replace src with your actual logo paths -->
-        <div class="logo-item"><img src="assets/logos/logo1.png" alt="Partner 1"></div>
-        <div class="logo-item"><img src="assets/logos/logo2.png" alt="Partner 2"></div>
-        <div class="logo-item"><img src="assets/logos/logo3.png" alt="Partner 3"></div>
-        <div class="logo-item"><img src="assets/logos/logo4.png" alt="Partner 4"></div>
-        <div class="logo-item"><img src="assets/logos/logo5.png" alt="Partner 5"></div>
-        <div class="logo-item"><img src="assets/logos/logo6.png" alt="Partner 6"></div>
-
-        <!-- Duplicate logos for seamless infinite scroll -->
-        <div class="logo-item"><img src="assets/logos/logo1.png" alt="Partner 1"></div>
-        <div class="logo-item"><img src="assets/logos/logo2.png" alt="Partner 2"></div>
-        <div class="logo-item"><img src="assets/logos/logo3.png" alt="Partner 3"></div>
-        <div class="logo-item"><img src="assets/logos/logo4.png" alt="Partner 4"></div>
-        <div class="logo-item"><img src="assets/logos/logo5.png" alt="Partner 5"></div>
-        <div class="logo-item"><img src="assets/logos/logo6.png" alt="Partner 6"></div>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <div class="logo-item"><img alt="Partner 1" src="assets/logos/cress-bw.png" /></div>
+                    <div class="logo-item"><img alt="Partner 2" src="assets/logos/novac.png" /></div>
+                    <div class="logo-item"><img alt="Partner 3" src="assets/logos/ciic.png" /></div>
+                    <div class="logo-item"><img alt="Partner 4" src="assets/logos/pearson-bw.svg" /></div>
+                    <div class="logo-item"><img alt="Partner 5" src="assets/logos/siraj.png" /></div>
+                    <div class="logo-item"><img alt="Partner 6" src="assets/logos/gib.png" /></div>
+                    <div class="logo-item"><img alt="Crescent Institute of Technology logo"
+                            src="assets/logos/cres.png" />
+                    </div>
+                    <div class="logo-item"><img alt="Kalasingam Academy of Research and Education logo"
+                            src="assets/logos/kala.png" /></div>
+                    <div class="logo-item"><img alt="Karpagam Academy of Higher Education logo"
+                            src="assets/logos/kapa.png" /></div>
+                    <div class="logo-item"><img alt="Panimalar Engineering College logo" src="assets/logos/pani.png" />
+                    </div>
+                    <div class="logo-item"><img alt="PSNA college of Engineering and Technology logo"
+                            src="assets/logos/psna.png" /></div>
+                    <div class="logo-item"><img alt="St. Peter's Institute of Higher Education and Research logo"
+                            src="assets/logos/peter.png" /></div>
+                    <div class="logo-item"><img alt="Sathyabama Institute of Science and Technology logo"
+                            src="assets/logos/sathya.png" /></div>
+                    <div class="logo-item"><img alt="coimbatore institute of engineering and technology logo"
+                            src="assets/logos/ciet.jpg" /></div>
+                    <div class="logo-item"><img alt="Partner 1" src="assets/logos/cress-bw.png" /></div>
+                    <div class="logo-item"><img alt="Partner 2" src="assets/logos/novac.png" /></div>
+                    <div class="logo-item"><img alt="Partner 3" src="assets/logos/ciic.png" /></div>
+                    <div class="logo-item"><img alt="Partner 4" src="assets/logos/pearson-bw.svg" /></div>
+                    <div class="logo-item"><img alt="Partner 5" src="assets/logos/siraj.png" /></div>
+                    <div class="logo-item"><img alt="Partner 6" src="assets/logos/gib.png" /></div>
+                    <div class="logo-item"><img alt="Crescent Institute of Technology logo"
+                            src="assets/logos/cres.png" />
+                    </div>
+                    <div class="logo-item"><img alt="Kalasingam Academy of Research and Education logo"
+                            src="assets/logos/kala.png" /></div>
+                    <div class="logo-item"><img alt="Karpagam Academy of Higher Education logo"
+                            src="assets/logos/kapa.png" /></div>
+                    <div class="logo-item"><img alt="Panimalar Engineering College logo" src="assets/logos/pani.png" />
+                    </div>
+                    <div class="logo-item"><img alt="PSNA college of Engineering and Technology logo"
+                            src="assets/logos/psna.png" /></div>
+                    <div class="logo-item"><img alt="St. Peter's Institute of Higher Education and Research logo"
+                            src="assets/logos/peter.png" /></div>
+                    <div class="logo-item"><img alt="Sathyabama Institute of Science and Technology logo"
+                            src="assets/logos/sathya.png" /></div>
+                    <div class="logo-item"><img alt="coimbatore institute of engineering and technology logo"
+                            src="assets/logos/ciet.jpg" /></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Who We Are -->
@@ -933,8 +1445,8 @@
                 <span class="section-badge">WHO WE ARE</span>
                 <h2>Built at the Intersection of Academia and Industry</h2>
                 <p>
-                    We work with universities, colleges, and corporate partners to 
-                    create scalable, outcome-driven learning ecosystems that prepare 
+                    We work with universities, colleges, and corporate partners to
+                    create scalable, outcome-driven learning ecosystems that prepare
                     students for real careers – not just exams.
                 </p>
             </div>
@@ -944,10 +1456,10 @@
                     <div class="card">
                         <h3>Our Purpose</h3>
                         <p>
-                            Enbott exists to solve one core problem: talented students are graduating every 
-                            year, but employers still struggle to find industry-ready talent. We build a 
-                            bridge between the two by embedding world-class learning experiences directly 
-                            into campuses through Centers of Excellence, certification programs, and 
+                            Enbott exists to solve one core problem: talented students are graduating every
+                            year, but employers still struggle to find industry-ready talent. We build a
+                            bridge between the two by embedding world-class learning experiences directly
+                            into campuses through Centers of Excellence, certification programs, and
                             international collaborations.
                         </p>
                         <div class="pill-row">
@@ -992,7 +1504,7 @@
                 <span class="section-badge">OUR STORY</span>
                 <h2>From Training Programs to Campus Ecosystems</h2>
                 <p>
-                    Enbott is part of GT Technologies’ long-term vision to create sustainable, 
+                    Enbott is part of GT Technologies’ long-term vision to create sustainable,
                     industry-ready talent pipelines in partnership with academia.
                 </p>
             </div>
@@ -1007,8 +1519,9 @@
                                 <div class="timeline-year">LEGACY</div>
                                 <div class="timeline-title">GT Technologies (formerly HCL Infosystems LLC)</div>
                                 <div class="timeline-text">
-                                    After decades of working with enterprises and technology ecosystems, GT Technologies 
-                                    identified a persistent gap: graduates needed significant re-training before deployment.
+                                    After decades of working with enterprises and technology ecosystems, GT Technologies
+                                    identified a persistent gap: graduates needed significant re-training before
+                                    deployment.
                                 </div>
                             </div>
                             <div class="timeline-item">
@@ -1016,7 +1529,7 @@
                                 <div class="timeline-year">CAMPUS FOCUS</div>
                                 <div class="timeline-title">Bringing Industry Inside the Campus</div>
                                 <div class.timeline-text>
-                                    Instead of training graduates after they join companies, we began designing programs 
+                                    Instead of training graduates after they join companies, we began designing programs
                                     that could be delivered while students were still in college.
                                 </div>
                             </div>
@@ -1025,7 +1538,7 @@
                                 <div class="timeline-year">PARTNERSHIPS</div>
                                 <div class="timeline-title">CodeChef, Pearson & International Collaborations</div>
                                 <div class="timeline-text">
-                                    We formalized partnerships with global platforms to ensure every student trained 
+                                    We formalized partnerships with global platforms to ensure every student trained
                                     through Enbott meets internationally benchmarked standards.
                                 </div>
                             </div>
@@ -1036,8 +1549,8 @@
                     <div class="card">
                         <h3>Where We’re Going</h3>
                         <p>
-                            The vision is simple: every campus that partners with Enbott should be known for 
-                            producing graduates who can contribute from Day 1 – whether in a startup, MNC, or 
+                            The vision is simple: every campus that partners with Enbott should be known for
+                            producing graduates who can contribute from Day 1 – whether in a startup, MNC, or
                             their own entrepreneurial venture.
                         </p>
                         <ul class="bullet-list">
@@ -1047,7 +1560,7 @@
                             <li>Enabling international exposure and mobility for high-performing students</li>
                         </ul>
                         <div class="highlight-box" style="margin-top:14px;">
-                            <strong>Our long-term commitment:</strong> move from “training as an activity” 
+                            <strong>Our long-term commitment:</strong> move from “training as an activity”
                             to “career readiness as a campus culture” across partner institutions.
                         </div>
                     </div>
@@ -1063,7 +1576,7 @@
                 <span class="section-badge">HOW WE WORK</span>
                 <h2>Designed for Academic Leaders, Built for Students</h2>
                 <p>
-                    Our engagement model is simple, predictable, and aligned to university priorities: 
+                    Our engagement model is simple, predictable, and aligned to university priorities:
                     academic excellence, employability, and reputation.
                 </p>
             </div>
@@ -1073,8 +1586,8 @@
                     <div class="step-label">STEP 01</div>
                     <div class="step-title">Discover</div>
                     <div class="step-text">
-                        We work with your leadership and faculty to understand current programs, 
-                        strengths, and placement goals. This helps us identify the right mix of 
+                        We work with your leadership and faculty to understand current programs,
+                        strengths, and placement goals. This helps us identify the right mix of
                         competitive programming, communication, and international exposure.
                     </div>
                     <div class="step-taglist">
@@ -1088,8 +1601,8 @@
                     <div class="step-label">STEP 02</div>
                     <div class="step-title">Design</div>
                     <div class="step-text">
-                        Together, we co-design the Center of Excellence, delivery model, and 
-                        certification pathways. Programs are aligned to your academic calendar 
+                        Together, we co-design the Center of Excellence, delivery model, and
+                        certification pathways. Programs are aligned to your academic calendar
                         and credit structure wherever possible.
                     </div>
                     <div class="step-taglist">
@@ -1103,8 +1616,8 @@
                     <div class="step-label">STEP 03</div>
                     <div class="step-title">Deploy & Scale</div>
                     <div class="step-text">
-                        We set up labs, onboard students, train faculty, and run continuous 
-                        assessments. Regular dashboards keep leadership updated on skill progress 
+                        We set up labs, onboard students, train faculty, and run continuous
+                        assessments. Regular dashboards keep leadership updated on skill progress
                         and placement outcomes.
                     </div>
                     <div class="step-taglist">
@@ -1124,7 +1637,7 @@
                 <span class="section-badge" style="background:rgba(148,163,184,0.2);color:#e5e7eb;">OUR VALUES</span>
                 <h2 style="color:white;">What We Stand For</h2>
                 <p style="color:#e5e7eb;">
-                    Every program we roll out, every partnership we sign, and every student we work with 
+                    Every program we roll out, every partnership we sign, and every student we work with
                     is guided by a few non-negotiable principles.
                 </p>
             </div>
@@ -1134,7 +1647,7 @@
                     <div class="value-icon">🎓</div>
                     <div class="value-title">Student-Centred Design</div>
                     <div class="value-text">
-                        We measure success by student confidence, skills, and outcomes – not just 
+                        We measure success by student confidence, skills, and outcomes – not just
                         enrollment numbers or completion certificates.
                     </div>
                 </div>
@@ -1142,7 +1655,7 @@
                     <div class="value-icon">🤝</div>
                     <div class="value-title">True Partnership</div>
                     <div class="value-text">
-                        We work as an extension of your academic team, not as a vendor – aligning 
+                        We work as an extension of your academic team, not as a vendor – aligning
                         initiatives to your long-term institutional strategy.
                     </div>
                 </div>
@@ -1150,7 +1663,7 @@
                     <div class="value-icon">📊</div>
                     <div class="value-title">Outcome Obsession</div>
                     <div class="value-text">
-                        Every program is backed by measurable milestones: participation, skill 
+                        Every program is backed by measurable milestones: participation, skill
                         progression, certifications, and placement impact.
                     </div>
                 </div>
@@ -1158,7 +1671,7 @@
                     <div class="value-icon">🌍</div>
                     <div class="value-title">Global Yet Local</div>
                     <div class="value-text">
-                        International standards, adapted for local realities – from language and 
+                        International standards, adapted for local realities – from language and
                         infrastructure to student demographics.
                     </div>
                 </div>
@@ -1188,7 +1701,7 @@
                             <li>International learning – academic collaborations and corporate exposure.</li>
                         </ul>
                         <div class="highlight-box" style="margin-top:14px;">
-                            <strong>Result:</strong> A coherent, well-governed skills ecosystem instead of 
+                            <strong>Result:</strong> A coherent, well-governed skills ecosystem instead of
                             scattered workshops and unconnected training vendors.
                         </div>
                     </div>
@@ -1197,11 +1710,11 @@
                     <div class="card">
                         <h3>What This Means for Stakeholders</h3>
                         <ul class="bullet-list">
-                            <li><strong>For Management:</strong> Stronger brand positioning, improved rankings, and 
+                            <li><strong>For Management:</strong> Stronger brand positioning, improved rankings, and
                                 differentiated campus value proposition.</li>
-                            <li><strong>For Faculty:</strong> Structured content, tools, and support to deliver 
+                            <li><strong>For Faculty:</strong> Structured content, tools, and support to deliver
                                 industry-relevant courses.</li>
-                            <li><strong>For Students:</strong> Clear pathways from classroom learning to certifications, 
+                            <li><strong>For Students:</strong> Clear pathways from classroom learning to certifications,
                                 portfolios, and placements.</li>
                         </ul>
                     </div>
@@ -1217,7 +1730,7 @@
                 <span class="section-badge">LEADERSHIP & ADVISORY</span>
                 <h2>The Team Behind Enbott</h2>
                 <p>
-                    Enbott is led by educators, technologists, and industry leaders with a shared belief: 
+                    Enbott is led by educators, technologists, and industry leaders with a shared belief:
                     employability should be designed into education, not added after.
                 </p>
             </div>
@@ -1228,7 +1741,7 @@
                     <div class="person-name">Founder & CEO</div>
                     <div class="person-role">Strategy & University Partnerships</div>
                     <div class="person-text">
-                        Leads the overall vision for campus-integrated learning, working closely with 
+                        Leads the overall vision for campus-integrated learning, working closely with
                         institutional leadership teams to design CoEs and long-term roadmaps.
                     </div>
                     <div class="person-tags">
@@ -1242,7 +1755,7 @@
                     <div class="person-name">Program Director</div>
                     <div class="person-role">Delivery & Outcomes</div>
                     <div class="person-text">
-                        Owns program design, implementation, and learner outcomes across competitive 
+                        Owns program design, implementation, and learner outcomes across competitive
                         programming, communication, and CoE initiatives.
                     </div>
                     <div class="person-tags">
@@ -1256,7 +1769,7 @@
                     <div class="person-name">Industry & International Advisor</div>
                     <div class="person-role">Corporate & Global Connect</div>
                     <div class="person-text">
-                        Brings in insights from hiring partners and international collaborators to keep 
+                        Brings in insights from hiring partners and international collaborators to keep
                         all programs aligned to current market expectations.
                     </div>
                     <div class="person-tags">
@@ -1277,18 +1790,19 @@
         <div class="container">
             <h2>Let’s Build Your Campus Center of Excellence</h2>
             <p class="emotional-text">
-                Whether you’re planning a new skills lab, reimagining your placement strategy, or looking 
+                Whether you’re planning a new skills lab, reimagining your placement strategy, or looking
                 to differentiate your programs with global certifications – we’d love to co-design it with you.
             </p>
 
             <div class="cta-buttons-final">
                 <!-- Replace with your actual contact / form URLs -->
                 <a href="mailto:info@enbott.com" class="btn-large">📩 Schedule a Discussion</a>
-                <a href="#" class="btn-outline">📄 Download Institution Brochure</a>
+                <a href="assets/docs/enbott-iic.pdf" class="btn-outline">📄 Download Institution Brochure</a>
             </div>
 
             <p style="margin-top: 20px; opacity: 0.9;">
-                Part of GT Technologies (formerly HCL Infosystems LLC) • Campus-integrated, outcome-driven, globally connected.
+                Part of GT Technologies (formerly HCL Infosystems LLC) • Campus-integrated, outcome-driven, globally
+                connected.
             </p>
         </div>
     </section>
@@ -1327,16 +1841,17 @@
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About Enbott</a></li>
-                        <li><a href="#">GT Technologies</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="/about">About Enbott</a></li>
+                        <li><a href="/leadership">Leadership</a></li>
+                        <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Enbott. Part of GT Technologies (formerly HCL Infosystems LLC). All rights reserved.</p>
-                <p style="margin-top: 10px;">🏫 Campus-Integrated Learning | 🌍 Global Partnerships | 📜 Recognized Certifications | 🏢 25 Years Industry Legacy</p>
+                <p style="margin-top: 10px;">🏫 Campus-Integrated Learning | 🌍 Global Partnerships | 📜 Recognized
+                    Certifications | 🏢 25 Years Industry Legacy</p>
             </div>
         </div>
     </footer>
@@ -1344,5 +1859,17 @@
     <!-- Floating CTA -->
     <a href="#contact" class="floating-cta">💬 Talk to Enbott</a>
 
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileNav").classList.toggle("active");
+            document.body.classList.toggle("menu-open");
+            document.querySelector(".menu-toggle").classList.toggle("active");
+        }
+
+        function toggleDropdown(el) {
+            el.parentElement.classList.toggle("active");
+        }
+    </script>
 </body>
+
 </html>
