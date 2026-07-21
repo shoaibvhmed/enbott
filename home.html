@@ -90,25 +90,26 @@
         }
 
         /* POPUP LAYOUT */
-        /* Overlay */
+
+        /* Popup Overlay */
         .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
             display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
             justify-content: center;
             align-items: center;
             z-index: 9999;
         }
 
-        /* Popup Box */
-        .popup-box {
-            background: #fff;
+        /* Container */
+        .popup-container {
+            display: flex;
             width: 90%;
-            max-width: 600px;
+            max-width: 900px;
+            height: 450px;
+            /* was 500px */
+            background: #fff;
             border-radius: 12px;
             overflow: hidden;
             position: relative;
@@ -116,18 +117,22 @@
         }
 
         /* Close Button */
-        .close-btn {
+        .popup-close {
             position: absolute;
             top: 10px;
             right: 15px;
-            font-size: 22px;
+            font-size: 28px;
+            background: transparent;
+            border: none;
             cursor: pointer;
             z-index: 10;
+            color: #333;
+            line-height: 1;
         }
 
         iframe {
             width: 100%;
-            height: 550px;
+            height: 100%;
             border: none;
         }
 
@@ -143,55 +148,82 @@
             }
         }
 
-        .popup-box.two-col {
-            display: flex;
-            width: 90%;
-            max-width: 900px;
-            height: 550px;
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-        }
-
         /* LEFT IMAGE */
         .popup-left {
             width: 45%;
-            background: #000;
+            /* Changed from 45% */
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         .popup-left img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            /* Changed from cover */
+            object-position: center;
+            display: block;
         }
 
-        /* RIGHT FORM */
         .popup-right {
             width: 55%;
+            overflow: hidden;
         }
 
         .popup-right iframe {
             width: 100%;
-            height: 100%;
+            height: calc(100% + 20px);
+            margin-bottom: -20px;
             border: none;
         }
 
         /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
-            .popup-box.two-col {
+
+            .popup-container {
                 flex-direction: column;
-                height: auto;
+                width: 94%;
+                height: 85vh;
+                /* Fixed height to fit phone screen */
+                max-height: 85vh;
+                overflow: hidden;
+                /* Prevent popup itself from scrolling */
+                border-radius: 12px;
             }
 
             .popup-left {
                 width: 100%;
-                height: 180px;
+                height: 250px;
+                /* Image size */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+                flex-shrink: 0;
+            }
+
+            .popup-left img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
             }
 
             .popup-right {
                 width: 100%;
-                height: 400px;
+                flex: 1;
+                /* Takes remaining space */
+                height: 100%;
+            }
+
+            .popup-right iframe {
+                width: 100%;
+                height: 100%;
+                /* Fill remaining space */
+                border: none;
             }
         }
 
@@ -404,9 +436,16 @@
 
             .mobile-header-login {
                 display: inline-flex !important;
-                width: 100px;
+                width: auto;
                 height: 40px;
                 flex-shrink: 0;
+                background: transparent !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                border-radius: 999px !important;
+                outline: none !important;
+                -webkit-tap-highlight-color: transparent;
             }
 
             .menu-toggle {
@@ -1612,16 +1651,6 @@
             }
         }
 
-        @keyframes logo-scroll {
-            from {
-                transform: translateX(0)
-            }
-
-            to {
-                transform: translateX(-50%)
-            }
-        }
-
         @media(max-width:640px) {
             .logo-track {
                 gap: 32px
@@ -1678,6 +1707,13 @@
 
         .mobile-header-login {
             display: none;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+            border-radius: 999px !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent;
         }
 
         @media (max-width:968px) {
@@ -1695,14 +1731,30 @@
             position: relative;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             overflow: hidden;
-            border-radius: 4px;
-            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+            border-radius: 999px;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            padding: 0 !important;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .desktop-login-wrapper:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+            box-shadow: none !important;
+        }
+
+        .desktop-login-wrapper:focus,
+        .desktop-login-wrapper:active,
+        .desktop-login-wrapper:focus-visible {
+            background: transparent !important;
+            box-shadow: none !important;
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .mobile-login-btn {
@@ -1850,21 +1902,28 @@
 
         @media (max-width:768px) {
             .mobile-header-login {
-                width: 130px !important;
-                height: 44px !important
+                width: auto !important;
+                height: 40px !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                border-radius: 999px !important;
+                outline: none !important;
+                -webkit-tap-highlight-color: transparent;
             }
 
             .mobile-header-login img {
-                width: 100% !important;
-                height: 44px !important;
+                width: auto !important;
+                height: 40px !important;
                 object-fit: contain;
-                padding-left: 16px
+                padding-left: 0 !important;
             }
 
             .mobile-header-login .ai-core-orb {
-                left: 25px !important;
+                left: 11px !important;
                 width: 6px;
-                height: 6px
+                height: 6px;
             }
 
             .hero-layout-grid {
@@ -1948,13 +2007,12 @@
                 <span class="arrow">+</span>
             </div>
             <div class="mobile-dropdown-content">
-                <a href="/services">Overview</a>
-                <a href="/services#technical-training">— Technical Training</a>
-                <a href="/services#iic">Industry Integrated Certification (IIC)</a>
-                <a href="/services#placement-readiness">— Placement Readiness</a>
-                <a href="/services#internships">— Internships</a>
-                <a href="/services#global-immersion">— Global Immersion</a>
-                <a href="/services#faculty-development">— Faculty Development</a>
+                <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
+                <a href="/services#technical-training">Coding Competency Training</a>
+                <a href="/services#placement-readiness">Placement Readiness</a>
+                <a href="/services#internships">Internship Programs</a>
+                <a href="/services#global-immersion">Global Immersion</a>
+                <a href="/services#faculty-development">Faculty Development</a>
             </div>
         </div>
         <a href="/partners" onclick="toggleMenu()">Partnerships</a>
@@ -2002,6 +2060,7 @@
                 <path class="pulse-stream stream-3" d="M 200,150 L 200,450" />
             </svg>
         </div>
+
 
         <div class="container hero-layout-grid">
             <div class="hero-narrative">
@@ -2525,7 +2584,7 @@
                 <div class="metric-card">
                     <span class="metric-number">3000+</span>
                     <span class="metric-label">Learning Hours</span>
-                    <span class="metric-sublabel"> communication content</span>
+
                 </div>
 
 
@@ -2692,11 +2751,10 @@
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="/partners">About Enbott</a></li>
+                         <li><a href="/about">About Enbott</a></li>
                         <li><a href="/leadership">Leadership</a></li>
                         <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
                         <li><a href="/contact">Contact Us</a></li>
-
                     </ul>
                 </div>
 
@@ -2712,11 +2770,65 @@
         </div>
     </footer>
 
+    <!-- POPUP MODAL -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-container">
+
+            <!-- CLOSE BUTTON -->
+            <button class="popup-close" onclick="closePopup()">×</button>
+
+            <!-- LEFT IMAGE -->
+            <div class="popup-left">
+                <img src="assets/images/gallery/takpopv4.jpg" alt="promo">
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="popup-right">
+
+                <iframe
+                    data-tally-src="https://tally.so/embed/44oPKA?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1"
+                    loading="lazy" width="100%" height="448" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Launch your career in AR/VR with Enbott" data-tally-embed-widget-initialized="1"
+                    src="https://tally.so/embed/44oPKA?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1&amp;originPage=%2FC%3A%2FUsers%2Fjunai%2FDesktop%2Fhome.html"
+                    id="iFrameResizer0" scrolling="no" style="overflow: hidden; height: 471.5px;"></iframe>
+                <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
+
+            </div>
+
+        </div>
+    </div>
+
     <script>
         function toggleMenu() {
             document.getElementById("mobileNav").classList.toggle("active");
             document.body.classList.toggle("menu-open");
         }
+
+        /* Popup Functions */
+        function openPopup() {
+            document.getElementById("popupOverlay").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+
+        /* Automatically open popup after 3 seconds */
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+                openPopup();
+            }, 3000);
+
+        });
+
+        /* Close popup when clicking outside box */
+        window.onclick = function (event) {
+            const overlay = document.getElementById("popupOverlay");
+            if (event.target === overlay) {
+                closePopup();
+            }
+        };
     </script>
 
     <script>
@@ -2783,6 +2895,7 @@
             setImage(currentIndex);
         }
     </script>
+
 </body>
 
 </html>
