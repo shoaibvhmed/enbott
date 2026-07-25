@@ -779,8 +779,8 @@
       transition: all 0.3s;
     }
 
+
     .mobile-nav {
-      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -788,9 +788,29 @@
       background: white;
       display: none;
       flex-direction: column;
-      padding: 90px 20px 20px;
+      padding: 39px 20px 20px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
       z-index: 999;
+    }
+
+    .mobile-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #0f172a;
+      font-size: 28px;
+      line-height: 1;
+      z-index: 10002;
+      cursor: pointer;
+    }
+
+    body.menu-open {
+      overflow: hidden;
     }
 
     .mobile-nav a {
@@ -1031,10 +1051,13 @@
     }
 
     @keyframes aiCoreBreathing {
-      0%, 100% {
+
+      0%,
+      100% {
         box-shadow: 0 0 5px #3b82f6, 0 0 10px #ffffff, 0 0 14px rgba(59, 130, 246, 0.5);
         opacity: 0.6;
       }
+
       50% {
         box-shadow: 0 0 12px #3b82f6, 0 0 20px #ffffff, 0 0 30px #93c5fd;
         opacity: 1;
@@ -1104,6 +1127,7 @@
       0% {
         transform: rotate(0deg) translateX(11px) rotate(0deg) scale(1);
       }
+
       100% {
         transform: rotate(360deg) translateX(11px) rotate(-360deg) scale(1);
       }
@@ -1113,6 +1137,7 @@
       0% {
         transform: rotate(120deg) translateX(15px) rotate(-120deg) scale(0.7);
       }
+
       100% {
         transform: rotate(480deg) translateX(15px) rotate(-480deg) scale(0.7);
       }
@@ -1122,6 +1147,7 @@
       0% {
         transform: rotate(240deg) translateX(8px) rotate(-240deg) scale(1.2);
       }
+
       100% {
         transform: rotate(-120deg) translateX(8px) rotate(120deg) scale(1.2);
       }
@@ -1170,6 +1196,58 @@
       font-weight: 600;
       padding: 14px 10px;
     }
+
+    /* mobile dropdown styles */
+    .mobile-dropdown {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .mobile-dropdown-toggle {
+      padding: 0px 0px;
+      font-weight: 600;
+      color: #1e293b;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-dropdown-content {
+      display: none;
+      flex-direction: column;
+      padding-left: 10px;
+      background: #f9fafb;
+    }
+
+    .mobile-dropdown-content a {
+      padding: 12px 10px;
+      font-size: 14px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .mobile-dropdown.active .mobile-dropdown-content {
+      display: flex;
+    }
+
+    .mobile-dropdown.active .arrow {
+      transform: rotate(45deg);
+    }
+
+    .mobile-services-link {
+      flex: 1;
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .arrow {
+      width: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      color: #000000;
+    }
   </style>
 </head>
 
@@ -1208,20 +1286,19 @@
         </a>
       </div>
       <div class="mobile-controls">
-        <a href="https://eilabs.enbott.com/login" target="_blank"
-            class="desktop-login-wrapper mobile-header-login">
-            <img src="assets/images/login-gradient.png" height="40px" width="100%" align="middle">
-            <span class="ai-core-orb">
-                <span class="particle p1"></span>
-                <span class="particle p2"></span>
-                <span class="particle p3"></span>
-            </span>
+        <a href="https://eilabs.enbott.com/login" target="_blank" class="desktop-login-wrapper mobile-header-login">
+          <img src="assets/images/login-gradient.png" height="40px" width="100%" align="middle">
+          <span class="ai-core-orb">
+            <span class="particle p1"></span>
+            <span class="particle p2"></span>
+            <span class="particle p3"></span>
+          </span>
         </a>
 
         <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
@@ -1229,20 +1306,42 @@
 
   <!-- Mobile Dropdown Navigation Menu Block -->
   <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close-btn" onclick="closeMenu()" aria-label="Close menu">×</button>
     <a href="/" onclick="toggleMenu()">Home</a>
-    <a href="/services" onclick="toggleMenu()">Services</a>
+    <div class="mobile-dropdown">
+
+      <div class="mobile-dropdown-toggle">
+
+        <a href="/services" class="mobile-services-link">
+          Services
+        </a>
+
+        <span class="arrow" onclick="toggleDropdown(this.parentElement.parentElement)">
+          +
+        </span>
+
+      </div>
+      <div class="mobile-dropdown-content">
+        <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
+        <a href="/services#technical-training">Coding Competency Training</a>
+        <a href="/services#placement-readiness">Placement Readiness</a>
+        <a href="/services#internships">Internship Programs</a>
+        <a href="/services#global-immersion">Global Immersion</a>
+        <a href="/services#faculty-development">Faculty Development</a>
+      </div>
+    </div>
     <a href="/partners" onclick="toggleMenu()">Partnerships</a>
     <a href="/clients" onclick="toggleMenu()">Client Stories</a>
     <div class="mobile-nav-buttons">
-        <a href="/contact" class="mobile-contact-btn" onclick="toggleMenu()">Contact Us</a>
-        <a href="https://eilabs.enbott.com/login" target="_blank" class="mobile-login-btn">
-            Login to ei-labs
-            <span class="ai-core-orb">
-                <span class="particle p1"></span>
-                <span class="particle p2"></span>
-                <span class="particle p3"></span>
-            </span>
-        </a>
+      <a href="/contact" class="mobile-contact-btn" onclick="toggleMenu()">Contact Us</a>
+      <a href="https://eilabs.enbott.com/login" target="_blank" class="mobile-login-btn">
+        Login to ei-labs
+        <span class="ai-core-orb">
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+        </span>
+      </a>
     </div>
   </div>
 
@@ -1278,25 +1377,6 @@
       <div class="services-grid">
         <div class="service-card">
           <div class="partner-logo-wrapper">
-            <img alt="MEASI Academy of Architecture Logo" src="assets/logos/measi.png" />
-          </div>
-          <h3>MEASI Academy of Architecture</h3>
-          <p>Chennai-based architecture institution established in 1999, affiliated with Anna University and approved by
-            the Council of Architecture. Renowned for design excellence, industry-oriented education, international
-            collaborations, and nurturing future architects through innovation and creative learning.</p>
-          <a class="learn-more" href="https://measiarch.in/" target="_blank">Visit Website →</a>
-        </div>
-        <div class="service-card">
-          <div class="partner-logo-wrapper">
-            <img alt="Crescent Institute of Technology Logo" src="assets/logos/cres.png" />
-          </div>
-          <h3>Crescent Institute Of Science And Technology</h3>
-          <p>Leading university in Vandalur, Chennai, offering engineering and science programs since 1984, impacting
-            over 9,000 students through industry-focused, research-driven education.</p>
-          <a class="learn-more" href="https://www.crescent.education" target="_blank">Visit Website →</a>
-        </div>
-        <div class="service-card">
-          <div class="partner-logo-wrapper">
             <img alt="Kalasingam Academy of Research and Education logo" src="assets/logos/kala.png" />
           </div>
           <h3>Kalasingam Academy of Research and Education</h3>
@@ -1306,12 +1386,12 @@
         </div>
         <div class="service-card">
           <div class="partner-logo-wrapper">
-            <img alt="Panimalar Engineering College Logo" src="assets/logos/pani.png" />
+            <img alt="Crescent Institute of Technology Logo" src="assets/logos/cres.png" />
           </div>
-          <h3>Panimalar Engineering College</h3>
-          <p>Poonamallee engineering college established in 2000, known for disciplined academics and preparing over
-            6,000 students with industry-ready skills and strong values.</p>
-          <a class="learn-more" href="https://www.panimalar.ac.in" target="_blank">Visit Website →</a>
+          <h3>Crescent Institute Of Science And Technology</h3>
+          <p>Leading university in Vandalur, Chennai, offering engineering and science programs since 1984, impacting
+            over 9,000 students through industry-focused, research-driven education.</p>
+          <a class="learn-more" href="https://www.crescent.education" target="_blank">Visit Website →</a>
         </div>
         <div class="service-card">
           <div class="partner-logo-wrapper">
@@ -1334,16 +1414,6 @@
         </div>
         <div class="service-card">
           <div class="partner-logo-wrapper">
-            <img alt="Sathyabama Institute of Science and Technology Logo" src="assets/logos/sathya.png" />
-          </div>
-          <h3>Sathyabama Institute of Science and Technology</h3>
-          <p>Prestigious deemed university in Chennai excelling in engineering, science, technology, and
-            multidisciplinary programs since 1987, impacting over 15,000 students with research-intensive,
-            industry-linked education.</p>
-          <a class="learn-more" href="https://www.sathyabama.ac.in/" target="_blank">Visit Website →</a>
-        </div>
-        <div class="service-card">
-          <div class="partner-logo-wrapper">
             <img alt="dhanalakshmi college of engineering Logo" src="assets/logos/dhan.png" />
           </div>
           <h3>Dhanalakshmi College of Engineering</h3>
@@ -1354,6 +1424,18 @@
         </div>
         <div class="service-card">
           <div class="partner-logo-wrapper">
+            <img src="assets/logos/egspec.png" alt="E.G.S. Pillay Engineering College Logo" width="150" height="150">
+            <br>
+          </div>
+          <br>
+          <h3>E.G.S. Pillay Engineering College</h3>
+          <p>Nagapattinam-based autonomous engineering institution established in 1995, renowned for academic
+            excellence, industry-oriented education, research, and innovation, empowering thousands of students through
+            quality technical programs and strong industry collaborations.</p>
+          <a href="https://www.egspec.org/" target="_blank" class="learn-more">Visit Website →</a>
+        </div>
+        <div class="service-card">
+          <div class="partner-logo-wrapper">
             <img alt="DG Vaishnava college Logo" src="assets/logos/dgvc.jpg" />
           </div>
           <h3>Dwaraka Doss Goverdhan Doss Vaishnav College (DG Vaishnav College)</h3>
@@ -1361,6 +1443,38 @@
             and commerce institution established in 1964, educating thousands with value-based, NAAC A++ accredited
             programs</p>
           <a class="learn-more" href="https://www.dgvaishnavcollege.edu.in/" target="_blank">Visit Website →</a>
+        </div>
+        <div class="service-card">
+          <div class="partner-logo-wrapper">
+            <img alt="MEASI Academy of Architecture Logo" src="assets/logos/measi.png" />
+          </div>
+          <h3>MEASI Academy of Architecture</h3>
+          <p>Chennai-based architecture institution established in 1999, affiliated with Anna University and approved by
+            the Council of Architecture. Renowned for design excellence, industry-oriented education, international
+            collaborations, and nurturing future architects through innovation and creative learning.</p>
+          <a class="learn-more" href="https://measiarch.in/" target="_blank">Visit Website →</a>
+        </div>
+        <div class="service-card">
+          <div class="partner-logo-wrapper">
+            <img alt="Sathyabama Institute of Science and Technology Logo" src="assets/logos/sathya.png" />
+          </div>
+          <h3>Sathyabama Institute of Science and Technology</h3>
+          <p>Prestigious deemed university in Chennai excelling in engineering, science, technology, and
+            multidisciplinary programs since 1987, impacting over 15,000 students with research-intensive,
+            industry-linked education.</p>
+          <a class="learn-more" href="https://www.sathyabama.ac.in/" target="_blank">Visit Website →</a>
+        </div>
+        <div class="service-card">
+          <div class="partner-logo-wrapper">
+            <img src="assets/logos/novacN.png" alt="Novac Technology Solutions Logo" width="60" height="60">
+            <br>
+          </div>
+          <br>
+          <h3>Novac Technology Solutions</h3>
+          <p>Chennai-headquartered digital transformation company specializing in enterprise technology, cloud
+            solutions, AI, automation, and digital engineering. With a global presence, Novac empowers businesses across
+            industries through innovative technology solutions and customer-centric services.</p>
+          <a href="https://novactech.in/" target="_blank" class="learn-more">Visit Website →</a>
         </div>
         <div class="service-card">
           <div class="partner-logo-wrapper">
@@ -1510,10 +1624,10 @@
         <div class="footer-section">
           <h4>Company</h4>
           <ul>
-             <li><a href="/about">About Enbott</a></li>
-                        <li><a href="/leadership">Leadership</a></li>
-                        <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
-                        <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/about">About Enbott</a></li>
+            <li><a href="/leadership">Leadership</a></li>
+            <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -1599,6 +1713,13 @@
   <script>
     function toggleMenu() {
       document.getElementById("mobileNav").classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+      document.querySelector(".menu-toggle").classList.toggle("active");
+    }
+    function closeMenu() {
+      document.getElementById("mobileNav").classList.remove("active");
+      document.body.classList.remove("menu-open");
+      document.querySelector(".menu-toggle").classList.remove("active");
     }
 
     // Interactive Kinetic Grid Shift (Scroll Parallax Logic)
@@ -1671,6 +1792,17 @@
 
       particleContainer.appendChild(p);
 
+    }
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileNav").classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+      document.querySelector(".menu-toggle").classList.toggle("active");
+    }
+
+    function toggleDropdown(dropdown) {
+      dropdown.classList.toggle("active");
     }
   </script>
 </body>
