@@ -1171,6 +1171,57 @@
       max-width: 420px;
     }
 
+    .mobile-dropdown {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .mobile-dropdown-toggle {
+      padding: 0px 0px;
+      font-weight: 600;
+      color: #1e293b;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-dropdown-content {
+      display: none;
+      flex-direction: column;
+      padding-left: 10px;
+      background: #f9fafb;
+    }
+
+    .mobile-dropdown-content a {
+      padding: 12px 10px;
+      font-size: 14px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .mobile-dropdown.active .mobile-dropdown-content {
+      display: flex;
+    }
+
+    .mobile-dropdown.active .arrow {
+      transform: rotate(45deg);
+    }
+
+    .mobile-services-link {
+      flex: 1;
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .arrow {
+      width: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      color: #000000;
+    }
+
     .brand-row {
       display: flex;
       align-items: center;
@@ -2018,12 +2069,28 @@
   </nav>
   <div class="mobile-nav" id="mobileNav">
     <a href="/" onclick="toggleMenu()">Home</a>
-    <a href="/services" onclick="toggleMenu()">Services</a>
-    <a href="#it-consulting" onclick="toggleMenu()">— IT Training</a>
-    <a href="#competitivepg" onclick="toggleMenu()">— Competitive Programming</a>
-    <a href="#english" onclick="toggleMenu()">— Communicative English</a>
-    <a href="#iic" onclick="toggleMenu()">— Industry Integrated Certification</a>
-    <a href="#intl" onclick="toggleMenu()">— Global Programs</a>
+    <div class="mobile-dropdown">
+
+      <div class="mobile-dropdown-toggle">
+
+        <a href="/services" class="mobile-services-link">
+          Services
+        </a>
+
+        <span class="arrow" onclick="toggleDropdown(this.parentElement.parentElement)">
+          +
+        </span>
+
+      </div>
+      <div class="mobile-dropdown-content">
+        <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
+        <a href="/services#technical-training">Coding Competency Training</a>
+        <a href="/services#placement-readiness">Placement Readiness</a>
+        <a href="/services#internships">Internship Programs</a>
+        <a href="/services#global-immersion">Global Immersion</a>
+        <a href="/services#faculty-development">Faculty Development</a>
+      </div>
+    </div>
     <a href="/partners" onclick="toggleMenu()">Partnerships</a>
     <a href="/clients" onclick="toggleMenu()">Client Stories</a>
     <div class="mobile-nav-buttons">
@@ -2517,6 +2584,50 @@
           <div class="detail-split-layout">
             <div>
               <div class="service-detail-header">
+                <div class="detail-icon">💼</div>
+                <div>
+                  <h3>Internship Program</h3>
+                </div>
+              </div>
+              <p class="detail-lead-text">Prepare students for the professional world through structured internships
+                that combine practical learning, industry exposure, and hands-on experience. Build real-world skills and
+                professional confidence.</p>
+
+              <h4>Core Capabilities</h4>
+              <div class="capabilities-grid">
+                <div class="capability-item">
+                  <h5>Practical Learning</h5>
+                  <p>Gain hands-on experience through live projects and real-world case studies.</p>
+                </div>
+                <div class="capability-item">
+                  <h5>Industry Exposure</h5>
+                  <p>Experience professional environments and current industry practices.</p>
+                </div>
+                <div class="capability-item">
+                  <h5>Expert Mentorship</h5>
+                  <p>Learn from experienced industry professionals through guided support.</p>
+                </div>
+                <div class="capability-item">
+                  <h5>Career Readiness</h5>
+                  <p>Build technical, communication, and problem-solving skills for the workplace.</p>
+                </div>
+              </div>
+            </div>
+            <div class="detail-sidebar-canvas">
+              <div class="audience-box">
+                <strong>Who is this for?</strong>
+                <p style="margin-top:10px;">Designed for students, fresh graduates, universities, colleges, and
+                  educational institutions seeking meaningful industry exposure, practical learning experiences, and
+                  enhanced career readiness.</p>
+                <img alt="Internship Program" class="audience-image" src="assets/img-SC/intership.avif">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-detail" style="transform: scale(0.973675) translateY(4.52984px);">
+          <div class="detail-split-layout">
+            <div>
+              <div class="service-detail-header">
                 <div class="detail-icon">📚</div>
                 <div>
                   <h3>Linguistic skills (with Pearson)</h3>
@@ -2549,7 +2660,7 @@
                 <strong>Who is this for?</strong>
                 <p style="margin-top:10px;">Students, job seekers, and corporates aiming to strengthen communication at
                   scale.</p>
-                <img alt="Audience illustration" class="audience-image" src="assets/img-SC/communicative-eng.avif" />
+                <img alt="Audience illustration" class="audience-image" src="assets/img-SC/communicative-eng.avif">
               </div>
             </div>
           </div>
@@ -2841,6 +2952,17 @@
     if (targetCounterSection) dashboardObserver.observe(targetCounterSection);
   </script>
   <div class="scroll-progress"></div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileNav").classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+      document.querySelector(".menu-toggle").classList.toggle("active");
+    }
+
+    function toggleDropdown(dropdown) {
+      dropdown.classList.toggle("active");
+    }
+  </script>
 </body>
 
 </html>
