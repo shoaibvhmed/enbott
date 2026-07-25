@@ -194,7 +194,6 @@
     }
 
     .mobile-nav {
-      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -202,10 +201,25 @@
       background: white;
       display: none;
       flex-direction: column;
-      padding: 90px 20px 20px;
+      padding: 39px 20px 20px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      z-index: 10000;
-      overflow-y: auto;
+      z-index: 999;
+    }
+
+    .mobile-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #0f172a;
+      font-size: 28px;
+      line-height: 1;
+      z-index: 10002;
+      cursor: pointer;
     }
 
     body.menu-open {
@@ -929,6 +943,7 @@
       box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.063), 0 30px 60px rgba(0, 0, 0, 0.068);
       position: sticky;
       top: 100px;
+      scroll-margin-top: 120px;
       transform-origin: top center;
       transition: transform 0.4s ease, box-shadow 0.4s;
     }
@@ -1453,6 +1468,7 @@
         margin-bottom: 40px;
         position: sticky;
         top: 80px;
+        scroll-margin-top: 100px;
         transform-origin: top center;
         transition: transform 0.4s ease, box-shadow 0.4s;
       }
@@ -1662,6 +1678,7 @@
         padding: 18px 15px;
         margin-bottom: 36px;
         top: 70px;
+        scroll-margin-top: 90px;
       }
 
       .service-detail-header {
@@ -2029,12 +2046,13 @@
         <div class="dropdown">
           <a href="/services">Services ▾</a>
           <div class="dropdown-menu">
-            <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
-            <a href="/services#technical-training">Coding Competency Training</a>
-            <a href="/services#placement-readiness">Placement Readiness</a>
-            <a href="/services#internships">Internship Programs</a>
-            <a href="/services#global-immersion">Global Immersion</a>
-            <a href="/services#faculty-development">Faculty Development</a>
+            
+            <a href="/services#iic" onclick="closeMenu()">Industry Integrated Certification (IIC) by ei-labs</a>
+            <a href="/services#technical-training" onclick="closeMenu()">Coding Competency Training</a>
+            <a href="/services#placement-readiness" onclick="closeMenu()">Placement Readiness</a>
+            <a href="/services#internships" onclick="closeMenu()">Internship Programs</a>
+            <a href="/services#global-immersion" onclick="closeMenu()">Global Immersion</a>
+            <a href="/services#faculty-development" onclick="closeMenu()">Faculty Development</a>
           </div>
         </div>
         <a href="/partners">Partnerships</a>
@@ -2068,12 +2086,13 @@
     </div>
   </nav>
   <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close-btn" onclick="closeMenu()" aria-label="Close menu">×</button>
     <a href="/" onclick="toggleMenu()">Home</a>
     <div class="mobile-dropdown">
 
       <div class="mobile-dropdown-toggle">
 
-        <a href="/services" class="mobile-services-link">
+        <a href="/services" class="mobile-services-link" onclick="closeMenu()">
           Services
         </a>
 
@@ -2083,12 +2102,12 @@
 
       </div>
       <div class="mobile-dropdown-content">
-        <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
-        <a href="/services#technical-training">Coding Competency Training</a>
-        <a href="/services#placement-readiness">Placement Readiness</a>
-        <a href="/services#internships">Internship Programs</a>
-        <a href="/services#global-immersion">Global Immersion</a>
-        <a href="/services#faculty-development">Faculty Development</a>
+        <a href="/services#iic" onclick="closeMenu()">Industry Integrated Certification (IIC) by ei-labs</a>
+        <a href="/services#technical-training" onclick="closeMenu()">Coding Competency Training</a>
+        <a href="/services#placement-readiness" onclick="closeMenu()">Placement Readiness</a>
+        <a href="/services#internships" onclick="closeMenu()">Internship Programs</a>
+        <a href="/services#global-immersion" onclick="closeMenu()">Global Immersion</a>
+        <a href="/services#faculty-development" onclick="closeMenu()">Faculty Development</a>
       </div>
     </div>
     <a href="/partners" onclick="toggleMenu()">Partnerships</a>
@@ -2820,7 +2839,11 @@
       document.body.classList.toggle("menu-open");
       document.querySelector(".menu-toggle").classList.toggle("active");
     }
-
+    function closeMenu() {
+      document.getElementById("mobileNav").classList.remove("active");
+      document.body.classList.remove("menu-open");
+      document.querySelector(".menu-toggle").classList.remove("active");
+    }
     // Entrance Observer Core handling for Bento Grid Portfolio cards
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -2957,6 +2980,16 @@
       document.getElementById("mobileNav").classList.toggle("active");
       document.body.classList.toggle("menu-open");
       document.querySelector(".menu-toggle").classList.toggle("active");
+    }
+
+    function closeMenu() {
+      const mobileNav = document.getElementById("mobileNav");
+      const menuToggle = document.querySelector(".menu-toggle");
+      if (mobileNav && mobileNav.classList.contains("active")) {
+        mobileNav.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        if (menuToggle) menuToggle.classList.remove("active");
+      }
     }
 
     function toggleDropdown(dropdown) {
