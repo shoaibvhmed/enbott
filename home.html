@@ -373,7 +373,6 @@
 
         /* Mobile Nav Panel */
         .mobile-nav {
-            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -381,9 +380,25 @@
             background: white;
             display: none;
             flex-direction: column;
-            padding: 90px 20px 20px;
+            padding: 39px 20px 20px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             z-index: 999;
+        }
+
+        .mobile-close-btn {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: #f1f5f9;
+            color: #0f172a;
+            font-size: 28px;
+            line-height: 1;
+            z-index: 10002;
+            cursor: pointer;
         }
 
         body.menu-open {
@@ -1505,7 +1520,7 @@
         }
 
         .mobile-dropdown-toggle {
-            padding: 14px 10px;
+            padding: 0px 0px;
             font-weight: 600;
             color: #1e293b;
             cursor: pointer;
@@ -1535,9 +1550,20 @@
             transform: rotate(45deg);
         }
 
+        .mobile-services-link {
+            flex: 1;
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
         .arrow {
-            font-size: 18px;
-            transition: transform 0.3s ease;
+            width: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            color: #000000;
         }
 
         :root {
@@ -2000,11 +2026,20 @@
     </nav>
 
     <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-close-btn" onclick="closeMenu()" aria-label="Close menu">×</button>
         <a href="/" onclick="toggleMenu()">Home</a>
         <div class="mobile-dropdown">
-            <div class="mobile-dropdown-toggle" onclick="toggleDropdown(this)">
-                Services
-                <span class="arrow">+</span>
+
+            <div class="mobile-dropdown-toggle">
+
+                <a href="/services" class="mobile-services-link">
+                    Services
+                </a>
+
+                <span class="arrow" onclick="toggleDropdown(this.parentElement.parentElement)">
+                    +
+                </span>
+
             </div>
             <div class="mobile-dropdown-content">
                 <a href="/services#iic">Industry Integrated Certification (IIC) by ei-labs</a>
@@ -2031,8 +2066,8 @@
     </div>
 
     <script>
-        function toggleDropdown(el) {
-            el.parentElement.classList.toggle("active");
+        function toggleDropdown(dropdown) {
+            dropdown.classList.toggle("active");
         }
     </script>
 
@@ -2751,7 +2786,7 @@
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                         <li><a href="/about">About Enbott</a></li>
+                        <li><a href="/about">About Enbott</a></li>
                         <li><a href="/leadership">Leadership</a></li>
                         <li><a href="https://www.gt.technology/" target="_blank">GT Technologies ↗ </a></li>
                         <li><a href="/contact">Contact Us</a></li>
@@ -2802,6 +2837,11 @@
         function toggleMenu() {
             document.getElementById("mobileNav").classList.toggle("active");
             document.body.classList.toggle("menu-open");
+        }
+        function closeMenu() {
+            document.getElementById("mobileNav").classList.remove("active");
+            document.body.classList.remove("menu-open");
+            document.querySelector(".menu-toggle").classList.remove("active");
         }
 
         /* Popup Functions */
