@@ -239,11 +239,11 @@
 
         /* Partnership Strip */
         .partnership-strip {
-            background: linear-gradient(to right, #f0f9ff, #e0f2fe);
-            padding: 35px 0;
-            text-align: center;
-            border-bottom: 2px solid #0891b2;
-        }
+    background: linear-gradient(180deg, #f9fbff 0%, #eef5ff 100%);
+    padding: 35px 0;
+    text-align: center;
+    border-bottom: 2px solid #1c859f;
+}
 
         .partnership-strip p {
             font-size: 15px;
@@ -969,7 +969,7 @@
 
         /* Logo Strip / Slider */
         .logo-strip {
-            background: #020617;
+            background: #040c30;
             padding: 40px 0 50px;
         }
 
@@ -1109,7 +1109,7 @@
 
         /* Mobile Nav Panel */
         .mobile-nav {
-            position: fixed;
+            <button class="mobile-close-btn" onclick="closeMenu()" aria-label="Close menu">×</button>position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -1551,55 +1551,36 @@
             </p>
             <div class="logo-slider">
                 <div class="logo-track">
-                    <!-- Replace src with your actual logo paths -->
-                    <div class="logo-item"><img alt="Partner 1" src="assets/logos/cress-bw.png" /></div>
-                    <div class="logo-item"><img alt="Partner 2" src="assets/logos/novac.png" /></div>
-                    <div class="logo-item"><img alt="Partner 3" src="assets/logos/ciic.png" /></div>
-                    <div class="logo-item"><img alt="Partner 4" src="assets/logos/pearson-bw.svg" /></div>
-                    <div class="logo-item"><img alt="Partner 5" src="assets/logos/siraj.png" /></div>
-                    <div class="logo-item"><img alt="Partner 6" src="assets/logos/gib.png" /></div>
-                    <!-- Duplicate logos for seamless infinite scroll -->
-                    <div class="logo-item"><img alt="Crescent Institute of Technology logo"
-                            src="assets/logos/cres.png" />
-                    </div>
-                    <div class="logo-item"><img alt="Kalasingam Academy of Research and Education logo"
-                            src="assets/logos/kala.png" /></div>
-                    <div class="logo-item"><img alt="Karpagam Academy of Higher Education logo"
-                            src="assets/logos/kapa.png" /></div>
-                    <div class="logo-item"><img alt="Panimalar Engineering College logo" src="assets/logos/pani.png" />
-                    </div>
-                    <div class="logo-item"><img alt="PSNA college of Engineering and Technology logo"
-                            src="assets/logos/psna.png" /></div>
-                    <div class="logo-item"><img alt="St. Peter's Institute of Higher Education and Research logo"
-                            src="assets/logos/peter.png" /></div>
-                    <div class="logo-item"><img alt="Sathyabama Institute of Science and Technology logo"
-                            src="assets/logos/sathya.png" /></div>
-                    <div class="logo-item"><img alt="coimbatore institute of engineering and technology logo"
-                            src="assets/logos/ciet.jpg" /></div>
-                    <div class="logo-item"><img alt="Partner 1" src="assets/logos/cress-bw.png" /></div>
-                    <div class="logo-item"><img alt="Partner 2" src="assets/logos/novac.png" /></div>
-                    <div class="logo-item"><img alt="Partner 3" src="assets/logos/ciic.png" /></div>
-                    <div class="logo-item"><img alt="Partner 4" src="assets/logos/pearson-bw.svg" /></div>
-                    <div class="logo-item"><img alt="Partner 5" src="assets/logos/siraj.png" /></div>
-                    <div class="logo-item"><img alt="Partner 6" src="assets/logos/gib.png" /></div>
-                    <div class="logo-item"><img alt="Crescent Institute of Technology logo"
-                            src="assets/logos/cres.png" />
-                    </div>
-                    <div class="logo-item"><img alt="Kalasingam Academy of Research and Education logo"
-                            src="assets/logos/kala.png" /></div>
-                    <div class="logo-item"><img alt="Karpagam Academy of Higher Education logo"
-                            src="assets/logos/kapa.png" /></div>
-                    <div class="logo-item"><img alt="Panimalar Engineering College logo" src="assets/logos/pani.png" />
-                    </div>
-                    <div class="logo-item"><img alt="PSNA college of Engineering and Technology logo"
-                            src="assets/logos/psna.png" /></div>
-                    <div class="logo-item"><img alt="St. Peter's Institute of Higher Education and Research logo"
-                            src="assets/logos/peter.png" /></div>
-                    <div class="logo-item"><img alt="Sathyabama Institute of Science and Technology logo"
-                            src="assets/logos/sathya.png" /></div>
-                    <div class="logo-item"><img alt="coimbatore institute of engineering and technology logo"
-                            src="assets/logos/ciet.jpg" /></div>
-                </div>
+
+    <!-- First Set -->
+    <div class="logo-item"><img src="assets/logos/kala.png" alt="Kalasalingam Academy of Research and Education"></div>
+    <div class="logo-item"><img src="assets/logos/cres.png" alt="Crescent Institute of Science and Technology"></div>
+    <div class="logo-item"><img src="assets/logos/peter.png" alt="St. Peter's Institute of Higher Education and Research"></div>
+    <div class="logo-item"><img src="assets/logos/ciet.jpg" alt="Coimbatore Institute of Engineering and Technology"></div>
+    <div class="logo-item"><img src="assets/logos/dhan.png" alt="Dhanalakshmi College of Engineering"></div>
+    <div class="logo-item"><img src="assets/logos/egspec.png" alt="E.G.S. Pillay Engineering College"></div>
+    <div class="logo-item"><img src="assets/logos/dgvc.jpg" alt="DG Vaishnav College"></div>
+    <div class="logo-item"><img src="assets/logos/measi.png" alt="MEASI Institute of Information Technology"></div>
+    <div class="logo-item"><img src="assets/logos/sathya.png" alt="Sathyabama Institute of Science and Technology"></div>
+    <div class="logo-item"><img src="assets/logos/novacN.png" alt="Novac Technology Solutions"></div>
+    <div class="logo-item"><img src="assets/logos/takshashila.png" alt="Takshashila University"></div>
+    <div class="logo-item"><img src="assets/logos/arunai.png" alt="Arunai Engineering College"></div>
+
+    <!-- Duplicate Set -->
+    <div class="logo-item"><img src="assets/logos/kala.png" alt="Kalasalingam Academy of Research and Education"></div>
+    <div class="logo-item"><img src="assets/logos/cres.png" alt="Crescent Institute of Science and Technology"></div>
+    <div class="logo-item"><img src="assets/logos/peter.png" alt="St. Peter's Institute of Higher Education and Research"></div>
+    <div class="logo-item"><img src="assets/logos/ciet.jpg" alt="Coimbatore Institute of Engineering and Technology"></div>
+    <div class="logo-item"><img src="assets/logos/dhan.png" alt="Dhanalakshmi College of Engineering"></div>
+    <div class="logo-item"><img src="assets/logos/egspec.png" alt="E.G.S. Pillay Engineering College"></div>
+    <div class="logo-item"><img src="assets/logos/dgvc.jpg" alt="DG Vaishnav College"></div>
+    <div class="logo-item"><img src="assets/logos/measi.png" alt="MEASI Institute of Information Technology"></div>
+    <div class="logo-item"><img src="assets/logos/sathya.png" alt="Sathyabama Institute of Science and Technology"></div>
+    <div class="logo-item"><img src="assets/logos/novacN.png" alt="Novac Technology Solutions"></div>
+    <div class="logo-item"><img src="assets/logos/takshashila.png" alt="Takshashila University"></div>
+    <div class="logo-item"><img src="assets/logos/arunai.png" alt="Arunai Engineering College"></div>
+
+</div>
             </div>
         </div>
     </section>
